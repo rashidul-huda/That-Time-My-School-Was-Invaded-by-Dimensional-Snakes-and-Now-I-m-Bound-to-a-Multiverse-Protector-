@@ -145,7 +145,9 @@ function completeLoad(loadSaveData) {
         bgLayer.style.backgroundImage = 'none';
         charLayer.style.backgroundImage = 'none';
         bgmPlayer.pause();
-        hasUnsavedChanges = true;
+        
+        hasUnsavedChanges = false; 
+        
         renderStep(storyScript[currentStep], false);
     }
 }
