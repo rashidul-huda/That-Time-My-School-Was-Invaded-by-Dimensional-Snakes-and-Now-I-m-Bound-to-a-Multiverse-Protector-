@@ -1,4 +1,4 @@
-const chapter2 = [
+var chapter2 = [
     {
         vfx: 'vfx-blackout',
         sfx: 'assets/chapter2/sound_effects/crowd_stampede.mp3',

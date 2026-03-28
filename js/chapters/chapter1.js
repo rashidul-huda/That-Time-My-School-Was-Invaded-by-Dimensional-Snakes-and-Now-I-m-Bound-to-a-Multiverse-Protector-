@@ -1,4 +1,4 @@
-const chapter1 = [
+var chapter1 = [
     {
         bg: 'assets/chapter1/backgrounds/the_classroom_golden_hour.webp',
         bgm: 'assets/chapter1/background_music/ambient_start.mp3',
