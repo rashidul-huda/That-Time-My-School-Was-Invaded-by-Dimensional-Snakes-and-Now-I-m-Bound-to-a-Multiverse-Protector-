@@ -429,7 +429,7 @@ body {
     #menu-right h3 { font-size: 18px; margin-bottom: 15px; }
     .chapter-btn { font-size: 14px; padding: 10px; }
     
-    #dialogue-box { height: 140px; bottom: 10px; padding: 10px 20px 45px 20px; width: 95%; }
+    #dialogue-box { height: 155px; bottom: 10px; padding: 10px 20px 45px 20px; width: 95%; }
     #speaker-name { font-size: 18px; margin-bottom: 5px; }
     #dialogue-text { font-size: 16px; }
     
