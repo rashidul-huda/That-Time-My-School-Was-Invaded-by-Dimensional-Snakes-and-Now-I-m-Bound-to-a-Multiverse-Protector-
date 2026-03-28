@@ -5,15 +5,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100dvh;
     margin: 0;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 #game-container {
     width: 100vw;
-    max-width: min(1920px, calc(100vh * (16 / 9)));
-    max-height: 100vh;
+    max-width: min(1920px, calc(100dvh * (16 / 9)));
+    max-height: 100dvh;
     aspect-ratio: 16 / 9;
     position: relative;
     background-color: black;
@@ -24,15 +26,28 @@ body {
 #game-container:fullscreen,
 #game-container:-webkit-full-screen {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     max-width: none;
     max-height: none;
+}
+
+#game-container.pseudo-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    z-index: 9999;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 #main-menu {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: url('../assets/menu_bg.jpg') no-repeat center center;
+    background: url('../assets/menu_bg.webp') no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: row;

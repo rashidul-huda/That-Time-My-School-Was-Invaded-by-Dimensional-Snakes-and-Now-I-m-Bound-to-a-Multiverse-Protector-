@@ -6,7 +6,7 @@ const chapter2 = [
         text: 'The lingering sound of shattered glass fades into a low, terrifying rumble. A deafening chorus of screams erupts from everywhere in the building as hundreds of rubber-soled shoes squeak frantically against the linoleum.'
     },
     {
-        bg: 'assets/chapter2/backgrounds/the_stairwell_emergency_lights.png',
+        bg: 'assets/chapter2/backgrounds/the_stairwell_emergency_lights.webp',
         bgm: 'assets/chapter2/background_music/the_stampede_claustrophobic_panic.mp3',
         speaker: 'Ren (Internal)',
         text: 'The glass shattered on the first floor. The main entrance.'
@@ -20,7 +20,7 @@ const chapter2 = [
         text: 'The realization hits the crowd in the stairwell like a physical shockwave. A second ago, everyone was pushing down to escape. Now, the tide violently reverses.'
     },
     {
-        char: 'assets/chapter2/characters/random_student/random_student.png',
+        char: 'assets/chapter2/characters/random_student/random_student.webp',
         vfx: 'vfx-shake',
         speaker: 'Random Student',
         text: '"GO BACK! GO BACK UP! THEY\'RE IN THE LOBBY!"'
@@ -44,7 +44,7 @@ const chapter2 = [
         text: '"Ren! REN! Grab my hand!"'
     },
     {
-        char: 'assets/chapter2/characters/kaito_best_friend/reaching_one_hand_out.png',
+        char: 'assets/chapter2/characters/kaito_best_friend/reaching_one_hand_out.webp',
         speaker: 'Ren (Internal)',
         text: 'Kaito appears, leaning over the railing from the landing above. His face is pale, eyes wide with raw terror, but he’s reaching down into the sea of people.'
     },
@@ -64,12 +64,12 @@ const chapter2 = [
         text: 'I try to anchor myself against the handrail and reach down for the girl, but the crowd is too dense. A senior shoves past me, breaking my grip on the rail. Kaito grabs my collar from above and violently yanks me up to the landing.'
     },
     {
-        char: 'assets/chapter2/characters/kaito_best_friend/desperate_expression.png',
+        char: 'assets/chapter2/characters/kaito_best_friend/desperate_expression.webp',
         speaker: 'Kaito',
         text: '"Are you crazy?! You can\'t stop!"'
     },
     {
-        bg: 'assets/chapter2/backgrounds/second_floor_hallway_bedlam.png',
+        bg: 'assets/chapter2/backgrounds/second_floor_hallway_bedlam.webp',
         sfx: 'assets/chapter2/sound_effects/fire_alarm.mp3',
         char: '',
         speaker: 'Ren (Internal)',
@@ -82,12 +82,12 @@ const chapter2 = [
         text: 'Beneath the alarm, a sickening, wet sliding sound reverberates through the floorboards. It’s heavy. Unbelievably heavy.'
     },
     {
-        char: 'assets/chapter2/characters/mr_sato_math_teacher/mr_sato_math_teacher.png',
+        char: 'assets/chapter2/characters/mr_sato_math_teacher/mr_sato_math_teacher.webp',
         speaker: 'Mr. Sato',
         text: '"To the east wing! Everyone, keep moving to the emergency fire exits in the east wing! Do NOT look back!"'
     },
     {
-        char: 'assets/chapter2/characters/kaito_best_friend/breathing_heavily.png',
+        char: 'assets/chapter2/characters/kaito_best_friend/breathing_heavily.webp',
         speaker: 'Kaito',
         text: '"The fire exits... Ren, we have to follow him. We have to get out."'
     },
@@ -104,7 +104,7 @@ const chapter2 = [
         text: '"No. Kaito, stop. Think about it. If we go out the east doors, we\'re completely exposed in the open lot. That\'s where they came from."'
     },
     {
-        char: 'assets/chapter2/characters/kaito_best_friend/desperate_expression.png',
+        char: 'assets/chapter2/characters/kaito_best_friend/desperate_expression.webp',
         speaker: 'Kaito',
         text: '"But Mr. Sato is taking everyone that way! We can\'t stay in here! Did you hear that sound downstairs? One of them is in the building, Ren! It’s going to come up the stairs!"'
     },
@@ -130,12 +130,12 @@ const chapter2 = [
         text: '"The science labs. On the third floor. The doors are reinforced steel for chemical fires, and there are no ground-level windows."'
     },
     {
-        char: 'assets/chapter2/characters/kaito_best_friend/looking_absolutely_terrified.png',
+        char: 'assets/chapter2/characters/kaito_best_friend/looking_absolutely_terrified.webp',
         speaker: 'Kaito',
         text: '"Are you insane?! That\'s a dead end! If they find us up there, we\'re trapped!"'
     },
     {
-        char: 'assets/chapter2/characters/mr_sato_math_teacher/mr_sato_math_teacher.png',
+        char: 'assets/chapter2/characters/mr_sato_math_teacher/mr_sato_math_teacher.webp',
         speaker: 'Mr. Sato',
         text: '"KEEP MOVING! HURRY!"'
     },
@@ -155,12 +155,12 @@ const chapter2 = [
         text: 'Kaito slowly turns his head back to me. The argument is over.'
     },
     {
-        char: 'assets/chapter2/characters/kaito_best_friend/serious_expression.png',
+        char: 'assets/chapter2/characters/kaito_best_friend/serious_expression.webp',
         speaker: 'Kaito',
         text: '"Third floor. Let\'s go. Now."'
     },
     {
-        bg: 'assets/chapter2/backgrounds/third_floor_stairwell_the_escape.png',
+        bg: 'assets/chapter2/backgrounds/third_floor_stairwell_the_escape.webp',
         bgm: 'assets/chapter2/background_music/the_stealth_escape_pulsing_beat.mp3',
         char: '',
         speaker: 'Ren (Internal)',
@@ -180,7 +180,7 @@ const chapter2 = [
         text: '...'
     },
     {
-        bg: 'assets/chapter2/backgrounds/the_biology_lab_eerie_peace.png',
+        bg: 'assets/chapter2/backgrounds/the_biology_lab_eerie_peace.webp',
         bgm: 'assets/chapter2/background_music/the_lab_eerie_silence.mp3',
         speaker: 'Ren (Internal)',
         text: 'Safe. For a second, it feels like we\'re safe.'

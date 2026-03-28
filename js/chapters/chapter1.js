@@ -1,6 +1,6 @@
 const chapter1 = [
     {
-        bg: 'assets/chapter1/backgrounds/the_classroom_golden_hour.png',
+        bg: 'assets/chapter1/backgrounds/the_classroom_golden_hour.webp',
         bgm: 'assets/chapter1/background_music/ambient_start.mp3',
         speaker: 'Ren (Internal)',
         text: 'Another Tuesday. Another afternoon spent counting the minutes until the final bell. The air in the classroom is thick and sleepy, smelling of chalk dust and old sneakers.'
@@ -10,7 +10,7 @@ const chapter1 = [
         text: 'Outside the window, the heat shimmers above the asphalt of the schoolyard. It’s the kind of day where nothing interesting ever happens.'
     },
     {
-        char: 'assets/chapter1/characters/kaito_best_friend/neutral_bored.png',
+        char: 'assets/chapter1/characters/kaito_best_friend/neutral_bored.webp',
         speaker: 'Kaito',
         text: '"Hey, Ren. If you stare at the clock any harder, you\'re going to burn a hole in it. Only five more minutes. We still hitting up the arcade after this?"'
     },
@@ -21,13 +21,13 @@ const chapter1 = [
         ]
     },
     {
-        char: 'assets/chapter1/characters/kaito_best_friend/amused.png',
+        char: 'assets/chapter1/characters/kaito_best_friend/amused.webp',
         speaker: 'Kaito',
         text: '(Laughs) "In your dreams, buddy! I practiced all weekend."',
         jumpTo: 6
     },
     {
-        char: 'assets/chapter1/characters/kaito_best_friend/annoyed.png',
+        char: 'assets/chapter1/characters/kaito_best_friend/annoyed.webp',
         speaker: 'Kaito',
         text: '(Pouts) "Lame. Fine, but you’re treating next time."'
     },
@@ -69,12 +69,12 @@ const chapter1 = [
         text: '(Whispering) "Kaito..."'
     },
     {
-        char: 'assets/chapter1/characters/kaito_best_friend/confused.png',
+        char: 'assets/chapter1/characters/kaito_best_friend/confused.webp',
         speaker: 'Kaito',
         text: '"Huh? What\'s up, you look like you\'ve seen a..."'
     },
     {
-        char: 'assets/chapter1/characters/kaito_best_friend/terrified.png',
+        char: 'assets/chapter1/characters/kaito_best_friend/terrified.webp',
         speaker: 'Kaito',
         text: '(Shouting, voice cracking) "WHAT IS THAT?!"'
     },
@@ -82,7 +82,7 @@ const chapter1 = [
         bgm: 'assets/chapter1/background_music/the_panic.mp3',
         sfx: 'assets/chapter1/sound_effects/scream.mp3',
         vfx: 'vfx-flash-red',
-        char: 'assets/chapter1/characters/teacher/teacher.png',
+        char: 'assets/chapter1/characters/teacher/teacher.webp',
         speaker: 'Teacher',
         text: '"Everyone! Stay calm! Get away from the windows! Move to the hallway, NOW!"'
     },
@@ -92,7 +92,7 @@ const chapter1 = [
         text: 'The classroom erupts into chaos. People are shouting, crying, trampling over desks. Kaito grabs my arm, hard.'
     },
     {
-        char: 'assets/chapter1/characters/kaito_best_friend/terrified.png',
+        char: 'assets/chapter1/characters/kaito_best_friend/terrified.webp',
         speaker: 'Kaito',
         text: '"We gotta move, Ren! Come on!"'
     },
@@ -103,7 +103,7 @@ const chapter1 = [
         text: 'We push into the crowded hallway. It\'s deafening. Hundreds of students are surging towards the stairwells. I lose sight of Kaito immediately. I\'m just a cork in a raging river of panicked bodies.'
     },
     {
-        bg: 'assets/chapter1/backgrounds/the_stairwell_window_looking_out_at_the_field.png',
+        bg: 'assets/chapter1/backgrounds/the_stairwell_window_looking_out_at_the_field.webp',
         speaker: 'Ren (Internal)',
         text: 'I manage to shove my way to a window in the stairwell that looks out over the parking lot. I have to know. I have to see.'
     },
@@ -163,7 +163,7 @@ const chapter1 = [
         text: '...'
     },
     {
-        bg: 'assets/chapter1/backgrounds/the_stairwell_window_the_aftermath_sepia_tone.png',
+        bg: 'assets/chapter1/backgrounds/the_stairwell_window_the_aftermath_sepia_tone.webp',
         bgm: 'assets/chapter1/background_music/the_true_threat.mp3',
         speaker: 'Ren (Internal)',
         text: 'No.'

@@ -1,10 +1,7 @@
 const SAVE_KEY = 'snakesVN_saveData';
 const UNLOCKS_KEY = 'snakesVN_unlocks';
-
-const gameChapters = {
-    1: typeof chapter1 !== 'undefined' ? chapter1 : [],
-    2: typeof chapter2 !== 'undefined' ? chapter2 : []
-};
+const PRELOAD_STEPS = 4;
+const TOTAL_CHAPTERS = 2; 
 
 const bgmPlayer = new Audio();
 bgmPlayer.loop = true;
@@ -13,6 +10,7 @@ sfxPlayer.loop = false;
 
 const mainMenu = document.getElementById('main-menu');
 const loadingScreen = document.getElementById('loading-screen');
+const loadingText = document.getElementById('loading-text');
 const uiLayer = document.getElementById('ui-layer');
 const bgLayer = document.getElementById('bg-layer');
 const charLayer = document.getElementById('char-layer');
@@ -54,71 +52,77 @@ function initMenu() {
     let unlocked = JSON.parse(localStorage.getItem(UNLOCKS_KEY)) || [1];
     chapterList.innerHTML = '';
     
-    Object.keys(gameChapters).forEach(chId => {
-        if (gameChapters[chId].length === 0) return; 
-
+    for (let chId = 1; chId <= TOTAL_CHAPTERS; chId++) {
         const btn = document.createElement('button');
         btn.className = 'chapter-btn';
         btn.innerText = `Chapter ${chId}`;
         
-        if (unlocked.includes(parseInt(chId))) {
+        if (unlocked.includes(chId)) {
             btn.classList.add('unlocked');
-            btn.onclick = () => startLoadProcess(parseInt(chId));
+            btn.onclick = () => startLoadProcess(chId);
         } else {
             btn.innerText += " (Locked)";
         }
         chapterList.appendChild(btn);
-    });
+    }
+}
+
+function loadChapterScript(chapterId, callback) {
+    if (window['chapter' + chapterId]) {
+        callback();
+        return;
+    }
+
+    loadingText.innerText = "Downloading Chapter Data...";
+    
+    const script = document.createElement('script');
+    script.src = `js/chapters/chapter${chapterId}.js`;
+    
+    script.onload = () => {
+        loadingText.innerText = "Loading Assets...";
+        callback();
+    };
+    
+    script.onerror = () => {
+        alert("Failed to load chapter data. Please check your connection.");
+        loadingScreen.style.display = 'none';
+        mainMenu.style.display = 'flex';
+    };
+    
+    document.body.appendChild(script);
+}
+
+function preloadAhead(startIndex) {
+    if (!storyScript || storyScript.length === 0) return;
+    const endIndex = Math.min(startIndex + PRELOAD_STEPS, storyScript.length);
+    for (let i = startIndex; i < endIndex; i++) {
+        const step = storyScript[i];
+        if (step.bg) { 
+            const img = new Image(); 
+            img.src = step.bg; 
+        }
+        if (step.char) { 
+            const img = new Image(); 
+            img.src = step.char; 
+        }
+    }
 }
 
 function startLoadProcess(chapterId, loadSaveData = null) {
     mainMenu.style.display = 'none';
     loadingScreen.style.display = 'flex';
     
-    activeChapterId = chapterId;
-    storyScript = gameChapters[chapterId];
-    
-    const assets = new Set();
-    storyScript.forEach(step => {
-        if (step.bg) assets.add(step.bg);
-        if (step.char) assets.add(step.char);
-        if (step.bgm && step.bgm !== '') assets.add(step.bgm);
-        if (step.sfx) assets.add(step.sfx);
-    });
-
-    let loaded = 0;
-    const total = assets.size;
-    
-    if (total === 0) {
-        completeLoad(loadSaveData);
-        return;
-    }
-
-    const checkDone = () => {
-        loaded++;
-        if (loaded >= total) {
+    loadChapterScript(chapterId, () => {
+        activeChapterId = chapterId;
+        storyScript = window['chapter' + chapterId];
+        
+        let startStep = loadSaveData ? loadSaveData.currentStep : 0;
+        
+        preloadAhead(startStep);
+        
+        setTimeout(() => {
             completeLoad(loadSaveData);
-        }
-    };
-
-    setTimeout(() => {
-        if (loadingScreen.style.display === 'flex') {
-            completeLoad(loadSaveData);
-        }
-    }, 5000);
-
-    assets.forEach(src => {
-        if (src.endsWith('.mp3') || src.endsWith('.wav')) {
-            const audio = new Audio();
-            audio.oncanplaythrough = checkDone;
-            audio.onerror = checkDone;
-            audio.src = src;
-        } else {
-            const img = new Image();
-            img.onload = checkDone;
-            img.onerror = checkDone;
-            img.src = src;
-        }
+        }, 600);
     });
 }
 
@@ -164,6 +168,7 @@ function advanceStory() {
 
     if (nextStep < storyScript.length) {
         currentStep = nextStep;
+        preloadAhead(currentStep + 1);
         renderStep(storyScript[currentStep], false);
     } else {
         handleChapterEnd();
@@ -276,6 +281,7 @@ function renderStep(step, isGoingBack) {
                 choicesContainer.style.display = 'none';
                 dialogueBox.style.display = 'block';
                 currentStep += choice.nextStepOffset;
+                preloadAhead(currentStep);
                 renderStep(storyScript[currentStep], false);
             };
             choicesContainer.appendChild(btn);
@@ -330,7 +336,9 @@ function returnToMenu() {
 }
 
 function updateFullscreenButton() {
-    if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+    const isNativeFs = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+    const isPseudoFs = gameContainer.classList.contains('pseudo-fullscreen');
+    if (isNativeFs || isPseudoFs) {
         fullscreenBtn.innerText = '⛶ Exit Fullscreen';
     } else {
         fullscreenBtn.innerText = '⛶ Fullscreen';
@@ -359,14 +367,44 @@ document.getElementById('save-btn').onclick = saveGame;
 document.getElementById('leave-btn').onclick = returnToMenu;
 
 fullscreenBtn.onclick = () => {
-    if (!document.fullscreenElement) {
-        if (gameContainer.requestFullscreen) gameContainer.requestFullscreen();
-        else if (gameContainer.webkitRequestFullscreen) gameContainer.webkitRequestFullscreen();
-        else if (gameContainer.msRequestFullscreen) gameContainer.msRequestFullscreen();
+    const isNativeFs = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+    const isPseudoFs = gameContainer.classList.contains('pseudo-fullscreen');
+    
+    if (!isNativeFs && !isPseudoFs) {
+        const req = gameContainer.requestFullscreen || gameContainer.webkitRequestFullscreen || gameContainer.msRequestFullscreen;
+        if (req) {
+            try {
+                const promise = req.call(gameContainer);
+                if (promise !== undefined) {
+                    promise.catch(() => {
+                        gameContainer.classList.add('pseudo-fullscreen');
+                        updateFullscreenButton();
+                    });
+                } else {
+                    setTimeout(() => {
+                        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+                            gameContainer.classList.add('pseudo-fullscreen');
+                            updateFullscreenButton();
+                        }
+                    }, 200);
+                }
+            } catch (e) {
+                gameContainer.classList.add('pseudo-fullscreen');
+                updateFullscreenButton();
+            }
+        } else {
+            gameContainer.classList.add('pseudo-fullscreen');
+            updateFullscreenButton();
+        }
     } else {
-        if (document.exitFullscreen) document.exitFullscreen();
-        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-        else if (document.msExitFullscreen) document.msExitFullscreen();
+        if (isNativeFs) {
+            const exit = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
+            if (exit) exit.call(document);
+        }
+        if (isPseudoFs) {
+            gameContainer.classList.remove('pseudo-fullscreen');
+            updateFullscreenButton();
+        }
     }
 };
 
