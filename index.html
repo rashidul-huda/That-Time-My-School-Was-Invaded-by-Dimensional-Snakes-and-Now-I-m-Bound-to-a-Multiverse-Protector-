@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>That Time My School Was Invaded by Dimensional Snakes...</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="click-to-start">Click Anywhere to Enter</div>
+
+<div id="rotate-screen">📱<br>Please rotate your device to landscape mode.</div>
+
+<div id="game-container">
+    <button id="fullscreen-btn">⛶ Fullscreen</button>
+
+    <div id="main-menu">
+        <div id="menu-left">
+            <img src="assets/title.png" id="menu-title-img" alt="That Time My School Was Invaded by Dimensional Snakes and Now I'm Bound to a Multiverse Protector!">
+            <button class="menu-btn" id="btn-new-game">New Game</button>
+            <button class="menu-btn" id="btn-continue" style="display: none;">Continue</button>
+        </div>
+        
+        <div id="menu-right">
+            <h3>Chapter Select</h3>
+            <div id="chapter-list"></div>
+        </div>
+    </div>
+
+    <div id="loading-screen" style="display: none;">
+        <div class="loader"></div>
+        <div id="loading-text">Loading Assets...</div>
+    </div>
+    
+    <div id="bg-layer" class="layer"></div>
+    <div id="char-layer" class="layer"></div>
+    <div id="vfx-layer" class="layer"></div>
+    
+    <div id="ui-layer" style="display: none;">
+        <button id="leave-btn">Leave Game</button>
+        <button id="save-btn">Save Game</button>
+        <div id="choices-container"></div>
+        <div id="dialogue-box">
+            <div id="speaker-name"></div>
+            <div id="dialogue-text"></div>
+        </div>
+        <div id="nav-controls">
+            <button class="nav-chevron" id="btn-back">&#10094;</button>
+            <button class="nav-chevron" id="btn-forward">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/chapters/chapter1.js"></script>
+<script src="js/chapters/chapter2.js"></script>
+<script src="js/engine.js"></script>
+</body>
+</html>
