@@ -361,6 +361,13 @@ body {
 }
 .vfx-flash-red { animation: flashRed 0.5s; }
 
+@keyframes flashWhite {
+    0% { background-color: transparent; }
+    10% { background-color: rgba(255, 255, 255, 0.95); }
+    100% { background-color: transparent; }
+}
+.vfx-flash-white { animation: flashWhite 0.5s ease-out; }
+
 .vfx-blackout { background-color: black !important; transition: none; }
 
 .vfx-tunnel-vision {
@@ -441,4 +448,15 @@ body {
     
     #nav-controls { bottom: 15px; width: 92%; }
     .nav-chevron { font-size: 16px; padding: 5px 25px; }
+}
+
+@keyframes bounceRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(8px); }
+}
+
+#btn-forward.bouncing {
+    animation: bounceRight 1s infinite ease-in-out;
+    border-color: #ffd700;
+    color: #ffd700;
 }

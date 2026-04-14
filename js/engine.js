@@ -1,7 +1,7 @@
 const SAVE_KEY = 'snakesVN_saveData';
 const UNLOCKS_KEY = 'snakesVN_unlocks';
 const PRELOAD_STEPS = 4;
-const TOTAL_CHAPTERS = 2; 
+const TOTAL_CHAPTERS = 3; 
 
 const bgmPlayer = new Audio();
 bgmPlayer.loop = true;
@@ -35,6 +35,11 @@ let persistentState = {
     char: null,
     bgm: null
 };
+
+let isTyping = false;
+let typeInterval = null;
+let fullCurrentText = '';
+let currentTextIndex = 0;
 
 function playMenuMusic() {
     if (!bgmPlayer.src.includes('before_the_pressure_breaks.mp3')) {
@@ -105,6 +110,14 @@ function preloadAhead(startIndex) {
             const img = new Image(); 
             img.src = step.char; 
         }
+        if (step.bgm) {
+            const a = new Audio();
+            a.src = step.bgm;
+        }
+        if (step.sfx) {
+            const a = new Audio();
+            a.src = step.sfx;
+        }
     }
 }
 
@@ -152,7 +165,46 @@ function completeLoad(loadSaveData) {
     }
 }
 
+function startTyping(text) {
+    clearInterval(typeInterval);
+    fullCurrentText = text;
+    dialogueText.textContent = '';
+    currentTextIndex = 0;
+    isTyping = true;
+    
+    const fwdBtn = document.getElementById('btn-forward');
+    if(fwdBtn) fwdBtn.classList.remove('bouncing');
+
+    if (!text) {
+        finishTyping();
+        return;
+    }
+
+    typeInterval = setInterval(() => {
+        currentTextIndex++;
+        dialogueText.textContent = fullCurrentText.substring(0, currentTextIndex);
+        
+        if (currentTextIndex >= fullCurrentText.length) {
+            finishTyping();
+        }
+    }, 25);
+}
+
+function finishTyping() {
+    clearInterval(typeInterval);
+    dialogueText.textContent = fullCurrentText;
+    isTyping = false;
+    
+    const fwdBtn = document.getElementById('btn-forward');
+    if(fwdBtn) fwdBtn.classList.add('bouncing');
+}
+
 function advanceStory() {
+    if (isTyping) {
+        finishTyping();
+        return;
+    }
+
     if (choicesContainer.style.display === 'flex') return;
 
     stepHistory.push({
@@ -178,6 +230,11 @@ function advanceStory() {
 }
 
 function goBack() {
+    if (isTyping) {
+        finishTyping();
+        return;
+    }
+
     if (stepHistory.length > 0) {
         const previous = stepHistory.pop();
         currentStep = previous.step;
@@ -247,12 +304,30 @@ function renderStep(step, isGoingBack) {
         }
 
         vfxLayer.className = 'layer'; 
+        bgLayer.classList.remove('vfx-shake');
+        charLayer.classList.remove('vfx-shake');
+        uiLayer.classList.remove('vfx-shake');
+
+        void bgLayer.offsetWidth;
+        void charLayer.offsetWidth;
+        void vfxLayer.offsetWidth;
+        void uiLayer.offsetWidth;
+
         if (step.vfx) {
-            setTimeout(() => {
-                vfxLayer.classList.add(step.vfx);
-            }, 10);
+            const vfxClasses = step.vfx.split(' ');
             
-            if (step.vfx === 'vfx-blackout' && step.text === '...') {
+            vfxClasses.forEach(vfxClass => {
+                if (vfxClass === 'vfx-shake') {
+                    bgLayer.classList.add('vfx-shake');
+                    charLayer.classList.add('vfx-shake');
+                    vfxLayer.classList.add('vfx-shake');
+                    uiLayer.classList.add('vfx-shake');
+                } else {
+                    vfxLayer.classList.add(vfxClass);
+                }
+            });
+            
+            if (step.vfx.includes('vfx-blackout') && step.text === '...') {
                  setTimeout(() => { vfxLayer.classList.remove('vfx-blackout'); advanceStory(); }, 1000);
                  dialogueBox.style.display = 'none';
                  return;
@@ -291,24 +366,51 @@ function renderStep(step, isGoingBack) {
     } else {
         dialogueBox.style.display = 'block';
         speakerName.innerText = step.speaker || '';
-        dialogueText.innerText = step.text || '';
+        
+        if (isGoingBack) {
+            fullCurrentText = step.text || '';
+            finishTyping();
+        } else {
+            startTyping(step.text || '');
+        }
     }
 }
 
 function handleChapterEnd() {
     let unlocked = JSON.parse(localStorage.getItem(UNLOCKS_KEY)) || [1];
-    if (!unlocked.includes(activeChapterId + 1)) {
-        unlocked.push(activeChapterId + 1);
+    let nextChapterId = activeChapterId + 1;
+
+    if (!unlocked.includes(nextChapterId) && nextChapterId <= TOTAL_CHAPTERS) {
+        unlocked.push(nextChapterId);
         localStorage.setItem(UNLOCKS_KEY, JSON.stringify(unlocked));
     }
-    uiLayer.style.display = 'none';
-    bgLayer.style.backgroundImage = 'none';
-    charLayer.style.backgroundImage = 'none';
-    vfxLayer.className = 'layer';
-    fullscreenBtn.classList.remove('in-game');
-    initMenu();
-    mainMenu.style.display = 'flex';
-    playMenuMusic();
+
+    if (activeChapterId < TOTAL_CHAPTERS) {
+        const saveData = {
+            chapterId: nextChapterId,
+            currentStep: 0,
+            stepHistory: [],
+            persistentState: { bg: null, char: null, bgm: null }
+        };
+        localStorage.setItem(SAVE_KEY, JSON.stringify(saveData));
+        hasUnsavedChanges = false;
+
+        uiLayer.style.display = 'none';
+        bgLayer.style.backgroundImage = 'none';
+        charLayer.style.backgroundImage = 'none';
+        vfxLayer.className = 'layer';
+        
+        startLoadProcess(nextChapterId);
+    } else {
+        uiLayer.style.display = 'none';
+        bgLayer.style.backgroundImage = 'none';
+        charLayer.style.backgroundImage = 'none';
+        vfxLayer.className = 'layer';
+        fullscreenBtn.classList.remove('in-game');
+        initMenu();
+        mainMenu.style.display = 'flex';
+        playMenuMusic();
+    }
 }
 
 function saveGame() {
