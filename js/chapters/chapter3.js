@@ -172,6 +172,7 @@ var chapter3 = [
         text: '"They\'re too small, Ren! We\'d never fit!"'
     },
     {
+        bg: 'assets/chapter3/backgrounds/lab_fume_hood_dead_end.webp',
         char: '',
         speaker: 'Ren (Internal)',
         text: 'I rush to the back of the room, tearing open the fume hood cabinets. Kaito is right. The exhaust pipes are barely wide enough for a cat, let alone a person. It\'s a dead end.',
@@ -254,6 +255,7 @@ var chapter3 = [
     },
     {
         bgm: '',
+        sfx: 'assets/chapter3/sound_effects/mikas_muffled_sobbing.mp3',
         char: '',
         speaker: 'Ren (Internal)',
         text: 'The heavy silence presses down on us. The only sound is Mika’s muffled sobbing from the corner.'
