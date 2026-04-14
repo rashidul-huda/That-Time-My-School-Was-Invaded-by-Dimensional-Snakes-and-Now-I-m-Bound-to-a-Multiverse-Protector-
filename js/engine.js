@@ -35,6 +35,7 @@ let persistentState = {
     char: null,
     bgm: null
 };
+let gameVariables = {};
 
 let isTyping = false;
 let typeInterval = null;
@@ -148,6 +149,7 @@ function completeLoad(loadSaveData) {
         currentStep = loadSaveData.currentStep;
         stepHistory = loadSaveData.stepHistory;
         persistentState = loadSaveData.persistentState;
+        gameVariables = loadSaveData.gameVariables || {};
         applyPersistentState();
         hasUnsavedChanges = false;
         renderStep(storyScript[currentStep], false); 
@@ -155,6 +157,7 @@ function completeLoad(loadSaveData) {
         currentStep = 0;
         stepHistory = [];
         persistentState = { bg: null, char: null, bgm: null };
+        gameVariables = {};
         bgLayer.style.backgroundImage = 'none';
         charLayer.style.backgroundImage = 'none';
         bgmPlayer.pause();
@@ -239,6 +242,7 @@ function goBack() {
         const previous = stepHistory.pop();
         currentStep = previous.step;
         persistentState = previous.state;
+        gameVariables = previous.vars || {};
         hasUnsavedChanges = true;
         
         applyPersistentState();
@@ -266,6 +270,13 @@ function applyPersistentState() {
 }
 
 function renderStep(step, isGoingBack) {
+    if (step.routeBasedOn !== undefined) {
+        let targetStep = gameVariables[step.routeBasedOn] ? step.ifTrue : step.ifFalse;
+        currentStep = targetStep;
+        renderStep(storyScript[currentStep], isGoingBack);
+        return;
+    }
+
     if (step.bg !== undefined) persistentState.bg = step.bg;
     if (step.char !== undefined) persistentState.char = step.char;
     if (step.bgm !== undefined) persistentState.bgm = step.bgm;
@@ -352,8 +363,14 @@ function renderStep(step, isGoingBack) {
             btn.onclick = () => {
                 stepHistory.push({
                     step: currentStep,
-                    state: JSON.parse(JSON.stringify(persistentState))
+                    state: JSON.parse(JSON.stringify(persistentState)),
+                    vars: JSON.parse(JSON.stringify(gameVariables))
                 });
+
+                if (choice.setVar) {
+                    Object.assign(gameVariables, choice.setVar);
+                }
+
                 hasUnsavedChanges = true;
                 choicesContainer.style.display = 'none';
                 dialogueBox.style.display = 'block';
@@ -390,7 +407,8 @@ function handleChapterEnd() {
             chapterId: nextChapterId,
             currentStep: 0,
             stepHistory: [],
-            persistentState: { bg: null, char: null, bgm: null }
+            persistentState: { bg: null, char: null, bgm: null },
+            gameVariables: gameVariables
         };
         localStorage.setItem(SAVE_KEY, JSON.stringify(saveData));
         hasUnsavedChanges = false;
@@ -418,7 +436,8 @@ function saveGame() {
         chapterId: activeChapterId,
         currentStep: currentStep,
         stepHistory: stepHistory,
-        persistentState: persistentState
+        persistentState: persistentState,
+        gameVariables: gameVariables
     };
     localStorage.setItem(SAVE_KEY, JSON.stringify(saveData));
     hasUnsavedChanges = false;
