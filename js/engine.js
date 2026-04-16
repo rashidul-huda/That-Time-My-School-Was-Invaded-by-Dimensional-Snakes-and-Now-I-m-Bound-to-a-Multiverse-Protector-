@@ -157,7 +157,11 @@ function completeLoad(loadSaveData) {
         currentStep = 0;
         stepHistory = [];
         persistentState = { bg: null, char: null, bgm: null };
-        gameVariables = {};
+        
+        if (activeChapterId === 1) {
+            gameVariables = {}; 
+        }
+        
         bgLayer.style.backgroundImage = 'none';
         charLayer.style.backgroundImage = 'none';
         bgmPlayer.pause();

@@ -62,7 +62,7 @@ var chapter1 = [
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'It raises its head, easily fifty feet in the air, and looks directly... at us.'
+        text: 'It raises its head, easily thirty feet in the air, and looks directly... at us.'
     },
     {
         speaker: 'Ren',

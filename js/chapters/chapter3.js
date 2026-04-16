@@ -163,7 +163,7 @@ var chapter3 = [
                 setVar: { acidObtained: false }
             },
             { 
-                text: '"Grab the acid! If it breaks through, we throw everything we have at its eyes!"', 
+                text: '"Grab the acid! If it breaks through, we throw everything we have at it!"', 
                 nextStepOffset: 4,
                 setVar: { acidObtained: true }
             }
@@ -183,13 +183,13 @@ var chapter3 = [
         bg: 'assets/chapter3/backgrounds/lab_fume_hood_dead_end.webp',
         char: '',
         speaker: 'Ren (Internal)',
-        text: 'I rush to the back of the room, tearing open the fume hood cabinets. Kaito is right. The exhaust pipes are barely wide enough for a cat, let alone a person. It\'s a dead end.',
+        text: 'I rush to the back of the room, tearing open the fume hood cabinet. Kaito is right. The exhaust pipe is barely wide enough for a cat, let alone a person. It\'s a dead end.',
         jumpTo: 39
     },
     {
         char: '',
         speaker: 'Ren',
-        text: '"The chemical cabinets! Grab the sulfuric acid, the bleach—anything corrosive! If it gets in, we aim for the eyes!"'
+        text: '"The chemical cabinet! Grab the sulfuric acid, the bleach—anything corrosive! If it gets in, we aim at it!"'
     },
     {
         char: 'assets/chapter3/characters/sho_taller_guy/desperate_yelling.webp',
