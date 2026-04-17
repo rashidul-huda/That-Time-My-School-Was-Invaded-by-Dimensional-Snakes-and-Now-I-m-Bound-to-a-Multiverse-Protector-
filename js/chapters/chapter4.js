@@ -230,6 +230,7 @@ var chapter4 = [
         text: 'It thrashes wildly, blindly throwing its massive head backward.'
     },
     {
+        sfx: 'assets/chapter4/sound_effects/monster_shriek_agony.mp3',
         vfx: 'vfx-shake',
         speaker: 'Ren (Internal)',
         text: 'In its blind agony, the heavy, armored skull slams like a wrecking ball directly into the steel door from the inside of the lab.'
