@@ -469,7 +469,7 @@ var chapter4 = [
     {
         char: 'assets/chapter4/characters/sho_taller_guy/pale_seated_traumatized.webp',
         speaker: 'Ren (Internal)',
-        text: 'Sho doesn\'t even look like the same person. He sinks down, folding his legs and resting his hands on his knees. He\'s white as a sheet, just staring blankly at the pavement, unable to process what we just saw.'
+        text: 'Sho sinks down, folding his legs and resting his hands on his knees. That brief flash of relief he had in the lobby is entirely gone, replaced by a pale, hollow shock. He stares at the pavement, broken by what we just walked past.'
     },
     {
         char: 'assets/chapter4/characters/kaito_best_friend/staring_at_hands.webp',
@@ -477,6 +477,21 @@ var chapter4 = [
         text: 'And Kaito... Kaito just stands there, staring blankly at the blood covering his own hands.'
     },
     {
+        char: '',
+        speaker: 'Ren (Internal)',
+        text: 'We made it out. The sun is shining. We are still breathing.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'But as the dead silence of the street presses in on us, the horrifying truth finally settles over me.'
+    },
+    {
+        vfx: 'vfx-blackout',
+        speaker: 'Ren (Internal)',
+        text: 'The world we knew this morning is gone. And whoever we used to be... they died inside those walls too.'
+    },
+    {
+        bgm: '',
         speaker: '',
         text: '[CHAPTER 4 END]'
     }
