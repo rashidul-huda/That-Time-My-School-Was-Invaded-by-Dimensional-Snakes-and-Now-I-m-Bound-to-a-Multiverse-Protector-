@@ -3,7 +3,7 @@ var chapter3 = [
         bg: 'assets/chapter2/backgrounds/the_biology_lab_eerie_peace.webp',
         bgm: 'assets/chapter3/background_music/eerie_suspense_room_tone.mp3',
         speaker: 'Ren (Internal)',
-        text: 'The biology lab is dark. The only light bleeds through the small, frosted skylight above, casting long, eerie blue shadows across the metal tables and glass beakers. Kaito and I are leaning hard against the heavy steel door.'
+        text: 'The biology lab is dark. The only light bleeds through the wide, frosted skylight overhead, casting long, eerie blue shadows across the metal tables and glass beakers. Kaito and I are leaning hard against the heavy steel door.'
     },
     {
         char: 'assets/chapter3/characters/sho_taller_guy/gripping_scalpel.webp',

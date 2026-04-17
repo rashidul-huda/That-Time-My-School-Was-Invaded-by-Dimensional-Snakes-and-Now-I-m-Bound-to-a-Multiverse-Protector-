@@ -12,7 +12,7 @@ var chapter4 = [
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'The massive, obsidian snout of the beast blocks out the faint light from the hallway above.'
+        text: 'The massive, obsidian snout of the beast blocks out the faint light from the skylight above.'
     },
     {
         speaker: 'Ren (Internal)',
@@ -60,13 +60,13 @@ var chapter4 = [
         text: 'The snake doesn\'t even roar. It just twitches its head.'
     },
     {
+        sfx: 'assets/chapter4/sound_effects/heavy_wet_thud.mp3',
         vfx: 'vfx-shake',
         speaker: 'Ren (Internal)',
         text: 'The sheer force of the movement swats Sho out of the air like a fly.'
     },
     {
         char: 'assets/chapter4/characters/sho_taller_guy/unconscious_slumped.webp',
-        sfx: 'assets/chapter4/sound_effects/heavy_wet_thud.mp3',
         speaker: 'Ren (Internal)',
         text: 'He hits the hard concrete wall with a heavy, wet thud and slumps to the floor, unmoving.'
     },
