@@ -148,10 +148,12 @@ var chapter5 = [
         text: 'A heavy cargo helicopter hovers directly overhead, the deafening downdraft blowing debris across the terrified crowd. It carries a massive, reinforced steel cage slung beneath it, lowering it heavily to the street.'
     },
     {
+        char: 'assets/chapter5/characters/snake/being_carried.webp',
         speaker: '',
         text: 'Ground crews sprint forward, securing thick steel cables around the unconscious leviathan, using heavy mechanical winches to drag its sheer bulk into the open containment cell.'
     },
     {
+        char: '',
         bgm: '',
         speaker: '',
         text: 'Once the heavy doors lock tight, the helicopter hoists the cage back into the air, flying it away toward a heavily fortified facility on the horizon. The entire operation takes less than ten minutes.'
