@@ -143,7 +143,6 @@ var chapter5 = [
     {
         bg: 'assets/chapter5/backgrounds/securing_the_leviathan.webp',
         char: '',
-        sfx: 'assets/chapter5/sound_effects/steel_cage_clanging.mp3',
         speaker: '',
         text: 'A heavy cargo helicopter hovers directly overhead, the deafening downdraft blowing debris across the terrified crowd. It carries a massive, reinforced steel cage slung beneath it, lowering it heavily to the street.'
     },
@@ -156,6 +155,7 @@ var chapter5 = [
         char: '',
         bgm: '',
         speaker: '',
+        sfx: 'assets/chapter5/sound_effects/steel_cage_clanging.mp3',
         text: 'Once the heavy doors lock tight, the helicopter hoists the cage back into the air, flying it away toward a heavily fortified facility on the horizon. The entire operation takes less than ten minutes.'
     },
     {
