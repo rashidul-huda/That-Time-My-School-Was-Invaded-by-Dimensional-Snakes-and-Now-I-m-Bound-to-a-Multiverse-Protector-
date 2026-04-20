@@ -313,6 +313,66 @@ var chapter5 = [
         text: 'It reminds me that I\'m not alone in this new world, and that makes it just a little bit easier to breathe.'
     },
     {
+        char: '',
+        bg: 'assets/chapter5/backgrounds/ren_bedroom_afternoon.webp',
+        speaker: '',
+        text: 'A quiet suburban bedroom. The next afternoon.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'I\'m lying on the floor of my bedroom, staring at the ceiling.'
+    },
+    {
+        sfx: 'assets/chapter5/sound_effects/muffled_tv_broadcast_drone.mp3',
+        speaker: 'Ren (Internal)',
+        text: 'The TV is humming softly in the background, a reporter droning on with yet another update about the capacity limits of the new containment zones.'
+    },
+    {
+        speaker: 'Mom',
+        text: '(From downstairs) "Ren! Can you run down to the corner store? We\'re completely out of cooking oil and salt!"'
+    },
+    {
+        speaker: 'Ren',
+        text: '"Yeah, Mom! I\'m on it!"'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'I grab my jacket and my wallet. As I head for the front door, I realize I should probably swing by Kaito\'s place on the way back to check on him.'
+    },
+    {
+        sfx: 'assets/chapter5/sound_effects/front_door_open_close.mp3',
+        speaker: '',
+        text: 'The front door opens and shuts.'
+    },
+    {
+        bg: 'assets/chapter5/backgrounds/quiet_suburban_street_sunny.webp',
+        bgm: 'assets/chapter5/background_music/fragile_new_normal.mp3',
+        speaker: 'Ren (Internal)',
+        text: 'I step out. The suburban neighborhood is incredibly quiet. The sun is shining, the cicadas are buzzing, and Mrs. Sato\'s flowers are blooming across the street.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'But it\'s a fragile, breathless kind of quiet. There is a heavy, unspoken tension hanging thick in the air.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'I look up at the clear blue sky.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'The old world didn\'t end in fire and brimstone.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'It just adapted, built bigger cages, and learned to walk a little more quietly.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'I pull my jacket tight and start walking down the street, stepping into the new normal.'
+    },
+    {
+        vfx: 'vfx-blackout',
+        bgm: '',
         speaker: '',
         text: '[CHAPTER 5 END]'
     }
