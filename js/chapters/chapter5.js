@@ -248,6 +248,71 @@ var chapter5 = [
         text: 'And watching his parents move safely around him in the warm light—he knows that\'s perfectly okay.'
     },
     {
+        char: '',
+        bg: 'assets/chapter5/backgrounds/mountain_road_twilight.webp',
+        speaker: '',
+        text: 'A winding mountain road overlooking the sprawling city. The sky is a beautiful, melancholic twilight orange.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'In the distance, far below us, the blinking red lights of the heavy cargo helicopters form a steady, chilling line across the sky.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'They are constantly ferrying massive steel cages toward the new containment facility built right on the edge of the city limits.'
+    },
+    {
+        char: 'assets/chapter5/characters/kaito_best_friend/sense_of_wonder_expression.webp',
+        speaker: 'Kaito',
+        text: '"Look at them go. It\'s like a twisted conveyor belt."'
+    },
+    {
+        speaker: 'Ren',
+        text: '"Yeah. One week. If you told me a month ago we\'d be out here watching giant snakes getting airlifted like zoo animals, I would have told you to lay off the energy drinks."'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'We don\'t talk about the school. We don\'t talk about the blood on the stairs or the mangled bodies in the lobby.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'We just talk about how completely bizarre it is that the world took a hit like this and just kept right on spinning.'
+    },
+    {
+        char: 'assets/chapter5/characters/kaito_best_friend/grinning.webp',
+        speaker: 'Kaito',
+        text: '(Laughing softly) "Hey, at least we\'re famous now, right?"'
+    },
+    {
+        speaker: 'Kaito',
+        text: '"Did you see that morning broadcast? They practically called us tactical geniuses for barricading ourselves in the lab."'
+    },
+    {
+        speaker: 'Ren',
+        text: '"Tactical geniuses? Kaito, my hands were shaking so bad I almost dropped the acid bottle before I threw it."'
+    },
+    {
+        speaker: 'Ren',
+        text: '"And then we literally had to tiptoe past two sleeping leviathans in the courtyard trying not to breathe too loud."'
+    },
+    {
+        char: 'assets/chapter5/characters/kaito_best_friend/teasing.webp',
+        speaker: 'Kaito',
+        text: '"Hey, tiptoeing is a highly respected tactical maneuver!"'
+    },
+    {
+        speaker: 'Kaito',
+        text: '"I\'m just saying, if we ever go back to school, I expect a much better locker for our heroic efforts."'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'I let out a genuine laugh. It feels good to just sit here and tease each other, finding a tiny sliver of lightheartedness in the middle of all this madness.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'It reminds me that I\'m not alone in this new world, and that makes it just a little bit easier to breathe.'
+    },
+    {
         speaker: '',
         text: '[CHAPTER 5 END]'
     }
