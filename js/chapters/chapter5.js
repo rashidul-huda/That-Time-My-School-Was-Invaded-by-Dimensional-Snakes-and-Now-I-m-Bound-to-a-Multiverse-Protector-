@@ -78,7 +78,7 @@ var chapter5 = [
         bg: 'assets/chapter5/backgrounds/outdoor_market_bustling.webp',
         bgm: 'assets/chapter5/background_music/market_bustle_ambient.mp3',
         speaker: '',
-        text: 'The bustling noise of a crowded outdoor market under the midday sun. Vendors are shouting prices, and people are nervously shuffling between stalls, carrying grocery bags, trying desperately to maintain a facade of a normal Tuesday.'
+        text: 'The bustling noise of a crowded outdoor market under the midday sun. Vendors are shouting prices, and people are nervously shuffling between stalls, carrying grocery bags, trying desperately to maintain a facade of a normal Thursday.'
     },
     {
         bgm: 'assets/chapter5/background_music/market_panic_action.mp3',
@@ -157,6 +157,95 @@ var chapter5 = [
         speaker: '',
         sfx: 'assets/chapter5/sound_effects/steel_cage_clanging.mp3',
         text: 'Once the heavy doors lock tight, the helicopter hoists the cage back into the air, flying it away toward a heavily fortified facility on the horizon. The entire operation takes less than ten minutes.'
+    },
+    {
+        bg: 'assets/chapter5/backgrounds/apartment_courtyard_day.webp',
+        bgm: 'assets/chapter5/background_music/uneasy_peace.mp3',
+        speaker: '',
+        text: 'A quiet courtyard of a high-rise apartment complex.'
+    },
+    {
+        speaker: '',
+        text: 'Yuta sits on a bench, surrounded by neighbors and kids from his complex. They look at him with a mix of deep concern and morbid curiosity.'
+    },
+    {
+        char: 'assets/chapter5/characters/yuta_glasses_kid/polite_reassuring_smile.webp',
+        speaker: '',
+        text: 'He recounts the story with a steady voice, answering their questions, offering a polite reassuring smile—showing them he\'s okay. To the crowd, he looks perfectly fine. Resilient, even.'
+    },
+    {
+        speaker: '',
+        text: 'His parents stand quietly behind him. They notice the subtle, lingering tension hidden deep behind his eyes—the kind of shadow that doesn\'t just wash away in a week.'
+    },
+    {
+        speaker: 'Yuta',
+        text: '"And then... the ceiling just caved in. It came right through the skylight."'
+    },
+    {
+        char: '',
+        bg: 'assets/chapter5/backgrounds/mika_darkened_bedroom.webp',
+        speaker: '',
+        text: 'A quiet, darkened bedroom. The only light is the cold glow of a phone screen.'
+    },
+    {
+        char: 'assets/chapter5/characters/mika_phone_girl/forced_selfie_smile.webp',
+        sfx: 'assets/chapter5/sound_effects/phone_camera_shutter.mp3',
+        speaker: '',
+        text: 'Mika stares at the selfie on her screen. Her eyes look tired. The smile looks forced. She hits delete.'
+    },
+    {
+        sfx: 'assets/chapter5/sound_effects/phone_camera_shutter.mp3',
+        speaker: '',
+        text: 'She adjusts her hair. Forces a wider smile. Takes another.'
+    },
+    {
+        speaker: '',
+        text: 'She stares at it. Delete. She is desperately looking for the girl she was just a week ago. She can\'t find her in the digital reflection.'
+    },
+    {
+        char: 'assets/chapter5/characters/mika_phone_girl/sho_notification.webp',
+        sfx: 'assets/chapter5/sound_effects/text_message_chime.mp3',
+        speaker: '',
+        text: 'A notification banner drops from the top of her screen.'
+    },
+    {
+        char: 'assets/chapter5/characters/mika_phone_girl/exhausted_dropping_smile.webp',
+        speaker: '',
+        text: 'She drops the fake smile. Lets out a shaky breath.'
+    },
+    {
+        char: 'assets/chapter5/characters/mika_phone_girl/blurry_selfie.webp',
+        sfx: 'assets/chapter5/sound_effects/phone_camera_shutter.mp3',
+        speaker: '',
+        text: 'She types back: "Doing better. Trying to study." Attaches a blurry photo of her open textbooks. Sends it.'
+    },
+    {
+        char: '',
+        bg: 'assets/chapter5/backgrounds/family_bakery_interior.webp',
+        speaker: '',
+        text: 'The warm, flour-dusted interior of a small family bakery. Low light. The smell of bread already in the air.'
+    },
+    {
+        sfx: 'assets/chapter5/sound_effects/dough_thwack.mp3',
+        speaker: '',
+        text: 'The rhythmic, heavy thwack of dough hitting a wooden table.'
+    },
+    {
+        char: 'assets/chapter5/characters/sho_taller_guy/kneading_dough_relaxed.webp',
+        speaker: '',
+        text: 'Sho kneads a massive mound of bread dough. Again. Again. The school is closed indefinitely—he has been here every morning before sunrise.'
+    },
+    {
+        speaker: '',
+        text: 'He has dark circles under his eyes. But his shoulders are relaxed.'
+    },
+    {
+        speaker: '',
+        text: 'The simple, repetitive rhythm of it is keeping the nightmares away. He is entirely out of the fight now.'
+    },
+    {
+        speaker: '',
+        text: 'And watching his parents move safely around him in the warm light—he knows that\'s perfectly okay.'
     },
     {
         speaker: '',
