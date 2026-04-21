@@ -158,12 +158,12 @@ var chapter3 = [
     {
         choices: [
             { 
-                text: '"Check the vents! There has to be a ventilation shaft for the chemical hoods!"', 
+                text: '"Check the vent! There has to be a ventilation shaft for the chemical hood!"',
                 nextStepOffset: 1,
                 setVar: { acidObtained: false }
             },
             { 
-                text: '"Grab the acid! If it breaks through, we throw everything we have at it!"', 
+                text: '"Grab the acid! If it breaks through, we throw everything we have at it!"',
                 nextStepOffset: 4,
                 setVar: { acidObtained: true }
             }

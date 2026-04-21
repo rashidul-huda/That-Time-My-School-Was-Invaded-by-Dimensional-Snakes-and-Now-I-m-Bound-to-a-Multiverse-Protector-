@@ -342,7 +342,7 @@ var chapter4 = [
     {
         char: 'assets/chapter4/characters/sho_taller_guy/relieved.webp',
         speaker: 'Sho',
-        text: '"We\'re out. We can make it to the street..."'
+        text: '(Panting) "We\'re out. We can make it to the street..."'
     },
     {
         char: '',
