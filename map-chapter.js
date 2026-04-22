@@ -9,7 +9,7 @@ const fs = require("fs");
 const path = require("path");
 
 // --- CONFIGURATION ---
-const CHAPTER_INDEX = 5; 
+const CHAPTER_INDEX = 6; 
 // ---------------------
 
 const TARGET_DIR = path.join("assets", `chapter${CHAPTER_INDEX}`);
