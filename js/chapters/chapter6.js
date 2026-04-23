@@ -1,6 +1,7 @@
 var chapter6 = [
     {
         bg: 'assets/chapter6/backgrounds/suburban_street_sunny.webp',
+        bgm: 'assets/chapter6/background_music/deceptive_peace.mp3',
         speaker: 'Ren (Internal)',
         text: 'The walk to the corner store is almost aggressively normal.'
     },
@@ -62,6 +63,7 @@ var chapter6 = [
     },
     {
         vfx: 'vfx-shake',
+        bgm: 'assets/chapter6/background_music/sudden_dread.mp3',
         speaker: 'Shopkeeper',
         text: '(From inside the store, voice trembling) "Could it be...?"'
     },
@@ -169,6 +171,7 @@ var chapter6 = [
         text: 'I take a deep breath. I\'ve done this before.'
     },
     {
+        bgm: 'assets/chapter6/background_music/stealth_heartbeat.mp3',
         speaker: 'Ren (Internal)',
         text: 'I slowly edge my way along the opposite side of the street, giving the massive, rising and falling black coils as much space as the road allows.'
     },
@@ -241,6 +244,7 @@ var chapter6 = [
     },
     {
         vfx: 'vfx-shake',
+        bgm: 'assets/chapter6/background_music/military_intervention.mp3',
         char: 'assets/chapter6/characters/kaito_best_friend/realization_helicopters_arrival.webp',
         speaker: 'Kaito',
         text: '"They\'re here."'
@@ -306,6 +310,7 @@ var chapter6 = [
     },
     {
         bg: 'assets/chapter6/backgrounds/kaito_bedroom_peeking.webp',
+        bgm: 'assets/chapter6/background_music/aftermath_calm.mp3',
         char: 'assets/chapter6/characters/kaito_best_friend/vulnerable_shaking_voice.webp',
         speaker: 'Kaito',
         text: '(Voice shaking slightly) "It was so fast, Ren. It came out of nowhere and just started tearing through the fences. We just locked the doors, closed the curtains, and hid under the dining table."'
@@ -346,6 +351,7 @@ var chapter6 = [
         jumpTo: 86
     },
     {
+        bgm: 'assets/chapter6/background_music/crushing_guilt.mp3',
         speaker: 'Ren (Internal)',
         text: 'My legs refuse to move forward.'
     },
@@ -385,6 +391,7 @@ var chapter6 = [
     },
     {
         bg: 'assets/chapter6/backgrounds/ren_driveway.webp',
+        bgm: 'assets/chapter6/background_music/deceptive_peace.mp3',
         speaker: 'Ren (Internal)',
         text: 'I finally turn the corner onto my own street.'
     },
@@ -448,6 +455,7 @@ var chapter6 = [
     },
     {
         char: 'assets/chapter6/characters/unknown_girl/dead_blank_shell.webp',
+        bgm: '',
         speaker: 'Ren (Internal)',
         text: 'The girl pauses. She tilts her head slightly, her polite smile slowly melting away into a dead, chilling blankness.'
     },
@@ -462,6 +470,7 @@ var chapter6 = [
     {
         char: 'assets/chapter6/characters/unknown_girl/lunging_energy_dagger.webp',
         vfx: 'vfx-shake',
+        bgm: 'assets/chapter6/background_music/epic_combat_clash.mp3',
         speaker: 'Ren (Internal)',
         text: 'Before I can even blink, she lunges forward.'
     },
