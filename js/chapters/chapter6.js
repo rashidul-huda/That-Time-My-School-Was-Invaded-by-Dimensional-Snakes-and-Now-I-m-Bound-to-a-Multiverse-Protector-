@@ -63,7 +63,7 @@ var chapter6 = [
     {
         vfx: 'vfx-shake',
         speaker: 'Shopkeeper',
-        text: '"Could it be...?"'
+        text: '(From inside the store, voice trembling) "Could it be...?"'
     },
     {
         speaker: 'Ren (Internal)',
@@ -105,7 +105,7 @@ var chapter6 = [
     {
         choices: [
             { text: '"I have to check on him. I can\'t leave not knowing."', nextStepOffset: 1 },
-            { text: '"I can\'t do this. I have to go home."', nextStepOffset: 55 }
+            { text: '"I can\'t do this. I have to go home."', nextStepOffset: 54 }
         ]
     },
     {
@@ -136,11 +136,11 @@ var chapter6 = [
         bg: 'assets/chapter6/backgrounds/neighbor_boundary_wall_crushed.webp',
         char: 'assets/chapter6/characters/snake/sleeping_leviathan.webp',
         speaker: 'Ren (Internal)',
-        text: 'Sprawled across the street and half-spilled into a neighbor\'s property is a massive, black leviathan.'
+        text: 'Sprawled across the street and half-spilled into a nearby property is a massive, black leviathan.'
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'Its heavy upper half has completely crushed the concrete boundary wall of the house next door to Kaito\'s, while its thick, bloated lower coils rest heavily on the cracked asphalt of the road.'
+        text: 'Its heavy upper half has completely crushed a concrete boundary wall in the vicinity, while its thick, bloated lower coils rest heavily on the cracked asphalt of the road.'
     },
     {
         speaker: 'Ren (Internal)',
@@ -149,7 +149,7 @@ var chapter6 = [
     {
         char: 'assets/chapter6/characters/neighbor/frantic_whispering.webp',
         speaker: 'Neighbor',
-        text: '"Hey! Kid! Get out of here! The Containment Team is on their way, don\'t wake it up!"'
+        text: '(Whispering frantically from behind a cracked window across the street) "Hey! Kid! Get out of here! The Containment Team is on their way, don\'t wake it up!"'
     },
     {
         char: '',
@@ -177,7 +177,7 @@ var chapter6 = [
         text: 'The neighbors across the street are watching me with wide, terrified eyes, clearly thinking I am about to get us all killed.'
     },
     {
-        bg: 'assets/chapter6/backgrounds/kaito_house_entryway.webp',
+        bg: 'assets/chapter6/backgrounds/kaito_front_door.webp',
         speaker: 'Ren (Internal)',
         text: 'I carefully step past the creature\'s massive tail and finally reach Kaito\'s front door. I don\'t dare knock.'
     },
@@ -212,17 +212,18 @@ var chapter6 = [
         text: 'He grabs my shirt, hauls me violently inside, and shuts the door with a soft click.'
     },
     {
+        bg: 'assets/chapter6/backgrounds/kaito_house_entryway.webp',
         speaker: 'Ren (Internal)',
         text: 'The genkan floor is littered with abandoned slippers and a toppled bag, while fresh cracks split across the walls like broken teeth— a stark reminder of how close the beast actually came.'
     },
     {
         char: 'assets/chapter6/characters/kaito_best_friend/furious_whispering.webp',
         speaker: 'Kaito',
-        text: '"Are you completely insane?! What are you doing here?!"'
+        text: '(Whispering, furious but relieved) "Are you completely insane?! What are you doing here?!"'
     },
     {
         speaker: 'Ren',
-        text: '"I heard the roar from the store. I saw the street. I... I had to make sure you were okay."'
+        text: '(Breathing hard, whispering back) "I heard the roar from the store. I saw the street. I... I had to make sure you were okay."'
     },
     {
         char: 'assets/chapter6/characters/kaito_best_friend/heavy_exhaustion.webp',
@@ -239,6 +240,7 @@ var chapter6 = [
     },
     {
         vfx: 'vfx-shake',
+        char: 'assets/chapter6/characters/kaito_best_friend/realization_helicopters_arrival.webp',
         speaker: 'Kaito',
         text: '"They\'re here."'
     },
@@ -246,7 +248,7 @@ var chapter6 = [
         bg: 'assets/chapter6/backgrounds/kaito_bedroom_peeking.webp',
         char: '',
         speaker: 'Ren (Internal)',
-        text: 'We run upstairs to Kaito\'s bedroom.'
+        text: 'We run upstairs to Kaito\'s bedroom. I realize my knuckles are completely white from death-gripping my grocery bag, so I set it down by the door.'
     },
     {
         speaker: 'Ren (Internal)',
@@ -263,7 +265,7 @@ var chapter6 = [
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'The beast thrashes wildly, pulling its massive head out from the neighbor\'s ruined wall and rearing up toward the sky, revealing its thick, bloated belly.'
+        text: 'The beast thrashes wildly, pulling its massive head out from the ruined boundary wall and rearing up toward the sky, revealing its thick, bloated belly.'
     },
     {
         vfx: 'vfx-shake',
@@ -285,7 +287,7 @@ var chapter6 = [
     {
         char: 'assets/chapter6/characters/kaito_best_friend/staring_out_window_in_disbelief.webp',
         speaker: 'Kaito',
-        text: '"They did it. They actually did it."'
+        text: '(Staring out the window) "They did it. They actually did it."'
     },
     {
         bg: 'assets/chapter6/backgrounds/military_cleanup_street.webp',
@@ -304,7 +306,7 @@ var chapter6 = [
     {
         char: 'assets/chapter6/characters/kaito_best_friend/vulnerable_shaking_voice.webp',
         speaker: 'Kaito',
-        text: '"It was so fast, Ren. It came out of nowhere and just started tearing through the fences. We just locked the doors, closed the curtains, and hid under the dining table."'
+        text: '(Voice shaking slightly) "It was so fast, Ren. It came out of nowhere and just started tearing through the fences. We just locked the doors, closed the curtains, and hid under the dining table."'
     },
     {
         speaker: 'Kaito',
@@ -338,10 +340,8 @@ var chapter6 = [
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'I can\'t bring myself to walk back through that destroyed street.'
-    },
-    {
-        jumpTo: 88
+        text: 'I can\'t bring myself to walk back through that destroyed street.',
+        jumpTo: 86
     },
     {
         speaker: 'Ren (Internal)',
@@ -382,9 +382,6 @@ var chapter6 = [
         text: 'I take a massive detour, sticking to the quietest residential roads I can find, absolutely desperate to get back to the safety of my own house.'
     },
     {
-        jumpTo: 88
-    },
-    {
         bg: 'assets/chapter6/backgrounds/ren_driveway.webp',
         speaker: 'Ren (Internal)',
         text: 'I finally turn the corner onto my own street.'
@@ -412,7 +409,7 @@ var chapter6 = [
     },
     {
         speaker: 'Unknown Girl',
-        text: '"Oh! Hello again. Actually, I was wondering... do you live here?"'
+        text: '(Turning to face him, smiling politely) "Oh! Hello again. Actually, I was wondering... do you live here?"'
     },
     {
         speaker: 'Ren',
@@ -534,7 +531,6 @@ var chapter6 = [
         text: 'They lock eyes, a silent, deadly understanding passing between them.'
     },
     {
-        char: '',
         speaker: 'Ren (Internal)',
         text: 'I fall back onto the concrete, my legs trembling so violently they completely give out.'
     },
@@ -547,6 +543,9 @@ var chapter6 = [
         text: 'I am utterly lost, paralyzed by fear, staring at a war that just arrived at my front gate.'
     },
     {
+        char: '',
+        vfx: 'vfx-blackout',
+        bgm: '',
         speaker: '',
         text: '[CHAPTER 6 END]'
     }
