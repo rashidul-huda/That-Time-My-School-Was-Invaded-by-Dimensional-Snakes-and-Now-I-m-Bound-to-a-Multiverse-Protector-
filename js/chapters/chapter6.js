@@ -195,7 +195,7 @@ var chapter6 = [
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'Ten agonizing seconds pass. The doorknob slowly turns.'
+        text: 'Ten agonizing seconds pass. The door handle slowly turns down.'
     },
     {
         char: 'assets/chapter6/characters/kaito_best_friend/door_crack_terrified.webp',
@@ -212,6 +212,7 @@ var chapter6 = [
         text: 'He grabs my shirt, hauls me violently inside, and shuts the door with a soft click.'
     },
     {
+        char: '',
         bg: 'assets/chapter6/backgrounds/kaito_house_entryway.webp',
         speaker: 'Ren (Internal)',
         text: 'The genkan floor is littered with abandoned slippers and a toppled bag, while fresh cracks split across the walls like broken teeth— a stark reminder of how close the beast actually came.'
@@ -297,13 +298,14 @@ var chapter6 = [
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'They drop the massive steel cage, wrap the thick cables around the slumbering beast, and use the heavy winches to drag its sheer bulk into the cell.'
+        text: 'They drop the massive steel cage, wrap the thick cables around the felled beast, and use the heavy winches to drag its sheer bulk into the cell.'
     },
     {
         speaker: 'Ren (Internal)',
         text: 'Within minutes, the helicopter hoists the cage into the sky, leaving the neighborhood safe once again.'
     },
     {
+        bg: 'assets/chapter6/backgrounds/kaito_bedroom_peeking.webp',
         char: 'assets/chapter6/characters/kaito_best_friend/vulnerable_shaking_voice.webp',
         speaker: 'Kaito',
         text: '(Voice shaking slightly) "It was so fast, Ren. It came out of nowhere and just started tearing through the fences. We just locked the doors, closed the curtains, and hid under the dining table."'
@@ -364,12 +366,12 @@ var chapter6 = [
         text: 'Filled with a sickening mix of guilt and terror, I tighten my grip on the grocery bag, turn around, and practically sprint back the way I came.'
     },
     {
+        bg: 'assets/chapter6/backgrounds/hedge_hiding_spot.webp',
         vfx: 'vfx-shake',
         speaker: 'Ren (Internal)',
         text: 'I dive into a hedge just in time.'
     },
     {
-        bg: 'assets/chapter6/backgrounds/hedge_hiding_spot.webp',
         speaker: 'Ren (Internal)',
         text: 'Two massive, heavily armored Containment Team trucks barrel down the main road, their engines roaring as they speed toward the disaster zone.'
     },
@@ -465,7 +467,7 @@ var chapter6 = [
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'Her left hand shoots out, the tote bag slipping from her fingers and hitting the pavement, forgotten— a jagged, ethereal dagger of crackling purple-blue energy materializing in its place.'
+        text: 'Her left hand shoots out, the tote bag slipping from her fingers and hitting the pavement, forgotten— a jagged, ethereal dagger of crackling purple-white energy materializing in its place.'
     },
     {
         speaker: 'Ren (Internal)',
@@ -490,7 +492,6 @@ var chapter6 = [
     },
     {
         bg: 'assets/chapter6/backgrounds/ren_driveway_magical_sparks.webp',
-        char: '',
         speaker: 'Ren (Internal)',
         text: 'Sparks of violent energy rain down on the driveway, illuminating the dark silhouette of a massive, torn, scale-like cape fluttering wildly in the shockwave.'
     },
@@ -499,6 +500,8 @@ var chapter6 = [
         text: 'As the blinding sparks settle, my vision adjusts.'
     },
     {
+        bg: 'assets/chapter6/backgrounds/ren_driveway.webp',
+        char: 'assets/chapter6/characters/mysterious_protector/blocking_with_axe.webp',
         speaker: 'Ren (Internal)',
         text: 'Standing directly in front of me, with his back to me, is a man in a tight-fitting tactical outfit.'
     },
@@ -507,7 +510,6 @@ var chapter6 = [
         text: 'Short, wild curly hair sits thick atop his head.'
     },
     {
-        char: 'assets/chapter6/characters/mysterious_protector/blocking_with_axe.webp',
         speaker: 'Ren (Internal)',
         text: 'In his hands, he wields a massive, ethereal weapon—a terrifying fusion of a broadsword and a heavy axe, glowing with a fierce, blinding light.'
     },
