@@ -422,6 +422,31 @@ body {
     }
 }
 
+@keyframes bounceRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(8px); }
+}
+
+#btn-forward.bouncing {
+    animation: bounceRight 1s infinite ease-in-out;
+    border-color: #ffd700;
+    color: #ffd700;
+}
+
+#btn-auto {
+    padding: 5px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#btn-auto.active {
+    background-color: #ffd700;
+    color: #000;
+    border-color: #ffd700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
 @media screen and (orientation: landscape) and (max-width: 950px) {
     #game-container {
         border-radius: 0;
@@ -448,15 +473,9 @@ body {
     
     #nav-controls { bottom: 15px; width: 92%; }
     .nav-chevron { font-size: 16px; padding: 5px 25px; }
-}
 
-@keyframes bounceRight {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(8px); }
-}
-
-#btn-forward.bouncing {
-    animation: bounceRight 1s infinite ease-in-out;
-    border-color: #ffd700;
-    color: #ffd700;
+    #btn-auto {
+        padding: 5px 20px;
+        font-size: 14px;
+    }
 }

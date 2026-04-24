@@ -24,6 +24,7 @@ const btnContinue = document.getElementById('btn-continue');
 const gameContainer = document.getElementById('game-container');
 const clickToStart = document.getElementById('click-to-start');
 const fullscreenBtn = document.getElementById('fullscreen-btn');
+const btnAuto = document.getElementById('btn-auto');
 
 let activeChapterId = 1;
 let storyScript = [];
@@ -41,6 +42,9 @@ let isTyping = false;
 let typeInterval = null;
 let fullCurrentText = '';
 let currentTextIndex = 0;
+
+let isAutoPlay = false;
+let autoPlayTimer = null;
 
 function playMenuMusic() {
     if (!bgmPlayer.src.includes('before_the_pressure_breaks.mp3')) {
@@ -149,6 +153,13 @@ function completeLoad(loadSaveData) {
     uiLayer.style.display = 'block';
     fullscreenBtn.classList.add('in-game');
 
+    if (isAutoPlay) {
+        btnAuto.classList.add('active');
+    } else {
+        btnAuto.classList.remove('active');
+    }
+    clearTimeout(autoPlayTimer);
+
     if (loadSaveData) {
         currentStep = loadSaveData.currentStep;
         stepHistory = loadSaveData.stepHistory;
@@ -173,6 +184,33 @@ function completeLoad(loadSaveData) {
         hasUnsavedChanges = false;
 
         renderStep(storyScript[currentStep], false);
+    }
+}
+
+function attemptAutoAdvance() {
+    if (!isAutoPlay) return;
+
+    if (sfxPlayer.src && !sfxPlayer.paused && !sfxPlayer.ended) {
+        sfxPlayer.onended = () => {
+            sfxPlayer.onended = null;
+            if (isAutoPlay) advanceStory(true);
+        };
+    } else {
+        advanceStory(true);
+    }
+}
+
+function toggleAutoPlay() {
+    isAutoPlay = !isAutoPlay;
+    if (isAutoPlay) {
+        btnAuto.classList.add('active');
+        if (!isTyping && choicesContainer.style.display !== 'flex' && dialogueBox.style.display === 'block') {
+            attemptAutoAdvance();
+        }
+    } else {
+        btnAuto.classList.remove('active');
+        clearTimeout(autoPlayTimer);
+        sfxPlayer.onended = null;
     }
 }
 
@@ -208,9 +246,22 @@ function finishTyping() {
 
     const fwdBtn = document.getElementById('btn-forward');
     if(fwdBtn) fwdBtn.classList.add('bouncing');
+
+    if (isAutoPlay && choicesContainer.style.display !== 'flex') {
+        const delay = Math.max(1000, fullCurrentText.length * 25);
+        autoPlayTimer = setTimeout(attemptAutoAdvance, delay);
+    }
 }
 
-function advanceStory() {
+function advanceStory(fromAuto = false) {
+    clearTimeout(autoPlayTimer);
+    sfxPlayer.onended = null;
+
+    if (fromAuto !== true && isAutoPlay) {
+        isAutoPlay = false;
+        btnAuto.classList.remove('active');
+    }
+
     if (isTyping) {
         finishTyping();
         return;
@@ -241,6 +292,14 @@ function advanceStory() {
 }
 
 function goBack() {
+    clearTimeout(autoPlayTimer);
+    sfxPlayer.onended = null;
+
+    if (isAutoPlay) {
+        isAutoPlay = false;
+        btnAuto.classList.remove('active');
+    }
+
     if (isTyping) {
         finishTyping();
         return;
@@ -348,7 +407,7 @@ function renderStep(step, isGoingBack) {
             });
 
             if (step.vfx.includes('vfx-blackout') && step.text === '...') {
-                 setTimeout(() => { vfxLayer.classList.remove('vfx-blackout'); advanceStory(); }, 1000);
+                 setTimeout(() => { vfxLayer.classList.remove('vfx-blackout'); advanceStory(isAutoPlay); }, 1000);
                  dialogueBox.style.display = 'none';
                  return;
             }
@@ -361,6 +420,7 @@ function renderStep(step, isGoingBack) {
     }
 
     if (step.choices) {
+        clearTimeout(autoPlayTimer);
         dialogueBox.style.display = 'none';
         choicesContainer.innerHTML = '';
         choicesContainer.style.display = 'flex';
@@ -456,6 +516,7 @@ function saveGame() {
 
 function returnToMenu() {
     if (!hasUnsavedChanges || confirm("Are you sure you want to leave? Unsaved progress will be lost.")) {
+        clearTimeout(autoPlayTimer);
         uiLayer.style.display = 'none';
         bgLayer.style.backgroundImage = 'none';
         charLayer.style.backgroundImage = 'none';
@@ -477,6 +538,15 @@ function updateFullscreenButton() {
     }
 }
 
+function dismissStartScreen() {
+    if (clickToStart.style.display === 'none') return;
+    clickToStart.style.opacity = '0';
+    setTimeout(() => {
+        clickToStart.style.display = 'none';
+    }, 500);
+    playMenuMusic();
+}
+
 document.addEventListener('fullscreenchange', updateFullscreenButton);
 document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
 document.addEventListener('MSFullscreenChange', updateFullscreenButton);
@@ -493,8 +563,12 @@ document.getElementById('btn-continue').onclick = () => {
 };
 
 document.getElementById('btn-back').onclick = goBack;
-document.getElementById('btn-forward').onclick = advanceStory;
-dialogueBox.onclick = advanceStory;
+document.getElementById('btn-forward').onclick = () => advanceStory(false);
+btnAuto.onclick = (e) => {
+    e.stopPropagation();
+    toggleAutoPlay();
+};
+dialogueBox.onclick = () => advanceStory(false);
 document.getElementById('save-btn').onclick = saveGame;
 document.getElementById('leave-btn').onclick = returnToMenu;
 
@@ -540,15 +614,6 @@ fullscreenBtn.onclick = () => {
     }
 };
 
-function dismissStartScreen() {
-    if (clickToStart.style.display === 'none') return;
-    clickToStart.style.opacity = '0';
-    setTimeout(() => {
-        clickToStart.style.display = 'none';
-    }, 500);
-    playMenuMusic();
-}
-
 clickToStart.addEventListener('click', dismissStartScreen);
 
 document.addEventListener('keydown', (e) => {
@@ -581,6 +646,9 @@ document.addEventListener('keydown', (e) => {
         } else if (e.code === 'ArrowLeft') {
             e.preventDefault();
             goBack();
+        } else if (e.code === 'KeyA') {
+            e.preventDefault();
+            toggleAutoPlay();
         }
     } else {
         if (e.code === 'Space' || e.code === 'ArrowRight' || e.code === 'Enter') {
@@ -589,6 +657,9 @@ document.addEventListener('keydown', (e) => {
         } else if (e.code === 'ArrowLeft') {
             e.preventDefault();
             goBack();
+        } else if (e.code === 'KeyA') {
+            e.preventDefault();
+            toggleAutoPlay();
         }
     }
 });
