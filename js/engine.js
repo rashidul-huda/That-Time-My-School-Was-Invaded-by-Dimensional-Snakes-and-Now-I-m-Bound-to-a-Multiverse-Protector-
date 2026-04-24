@@ -1,7 +1,7 @@
 const SAVE_KEY = 'snakesVN_saveData';
 const UNLOCKS_KEY = 'snakesVN_unlocks';
 const PRELOAD_STEPS = 4;
-const TOTAL_CHAPTERS = 6; 
+const TOTAL_CHAPTERS = 6;
 
 const bgmPlayer = new Audio();
 bgmPlayer.loop = true;
@@ -57,12 +57,12 @@ function initMenu() {
 
     let unlocked = JSON.parse(localStorage.getItem(UNLOCKS_KEY)) || [1];
     chapterList.innerHTML = '';
-    
+
     for (let chId = 1; chId <= TOTAL_CHAPTERS; chId++) {
         const btn = document.createElement('button');
         btn.className = 'chapter-btn';
         btn.innerText = `Chapter ${chId}`;
-        
+
         if (unlocked.includes(chId)) {
             btn.classList.add('unlocked');
             btn.onclick = () => startLoadProcess(chId);
@@ -80,21 +80,21 @@ function loadChapterScript(chapterId, callback) {
     }
 
     loadingText.innerText = "Downloading Chapter Data...";
-    
+
     const script = document.createElement('script');
     script.src = `js/chapters/chapter${chapterId}.js`;
-    
+
     script.onload = () => {
         loadingText.innerText = "Loading Assets...";
         callback();
     };
-    
+
     script.onerror = () => {
         alert("Failed to load chapter data. Please check your connection.");
         loadingScreen.style.display = 'none';
         mainMenu.style.display = 'flex';
     };
-    
+
     document.body.appendChild(script);
 }
 
@@ -103,16 +103,16 @@ function preloadAhead(startIndex) {
     const endIndex = Math.min(startIndex + PRELOAD_STEPS, storyScript.length);
     for (let i = startIndex; i < endIndex; i++) {
         const step = storyScript[i];
-        
-        if (step.bg) { 
-            const img = new Image(); 
-            img.src = step.bg; 
+
+        if (step.bg) {
+            const img = new Image();
+            img.src = step.bg;
         }
-        if (step.char) { 
-            const img = new Image(); 
-            img.src = step.char; 
+        if (step.char) {
+            const img = new Image();
+            img.src = step.char;
         }
-        
+
         if (i > startIndex) {
             if (step.bgm) {
                 const a = new Audio();
@@ -129,15 +129,15 @@ function preloadAhead(startIndex) {
 function startLoadProcess(chapterId, loadSaveData = null) {
     mainMenu.style.display = 'none';
     loadingScreen.style.display = 'flex';
-    
+
     loadChapterScript(chapterId, () => {
         activeChapterId = chapterId;
         storyScript = window['chapter' + chapterId];
-        
+
         let startStep = loadSaveData ? loadSaveData.currentStep : 0;
-        
+
         preloadAhead(startStep);
-        
+
         setTimeout(() => {
             completeLoad(loadSaveData);
         }, 600);
@@ -148,7 +148,7 @@ function completeLoad(loadSaveData) {
     loadingScreen.style.display = 'none';
     uiLayer.style.display = 'block';
     fullscreenBtn.classList.add('in-game');
-    
+
     if (loadSaveData) {
         currentStep = loadSaveData.currentStep;
         stepHistory = loadSaveData.stepHistory;
@@ -156,22 +156,22 @@ function completeLoad(loadSaveData) {
         gameVariables = loadSaveData.gameVariables || {};
         applyPersistentState();
         hasUnsavedChanges = false;
-        renderStep(storyScript[currentStep], false); 
+        renderStep(storyScript[currentStep], false);
     } else {
         currentStep = 0;
         stepHistory = [];
         persistentState = { bg: null, char: null, bgm: null };
-        
+
         if (activeChapterId === 1) {
-            gameVariables = {}; 
+            gameVariables = {};
         }
-        
+
         bgLayer.style.backgroundImage = 'none';
         charLayer.style.backgroundImage = 'none';
         bgmPlayer.pause();
-        
-        hasUnsavedChanges = false; 
-        
+
+        hasUnsavedChanges = false;
+
         renderStep(storyScript[currentStep], false);
     }
 }
@@ -182,7 +182,7 @@ function startTyping(text) {
     dialogueText.textContent = '';
     currentTextIndex = 0;
     isTyping = true;
-    
+
     const fwdBtn = document.getElementById('btn-forward');
     if(fwdBtn) fwdBtn.classList.remove('bouncing');
 
@@ -194,7 +194,7 @@ function startTyping(text) {
     typeInterval = setInterval(() => {
         currentTextIndex++;
         dialogueText.textContent = fullCurrentText.substring(0, currentTextIndex);
-        
+
         if (currentTextIndex >= fullCurrentText.length) {
             finishTyping();
         }
@@ -205,7 +205,7 @@ function finishTyping() {
     clearInterval(typeInterval);
     dialogueText.textContent = fullCurrentText;
     isTyping = false;
-    
+
     const fwdBtn = document.getElementById('btn-forward');
     if(fwdBtn) fwdBtn.classList.add('bouncing');
 }
@@ -252,7 +252,7 @@ function goBack() {
         persistentState = previous.state;
         gameVariables = previous.vars || {};
         hasUnsavedChanges = true;
-        
+
         applyPersistentState();
         choicesContainer.style.display = 'none';
         dialogueBox.style.display = 'block';
@@ -304,7 +304,7 @@ function renderStep(step, isGoingBack) {
                 charLayer.style.opacity = 1;
             }, 150);
         }
-        
+
         if (step.bgm !== undefined) {
             if (step.bgm === '') {
                 bgmPlayer.pause();
@@ -316,14 +316,14 @@ function renderStep(step, isGoingBack) {
                 bgmPlayer.play().catch(e => {});
             }
         }
-        
+
         if (step.sfx) {
             sfxPlayer.src = step.sfx;
             sfxPlayer.currentTime = 0;
             sfxPlayer.play().catch(e => {});
         }
 
-        vfxLayer.className = 'layer'; 
+        vfxLayer.className = 'layer';
         bgLayer.classList.remove('vfx-shake');
         charLayer.classList.remove('vfx-shake');
         uiLayer.classList.remove('vfx-shake');
@@ -335,7 +335,7 @@ function renderStep(step, isGoingBack) {
 
         if (step.vfx) {
             const vfxClasses = step.vfx.split(' ');
-            
+
             vfxClasses.forEach(vfxClass => {
                 if (vfxClass === 'vfx-shake') {
                     bgLayer.classList.add('vfx-shake');
@@ -346,7 +346,7 @@ function renderStep(step, isGoingBack) {
                     vfxLayer.classList.add(vfxClass);
                 }
             });
-            
+
             if (step.vfx.includes('vfx-blackout') && step.text === '...') {
                  setTimeout(() => { vfxLayer.classList.remove('vfx-blackout'); advanceStory(); }, 1000);
                  dialogueBox.style.display = 'none';
@@ -364,7 +364,7 @@ function renderStep(step, isGoingBack) {
         dialogueBox.style.display = 'none';
         choicesContainer.innerHTML = '';
         choicesContainer.style.display = 'flex';
-        
+
         step.choices.forEach(choice => {
             const btn = document.createElement('button');
             btn.className = 'choice-btn';
@@ -392,7 +392,7 @@ function renderStep(step, isGoingBack) {
     } else {
         dialogueBox.style.display = 'block';
         speakerName.innerText = step.speaker || '';
-        
+
         if (isGoingBack) {
             fullCurrentText = step.text || '';
             finishTyping();
@@ -426,7 +426,7 @@ function handleChapterEnd() {
         bgLayer.style.backgroundImage = 'none';
         charLayer.style.backgroundImage = 'none';
         vfxLayer.className = 'layer';
-        
+
         startLoadProcess(nextChapterId);
     } else {
         uiLayer.style.display = 'none';
@@ -501,7 +501,7 @@ document.getElementById('leave-btn').onclick = returnToMenu;
 fullscreenBtn.onclick = () => {
     const isNativeFs = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
     const isPseudoFs = gameContainer.classList.contains('pseudo-fullscreen');
-    
+
     if (!isNativeFs && !isPseudoFs) {
         const req = gameContainer.requestFullscreen || gameContainer.webkitRequestFullscreen || gameContainer.msRequestFullscreen;
         if (req) {
@@ -540,12 +540,57 @@ fullscreenBtn.onclick = () => {
     }
 };
 
-clickToStart.addEventListener('click', () => {
+function dismissStartScreen() {
+    if (clickToStart.style.display === 'none') return;
     clickToStart.style.opacity = '0';
     setTimeout(() => {
         clickToStart.style.display = 'none';
     }, 500);
     playMenuMusic();
+}
+
+clickToStart.addEventListener('click', dismissStartScreen);
+
+document.addEventListener('keydown', (e) => {
+    if (clickToStart.style.display !== 'none') { dismissStartScreen(); return; }
+    if (e.repeat) return;
+
+    if (uiLayer.style.display !== 'block') return;
+
+    if (choicesContainer.style.display === 'flex') {
+        const choices = Array.from(choicesContainer.querySelectorAll('.choice-btn'));
+        if (choices.length === 0) return;
+
+        let currentIndex = choices.findIndex(btn => btn === document.activeElement);
+
+        if (e.code === 'ArrowDown') {
+            e.preventDefault();
+            let nextIndex = currentIndex < 0 ? 0 : (currentIndex + 1) % choices.length;
+            choices[nextIndex].focus();
+        } else if (e.code === 'ArrowUp') {
+            e.preventDefault();
+            let prevIndex = currentIndex <= 0 ? choices.length - 1 : currentIndex - 1;
+            choices[prevIndex].focus();
+        } else if (e.code === 'Enter' || e.code === 'Space') {
+            e.preventDefault();
+            if (currentIndex >= 0) {
+                choices[currentIndex].click();
+            } else {
+                choices[0].focus();
+            }
+        } else if (e.code === 'ArrowLeft') {
+            e.preventDefault();
+            goBack();
+        }
+    } else {
+        if (e.code === 'Space' || e.code === 'ArrowRight' || e.code === 'Enter') {
+            e.preventDefault();
+            advanceStory();
+        } else if (e.code === 'ArrowLeft') {
+            e.preventDefault();
+            goBack();
+        }
+    }
 });
 
 initMenu();
