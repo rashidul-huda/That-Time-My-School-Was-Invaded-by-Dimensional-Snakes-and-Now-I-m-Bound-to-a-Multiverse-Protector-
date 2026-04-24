@@ -338,7 +338,21 @@ function applyPersistentState() {
 
 function renderStep(step, isGoingBack) {
     if (step.routeBasedOn !== undefined) {
-        let targetStep = gameVariables[step.routeBasedOn] ? step.ifTrue : step.ifFalse;
+        let varValue = gameVariables[step.routeBasedOn];
+        if (varValue === undefined) varValue = 0;
+        let isTrue = false;
+
+        if (step.condition !== undefined && step.routeValue !== undefined) {
+            if (step.condition === '>') isTrue = varValue > step.routeValue;
+            else if (step.condition === '>=') isTrue = varValue >= step.routeValue;
+            else if (step.condition === '<') isTrue = varValue < step.routeValue;
+            else if (step.condition === '<=') isTrue = varValue <= step.routeValue;
+            else if (step.condition === '===') isTrue = varValue === step.routeValue;
+        } else {
+            isTrue = !!varValue;
+        }
+
+        let targetStep = isTrue ? step.ifTrue : step.ifFalse;
         currentStep = targetStep;
         renderStep(storyScript[currentStep], isGoingBack);
         return;
@@ -438,6 +452,15 @@ function renderStep(step, isGoingBack) {
 
                 if (choice.setVar) {
                     Object.assign(gameVariables, choice.setVar);
+                }
+
+                if (choice.addVar) {
+                    for (let key in choice.addVar) {
+                        if (gameVariables[key] === undefined) {
+                            gameVariables[key] = 0;
+                        }
+                        gameVariables[key] += choice.addVar[key];
+                    }
                 }
 
                 hasUnsavedChanges = true;

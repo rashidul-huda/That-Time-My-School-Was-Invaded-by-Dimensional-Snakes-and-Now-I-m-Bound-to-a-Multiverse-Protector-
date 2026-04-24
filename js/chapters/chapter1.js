@@ -16,7 +16,7 @@ var chapter1 = [
     },
     {
         choices: [
-            { text: '"You know it. I need to beat your high score in Galactic Striker."', nextStepOffset: 1 },
+            { text: '"You know it. I need to beat your high score in Galactic Striker."', nextStepOffset: 1, addVar: { kaitoResolve: 1 } },
             { text: '"Maybe. I’m pretty wiped today. Just want to crash."', nextStepOffset: 2 }
         ]
     },

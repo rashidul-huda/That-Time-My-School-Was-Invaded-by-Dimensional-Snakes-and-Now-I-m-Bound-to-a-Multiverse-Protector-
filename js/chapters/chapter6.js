@@ -128,8 +128,15 @@ var chapter6 = [
     },
     {
         choices: [
-            { text: '"I have to check on him. I can\'t leave not knowing."', nextStepOffset: 1 },
-            { text: '"I can\'t do this. I have to go home."', nextStepOffset: 58 }
+            { 
+                text: '"I have to check on him. I can\'t leave not knowing."', 
+                nextStepOffset: 1,
+                addVar: { kaitoResolve: 1, renHumanity: 1 } 
+            },
+            { 
+                text: '"I can\'t do this. I have to go home."', 
+                nextStepOffset: 58 
+            }
         ]
     },
     {

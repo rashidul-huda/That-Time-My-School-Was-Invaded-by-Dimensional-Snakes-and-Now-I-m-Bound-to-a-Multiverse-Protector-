@@ -50,8 +50,8 @@ var chapter2 = [
     },
     {
         choices: [
-            { text: '"I\'m coming! Pull me up!"', nextStepOffset: 1 },
-            { text: '"Hold on, someone fell!"', nextStepOffset: 2 }
+            { text: '"I\'m coming! Pull me up!"', nextStepOffset: 1, addVar: { kaitoResolve: 1 } },
+            { text: '"Hold on, someone fell!"', nextStepOffset: 2, addVar: { renHumanity: 1 } }
         ]
     },
     {
