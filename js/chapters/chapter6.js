@@ -2,12 +2,19 @@ var chapter6 = [
     {
         bg: 'assets/chapter6/backgrounds/suburban_street_sunny.webp',
         bgm: 'assets/chapter6/background_music/deceptive_peace.mp3',
+        sfx: 'assets/chapter6/sound_effects/sneaker_scuff.mp3',
         speaker: 'Ren (Internal)',
         text: 'The walk to the corner store is almost aggressively normal.'
     },
     {
         speaker: 'Ren (Internal)',
         text: 'The sun is shining, the breeze is cool, and for a few minutes, I can almost trick my brain into believing the last few days were just a fever dream.'
+    },
+    {
+        sfx: 'assets/chapter6/sound_effects/bump_thud_rustle.mp3',
+        vfx: 'vfx-shake',
+        speaker: 'Ren (Internal)',
+        text: 'Suddenly, someone bumps into me with a soft thud.'
     },
     {
         char: 'assets/chapter6/characters/unknown_girl/apologetic_smile_map.webp',
@@ -33,6 +40,7 @@ var chapter6 = [
     },
     {
         char: 'assets/chapter6/characters/unknown_girl/friendly_wave.webp',
+        sfx: 'assets/chapter6/sound_effects/light_footsteps_fading.mp3',
         speaker: 'Ren (Internal)',
         text: 'She gives a small, friendly wave and walks past me in the opposite direction.'
     },
@@ -52,18 +60,30 @@ var chapter6 = [
     {
         bg: 'assets/chapter6/backgrounds/convenience_store_interior.webp',
         char: 'assets/chapter6/characters/shopkeeper/scanning.webp',
+        sfx: 'assets/chapter6/sound_effects/checkout_scan_beep.mp3',
         speaker: 'Ren (Internal)',
         text: 'I watch as the cashier scans a bottle of cooking oil and a bag of salt.'
     },
     {
-        bg: 'assets/chapter6/backgrounds/convenience_store_exterior.webp',
         char: '',
         speaker: 'Ren (Internal)',
-        text: 'I hand over some cash, grab the plastic bag, and step back outside.'
+        sfx: 'assets/chapter6/sound_effects/plastic_bag_rustle.mp3',
+        text: 'I hand over some cash and grab the plastic bag.'
+    },
+    {
+        bg: 'assets/chapter6/backgrounds/convenience_store_exterior.webp',
+        speaker: 'Ren (Internal)',
+        sfx: 'assets/chapter6/sound_effects/sliding_glass_door.mp3',
+        text: 'I step back outside.'
     },
     {
         vfx: 'vfx-shake',
         bgm: 'assets/chapter6/background_music/sudden_dread.mp3',
+        sfx: 'assets/chapter6/sound_effects/ground_vibration_deep_roar.mp3',
+        speaker: 'Ren (Internal)',
+        text: 'Suddenly, the ground vibrates underfoot. A deep, violent roar echoes in the distance, rattling the store windows.'
+    },
+    {
         speaker: 'Shopkeeper',
         text: '(From inside the store, voice trembling) "Could it be...?"'
     },
@@ -72,11 +92,13 @@ var chapter6 = [
         text: 'My eyes go wide. That sound... it came directly from Kaito\'s block.'
     },
     {
+        sfx: 'assets/chapter6/sound_effects/rapid_sprint_sneakers.mp3',
         speaker: 'Ren (Internal)',
         text: 'Errand completely forgotten, I rush down the street.'
     },
     {
         bg: 'assets/chapter6/backgrounds/kaito_block_devastated.webp',
+        sfx: 'assets/chapter6/sound_effects/sparking_wires.mp3',
         speaker: 'Ren (Internal)',
         text: 'My heart drops into my stomach.'
     },
@@ -107,7 +129,7 @@ var chapter6 = [
     {
         choices: [
             { text: '"I have to check on him. I can\'t leave not knowing."', nextStepOffset: 1 },
-            { text: '"I can\'t do this. I have to go home."', nextStepOffset: 54 }
+            { text: '"I can\'t do this. I have to go home."', nextStepOffset: 58 }
         ]
     },
     {
@@ -127,6 +149,7 @@ var chapter6 = [
         text: 'I rush forward quietly, keeping my head on a swivel, scanning the wreckage.'
     },
     {
+        sfx: 'assets/chapter6/sound_effects/cautious_footsteps_debris.mp3',
         speaker: 'Ren (Internal)',
         text: 'I slowly make my way down the block, completely terrified of what I might find.'
     },
@@ -145,6 +168,7 @@ var chapter6 = [
         text: 'Its heavy upper half has completely crushed a concrete boundary wall in the vicinity, while its thick, bloated lower coils rest heavily on the cracked asphalt of the road.'
     },
     {
+        sfx: 'assets/chapter6/sound_effects/deep_rhythmic_slumber.mp3',
         speaker: 'Ren (Internal)',
         text: 'It is breathing in a deep, rhythmic slumber, clearly already full from whatever it ate before it wandered into this neighborhood.'
     },
@@ -172,6 +196,7 @@ var chapter6 = [
     },
     {
         bgm: 'assets/chapter6/background_music/stealth_heartbeat.mp3',
+        sfx: 'assets/chapter6/sound_effects/pulsing_heartbeat.mp3',
         speaker: 'Ren (Internal)',
         text: 'I slowly edge my way along the opposite side of the street, giving the massive, rising and falling black coils as much space as the road allows.'
     },
@@ -193,10 +218,12 @@ var chapter6 = [
         text: 'Instead, I reach out with a trembling finger and press the electronic doorbell exactly once.'
     },
     {
+        sfx: 'assets/chapter6/sound_effects/electronic_doorbell_chime.mp3',
         speaker: 'Ren (Internal)',
         text: 'The chime rings softly inside the house.'
     },
     {
+        sfx: 'assets/chapter6/sound_effects/door_handle_turn_creak.mp3',
         speaker: 'Ren (Internal)',
         text: 'Ten agonizing seconds pass. The door handle slowly turns down.'
     },
@@ -212,11 +239,17 @@ var chapter6 = [
     {
         char: 'assets/chapter6/characters/kaito_best_friend/hauling_ren_inside.webp',
         speaker: 'Ren (Internal)',
-        text: 'He grabs my shirt, hauls me violently inside, and shuts the door with a soft click.'
+        sfx: 'assets/chapter6/sound_effects/clothing_grab_haul.mp3',
+        text: 'He grabs my shirt and hauls me violently inside.'
     },
     {
         char: '',
         bg: 'assets/chapter6/backgrounds/kaito_house_entryway.webp',
+        speaker: 'Ren (Internal)',
+        sfx: 'assets/chapter6/sound_effects/door_shut_click.mp3',
+        text: 'He shuts the door with a soft click.'
+    },
+    {
         speaker: 'Ren (Internal)',
         text: 'The genkan floor is littered with abandoned slippers and a toppled bag, while fresh cracks split across the walls like broken teeth— a stark reminder of how close the beast actually came.'
     },
@@ -245,6 +278,11 @@ var chapter6 = [
     {
         vfx: 'vfx-shake',
         bgm: 'assets/chapter6/background_music/military_intervention.mp3',
+        sfx: 'assets/chapter6/sound_effects/heavy_helicopter_rotors_muffled.mp3',
+        speaker: 'Ren (Internal)',
+        text: 'A sudden, deafening thwump-thwump-thwump of heavy military helicopter rotors bleeds through the walls.'
+    },
+    {
         char: 'assets/chapter6/characters/kaito_best_friend/realization_helicopters_arrival.webp',
         speaker: 'Kaito',
         text: '"They\'re here."'
@@ -252,12 +290,13 @@ var chapter6 = [
     {
         bg: 'assets/chapter6/backgrounds/kaito_bedroom_peeking.webp',
         char: '',
+        sfx: 'assets/chapter6/sound_effects/footsteps_on_wooden_stairs.mp3',
         speaker: 'Ren (Internal)',
         text: 'We run upstairs to Kaito\'s bedroom. I realize my knuckles are completely white from death-gripping my grocery bag, so I set it down by the door.'
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'I notice his window is webbed with jagged cracks from the sheer force of the monster\'s arrival.'
+        text: 'I notice his window is webbed with jagged cracks from the sheer force of the monster\'s arrival. The walls aren\'t spared either — hairline fractures spider across the plaster like the whole room flinched.'
     },
     {
         speaker: 'Ren (Internal)',
@@ -265,6 +304,7 @@ var chapter6 = [
     },
     {
         vfx: 'vfx-shake',
+        sfx: 'assets/chapter6/sound_effects/guttural_screech_loud.mp3',
         speaker: 'Ren (Internal)',
         text: 'The noise woke it up.'
     },
@@ -274,20 +314,29 @@ var chapter6 = [
     },
     {
         vfx: 'vfx-shake',
+        sfx: 'assets/chapter6/sound_effects/three_pneumatic_thwumps.mp3',
         speaker: 'Ren (Internal)',
-        text: 'Two massive tranquilizer harpoons strike the beast directly in the neck.'
+        text: 'Three massive tranquilizer harpoons strike the beast directly in the neck.'
     },
     {
+        sfx: 'assets/chapter6/sound_effects/monster_shriek_agony.mp3',
         speaker: 'Ren (Internal)',
-        text: 'It screeches violently, a sound that vibrates the already cracked glass of Kaito\'s window.'
+        text: 'It screeches violently, a sound that vibrates the already cracked glass of Kaito\'s window— and finally shakes loose the plaster beneath it, chunks of it crumbling to the floor like it had been hanging on by a thread.'
     },
     {
         speaker: 'Ren (Internal)',
         text: 'But the fight leaves it quickly.'
     },
     {
+        vfx: 'vfx-shake',
+        sfx: 'assets/chapter6/sound_effects/ground_shaking_thud.mp3',
         speaker: 'Ren (Internal)',
-        text: 'Within moments, its eyes roll back. Its massive body goes slack, collapsing sideways with a ground-shaking thud, sliding fully onto the street and completely flattening a parked car.'
+        text: 'Within moments, its eyes roll back. Its massive body goes slack, collapsing sideways with a ground-shaking thud.'
+    },
+    {
+        sfx: 'assets/chapter6/sound_effects/car_crush.mp3',
+        speaker: 'Ren (Internal)',
+        text: 'It spills fully onto the street and completely flattens a parked car.'
     },
     {
         char: 'assets/chapter6/characters/kaito_best_friend/staring_out_window_in_disbelief.webp',
@@ -301,10 +350,17 @@ var chapter6 = [
         text: 'We watch as the heavily armed tactical team swarms the street.'
     },
     {
+        sfx: 'assets/chapter6/sound_effects/heavy_metal_cage_door_open.mp3',
         speaker: 'Ren (Internal)',
-        text: 'They drop the massive steel cage, wrap the thick cables around the felled beast, and use the heavy winches to drag its sheer bulk into the cell.'
+        text: 'They drop the massive steel cage.'
     },
     {
+        sfx: 'assets/chapter6/sound_effects/winch_cables_ratchet.mp3',
+        speaker: 'Ren (Internal)',
+        text: 'They wrap the thick cables around the felled beast, and use the heavy winches to drag its sheer bulk into the cell.'
+    },
+    {
+        sfx: 'assets/chapter6/sound_effects/helicopter_rotors_loud_takeoff.mp3',
         speaker: 'Ren (Internal)',
         text: 'Within minutes, the helicopter hoists the cage into the sky, leaving the neighborhood safe once again.'
     },
@@ -330,6 +386,7 @@ var chapter6 = [
     },
     {
         bg: 'assets/chapter6/backgrounds/kaito_kitchen_back_door.webp',
+        sfx: 'assets/chapter6/sound_effects/wooden_stairs_descend.mp3',
         speaker: 'Ren (Internal)',
         text: 'When I finally head downstairs to leave, I find Kaito\'s parents in the kitchen — pale and exhausted, hovering near the back door like they\'d been waiting there the whole time.'
     },
@@ -348,7 +405,7 @@ var chapter6 = [
     {
         speaker: 'Ren (Internal)',
         text: 'I can\'t bring myself to walk back through that destroyed street.',
-        jumpTo: 86
+        jumpTo: 93
     },
     {
         bgm: 'assets/chapter6/background_music/crushing_guilt.mp3',
@@ -374,16 +431,19 @@ var chapter6 = [
     {
         bg: 'assets/chapter6/backgrounds/hedge_hiding_spot.webp',
         vfx: 'vfx-shake',
+        sfx: 'assets/chapter6/sound_effects/hedge_rustle_dive.mp3',
         speaker: 'Ren (Internal)',
         text: 'I dive into a hedge just in time.'
     },
     {
         bg: 'assets/chapter6/backgrounds/hedge_hiding_spot_containment_trucks.webp',
+        sfx: 'assets/chapter6/sound_effects/heavy_diesel_engines_pass.mp3',
         speaker: 'Ren (Internal)',
         text: 'Two massive, heavily armored Containment Team trucks barrel down the road, their engines roaring as they speed toward the disaster zone.'
     },
     {
         bg: 'assets/chapter6/backgrounds/hedge_hiding_spot.webp',
+        sfx: 'assets/chapter6/sound_effects/hedge_rustle_exit.mp3',
         speaker: 'Ren (Internal)',
         text: 'Once the coast is clear, I pull myself out of the hedge.'
     },
@@ -466,13 +526,14 @@ var chapter6 = [
         text: 'For a split second, she looks like an empty shell.'
     },
     {
+        bgm: 'assets/chapter6/background_music/girl_attacks.mp3',
         speaker: 'Ren (Internal)',
         text: 'Then, her face contorts into a mask of absolute, furious hatred.'
     },
     {
         char: 'assets/chapter6/characters/unknown_girl/lunging_energy_dagger.webp',
         vfx: 'vfx-shake',
-        bgm: 'assets/chapter6/background_music/epic_combat_clash.mp3',
+        sfx: 'assets/chapter6/sound_effects/girl_furious_attack_scream.mp3',
         speaker: 'Ren (Internal)',
         text: 'Before I can even blink, she lunges forward.'
     },
@@ -494,8 +555,13 @@ var chapter6 = [
     },
     {
         vfx: 'vfx-shake vfx-flash-white',
+        sfx: 'assets/chapter6/sound_effects/deafening_explosive_clash.mp3',
         speaker: 'Ren (Internal)',
-        text: 'The pain never comes.'
+        text: 'A deafening, explosive clash of metal and raw energy fills the air. The sound wave knocks me backward onto the hard pavement.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'But the pain never comes.'
     },
     {
         speaker: 'Ren (Internal)',
@@ -503,6 +569,8 @@ var chapter6 = [
     },
     {
         bg: 'assets/chapter6/backgrounds/ren_driveway_magical_sparks.webp',
+        bgm: 'assets/chapter6/background_music/epic_combat_clash.mp3',
+        sfx: 'assets/chapter6/sound_effects/energy_sparks_sizzle.mp3',
         speaker: 'Ren (Internal)',
         text: 'Sparks of violent energy rain down on the driveway, illuminating the dark silhouette of a massive, torn, scale-like cape fluttering wildly in the shockwave.'
     },
@@ -530,6 +598,7 @@ var chapter6 = [
     },
     {
         char: 'assets/chapter6/characters/unknown_girl/snarling.webp',
+        sfx: 'assets/chapter6/sound_effects/girl_aggressive_snarl.mp3',
         speaker: 'Ren (Internal)',
         text: 'The girl snarls, pushing against the axe.'
     },
@@ -540,6 +609,7 @@ var chapter6 = [
     },
     {
         char: 'assets/chapter6/characters/mysterious_protector/they_lock_eyes.webp',
+        sfx: 'assets/chapter6/sound_effects/lock_eyes.mp3',
         speaker: 'Ren (Internal)',
         text: 'They lock eyes, a silent, deadly understanding passing between them.'
     },

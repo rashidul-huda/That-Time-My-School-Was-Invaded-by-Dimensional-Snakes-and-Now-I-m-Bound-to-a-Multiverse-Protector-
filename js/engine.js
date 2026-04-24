@@ -103,6 +103,7 @@ function preloadAhead(startIndex) {
     const endIndex = Math.min(startIndex + PRELOAD_STEPS, storyScript.length);
     for (let i = startIndex; i < endIndex; i++) {
         const step = storyScript[i];
+        
         if (step.bg) { 
             const img = new Image(); 
             img.src = step.bg; 
@@ -111,13 +112,16 @@ function preloadAhead(startIndex) {
             const img = new Image(); 
             img.src = step.char; 
         }
-        if (step.bgm) {
-            const a = new Audio();
-            a.src = step.bgm;
-        }
-        if (step.sfx) {
-            const a = new Audio();
-            a.src = step.sfx;
+        
+        if (i > startIndex) {
+            if (step.bgm) {
+                const a = new Audio();
+                a.src = step.bgm;
+            }
+            if (step.sfx) {
+                const a = new Audio();
+                a.src = step.sfx;
+            }
         }
     }
 }
@@ -307,6 +311,7 @@ function renderStep(step, isGoingBack) {
             } else {
                 if (!bgmPlayer.src.includes(step.bgm)) {
                     bgmPlayer.src = step.bgm;
+                    bgmPlayer.load();
                 }
                 bgmPlayer.play().catch(e => {});
             }
