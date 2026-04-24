@@ -378,10 +378,12 @@ var chapter6 = [
         text: 'I dive into a hedge just in time.'
     },
     {
+        bg: 'assets/chapter6/backgrounds/hedge_hiding_spot_containment_trucks.webp',
         speaker: 'Ren (Internal)',
-        text: 'Two massive, heavily armored Containment Team trucks barrel down the main road, their engines roaring as they speed toward the disaster zone.'
+        text: 'Two massive, heavily armored Containment Team trucks barrel down the road, their engines roaring as they speed toward the disaster zone.'
     },
     {
+        bg: 'assets/chapter6/backgrounds/hedge_hiding_spot.webp',
         speaker: 'Ren (Internal)',
         text: 'Once the coast is clear, I pull myself out of the hedge.'
     },
