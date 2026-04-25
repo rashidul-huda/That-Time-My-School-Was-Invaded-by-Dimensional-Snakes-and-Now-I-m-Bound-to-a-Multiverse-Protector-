@@ -1,7 +1,7 @@
 const SAVE_KEY = 'snakesVN_saveData';
 const UNLOCKS_KEY = 'snakesVN_unlocks';
 const PRELOAD_STEPS = 4;
-const TOTAL_CHAPTERS = 6;
+const TOTAL_CHAPTERS = 7;
 
 const bgmPlayer = new Audio();
 bgmPlayer.loop = true;
@@ -397,9 +397,9 @@ function renderStep(step, isGoingBack) {
         }
 
         vfxLayer.className = 'layer';
-        bgLayer.classList.remove('vfx-shake');
-        charLayer.classList.remove('vfx-shake');
-        uiLayer.classList.remove('vfx-shake');
+        bgLayer.classList.remove('vfx-shake', 'vfx-camera-pan-up', 'vfx-zoom-in', 'vfx-float', 'vfx-energy-clash');
+        charLayer.classList.remove('vfx-shake', 'vfx-camera-pan-up', 'vfx-zoom-in', 'vfx-float', 'vfx-energy-clash');
+        uiLayer.classList.remove('vfx-shake', 'vfx-energy-clash');
 
         void bgLayer.offsetWidth;
         void charLayer.offsetWidth;
@@ -410,11 +410,14 @@ function renderStep(step, isGoingBack) {
             const vfxClasses = step.vfx.split(' ');
 
             vfxClasses.forEach(vfxClass => {
-                if (vfxClass === 'vfx-shake') {
-                    bgLayer.classList.add('vfx-shake');
-                    charLayer.classList.add('vfx-shake');
-                    vfxLayer.classList.add('vfx-shake');
-                    uiLayer.classList.add('vfx-shake');
+                if (vfxClass === 'vfx-shake' || vfxClass === 'vfx-energy-clash') {
+                    bgLayer.classList.add(vfxClass);
+                    charLayer.classList.add(vfxClass);
+                    vfxLayer.classList.add(vfxClass);
+                    uiLayer.classList.add(vfxClass);
+                } else if (vfxClass === 'vfx-camera-pan-up' || vfxClass === 'vfx-zoom-in' || vfxClass === 'vfx-float') {
+                    bgLayer.classList.add(vfxClass);
+                    charLayer.classList.add(vfxClass);
                 } else {
                     vfxLayer.classList.add(vfxClass);
                 }
