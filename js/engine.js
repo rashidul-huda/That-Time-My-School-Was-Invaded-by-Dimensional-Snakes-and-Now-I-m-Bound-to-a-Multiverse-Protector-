@@ -362,6 +362,16 @@ function renderStep(step, isGoingBack) {
     if (step.char !== undefined) persistentState.char = step.char;
     if (step.bgm !== undefined) persistentState.bgm = step.bgm;
 
+    vfxLayer.className = 'layer';
+    bgLayer.classList.remove('vfx-shake', 'vfx-camera-pan-up', 'vfx-zoom-in', 'vfx-zoom-out', 'vfx-float', 'vfx-energy-clash');
+    charLayer.classList.remove('vfx-shake', 'vfx-camera-pan-up', 'vfx-zoom-in', 'vfx-zoom-out', 'vfx-float', 'vfx-energy-clash');
+    uiLayer.classList.remove('vfx-shake', 'vfx-energy-clash');
+
+    void bgLayer.offsetWidth;
+    void charLayer.offsetWidth;
+    void vfxLayer.offsetWidth;
+    void uiLayer.offsetWidth;
+
     if (!isGoingBack) {
         if (step.bg !== undefined) {
             bgLayer.style.opacity = 0;
@@ -396,16 +406,6 @@ function renderStep(step, isGoingBack) {
             sfxPlayer.play().catch(e => {});
         }
 
-        vfxLayer.className = 'layer';
-        bgLayer.classList.remove('vfx-shake', 'vfx-camera-pan-up', 'vfx-zoom-in', 'vfx-float', 'vfx-energy-clash');
-        charLayer.classList.remove('vfx-shake', 'vfx-camera-pan-up', 'vfx-zoom-in', 'vfx-float', 'vfx-energy-clash');
-        uiLayer.classList.remove('vfx-shake', 'vfx-energy-clash');
-
-        void bgLayer.offsetWidth;
-        void charLayer.offsetWidth;
-        void vfxLayer.offsetWidth;
-        void uiLayer.offsetWidth;
-
         if (step.vfx) {
             const vfxClasses = step.vfx.split(' ');
 
@@ -415,7 +415,7 @@ function renderStep(step, isGoingBack) {
                     charLayer.classList.add(vfxClass);
                     vfxLayer.classList.add(vfxClass);
                     uiLayer.classList.add(vfxClass);
-                } else if (vfxClass === 'vfx-camera-pan-up' || vfxClass === 'vfx-zoom-in' || vfxClass === 'vfx-float') {
+                } else if (vfxClass === 'vfx-camera-pan-up' || vfxClass === 'vfx-zoom-in' || vfxClass === 'vfx-zoom-out' || vfxClass === 'vfx-float') {
                     bgLayer.classList.add(vfxClass);
                     charLayer.classList.add(vfxClass);
                 } else {

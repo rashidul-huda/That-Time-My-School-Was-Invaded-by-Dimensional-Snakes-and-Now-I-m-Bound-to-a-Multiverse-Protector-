@@ -21,6 +21,7 @@ var chapter7 = [
         text: 'Fifty feet above the suburban rooftops, two figures are engaged in a blinding, hyper-kinetic clash. Jagged arcs of purple energy slash wildly through the air.'
     },
     {
+        char: 'assets/chapter7/characters/mysterious_protector/effortless_blocking.webp',
         speaker: '',
         text: 'The man with the axe meets every frantic strike with precise, effortless sweeps of his glowing blade. He isn\'t trying to kill her. He is simply swatting her lethal lunges away like bothersome flies.'
     },
@@ -31,8 +32,8 @@ var chapter7 = [
         text: 'The girl drops back, hovering mid-air. Her chest heaves violently. She glares down at her crackling dagger, then up at the man\'s perfectly unbroken guard. A dark, furious realization washes over her face.'
     },
     {
-        bg: 'assets/chapter7/backgrounds/ren_driveway_looking_up.webp',
         char: 'assets/chapter7/characters/unknown_girl/locking_eyes_from_sky.webp',
+        vfx: 'vfx-zoom-out',
         sfx: 'assets/chapter7/sound_effects/eerie_heartbeat_focus.mp3',
         speaker: '',
         text: 'Her empty, dead eyes slowly pan downward, cutting through the crackling haze and falling directly onto the boy trembling on the concrete.'
@@ -42,29 +43,35 @@ var chapter7 = [
         text: 'My blood runs entirely cold. She\'s done playing with him. She wants me.'
     },
     {
-        char: '',
+        char: 'assets/chapter7/characters/unknown_girl/crossing_arms_dark_energy.webp',
         vfx: 'vfx-flash-white vfx-shake',
         sfx: 'assets/chapter7/sound_effects/massive_transformation_roar.mp3',
         speaker: '',
-        text: 'She crosses her arms in a sharp, unnatural gesture. A blinding sphere of black-and-purple light erupts around her. The sickening sound of flesh tearing and bone snapping violently echoes across the neighborhood.'
+        text: 'The dagger in her hand vanishes into thin air. She crosses her arms in a sharp, unnatural gesture. A blinding sphere of black-and-purple light erupts around her.'
     },
     {
-        bg: 'assets/chapter7/backgrounds/massive_snake_rushing.webp',
+        speaker: '',
+        text: 'The sickening sound of flesh tearing and bone snapping violently echoes across the neighborhood.'
+    },
+    {
+        bg: 'assets/chapter7/backgrounds/ren_driveway_transformation.webp',
+        char: 'assets/chapter7/characters/snake/transformation.webp',
         speaker: '',
         text: 'The light shatters. Where the girl just hovered, a humongous, obsidian leviathan now blots out the sun. It plummets toward the earth, letting out a guttural roar that violently rattles the roof tiles of the nearby houses.'
     },
     {
+        bg: 'assets/chapter7/backgrounds/ren_driveway_looking_up.webp',
         char: 'assets/chapter7/characters/mysterious_protector/landing_in_front_of_ren.webp',
         sfx: 'assets/chapter7/sound_effects/heavy_boots_landing.mp3',
         speaker: 'Mysterious Protector',
-        text: '"Brace yourself. You are going to be eaten now."'
+        text: '(Landing in front of Ren) "Brace yourself. You are going to be eaten now."'
     },
     {
-        char: '',
         speaker: 'Ren',
         text: '"Are you insane?! What are you talking about?!"'
     },
     {
+        char: 'assets/chapter7/characters/snake/slithering_forward.webp',
         vfx: 'vfx-shake',
         sfx: 'assets/chapter7/sound_effects/heavy_thud_asphalt_break.mp3',
         speaker: '',
@@ -77,16 +84,19 @@ var chapter7 = [
         text: 'It doesn\'t even slow down, violently slithering forward with its jaws unhinging, fully consumed by a pure, blinding hatred.'
     },
     {
+        char: 'assets/chapter7/characters/mysterious_protector/planting_feet_back_view.webp',
         vfx: 'vfx-flash-purple vfx-shake',
         sfx: 'assets/chapter7/sound_effects/ethereal_phasing_bite.mp3',
         speaker: '',
-        text: 'The man plants his feet, raising his heavy axe like an iron wall. The snake lunges. But as its snout makes contact with the glowing blade, its massive black form suddenly flickers into purple mist.'
+        text: 'The man plants his feet, raising his heavy blade-axe like an iron wall. The snake lunges. But as its snout makes contact with the glowing blade, its massive black form suddenly flickers into purple mist.'
     },
     {
+        sfx: 'assets/chapter7/sound_effects/asphalt_torn_up_crunch.mp3',
         speaker: 'Ren (Internal)',
         text: 'It phased right through him.'
     },
     {
+        char: '',
         bg: 'assets/chapter7/backgrounds/inside_the_serpent.webp',
         vfx: 'vfx-tunnel-vision',
         sfx: 'assets/chapter7/sound_effects/wet_swallowing_gulp.mp3',
@@ -111,13 +121,14 @@ var chapter7 = [
         text: 'For the very first time, the calm facade breaks. A bead of sweat rolls down the man\'s temple as he grinds his teeth.'
     },
     {
-        char: '',
+        char: 'assets/chapter7/characters/mysterious_protector/raising_glowing_axe.webp',
         vfx: 'vfx-flash-white',
         sfx: 'assets/chapter7/sound_effects/dimensional_shift.mp3',
         speaker: '',
         text: 'He thrusts his glowing blade-axe high into the air. A blinding, geometric grid of pure white light violently explodes outward, wiping away the suburban street, the sky, and the beast in an instant.'
     },
     {
+        char: '',
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_cubes.webp',
         bgm: 'assets/chapter7/background_music/surreal_dimension_ambient.mp3',
         speaker: '',
