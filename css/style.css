@@ -376,8 +376,8 @@ body {
 .vfx-flash-purple { animation: flashPurple 0.5s ease-out; }
 
 @keyframes floatAnim {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+    0%, 100% { transform: scale(1.04) translateY(0); }
+    50% { transform: scale(1.04) translateY(-1.5%); }
 }
 .vfx-float { animation: floatAnim 3s ease-in-out infinite; }
 

@@ -132,9 +132,14 @@ var chapter7 = [
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_cubes.webp',
         bgm: 'assets/chapter7/background_music/surreal_dimension_ambient.mp3',
         speaker: '',
-        text: 'The world reforms into a sprawling, surreal expanse. An endless, pale horizon stretches out in every direction, littered with thousands of massive, five-foot stone cubes. They float and rest in a gravity-defying grid, separated by exact three-meter gaps.'
+        text: 'The world reforms into a sprawling, surreal expanse. An endless, pale horizon stretches out in every direction, littered with thousands of massive stone cubes — each large enough to reach a person\'s shoulder.'
     },
     {
+        speaker: '',
+        text: 'They float and rest in a gravity-defying grid, separated by wide, deliberate corridors of empty space between them.'
+    },
+    {
+        bg: 'assets/chapter7/backgrounds/puzzle_dimension_cubes_pov.webp',
         sfx: 'assets/chapter7/sound_effects/ren_echoing_scream.mp3',
         speaker: 'Ren',
         text: '(Running) "Hey! Get me out of here!"'
@@ -150,29 +155,37 @@ var chapter7 = [
         text: 'From atop a nearby row of cubes, frantic footsteps echo. The girl—forced violently back into her human form by the dimensional shift—is scrambling across the stones like a feral animal. Her eyes are wide with a crazed, starving bloodlust, her dagger drawn tight.'
     },
     {
-        char: '',
-        vfx: 'vfx-float',
-        sfx: 'assets/chapter7/sound_effects/magic_levitation.mp3',
+        char: 'assets/chapter7/characters/unknown_girl/leaping_at_ren.webp',
         speaker: 'Ren (Internal)',
         text: 'She leaps directly at me. I throw my hands up—but before she can strike, my feet violently detach from the ground. An invisible, magical tether yanks me backward through the air.'
     },
     {
-        bg: 'assets/chapter7/backgrounds/puzzle_dimension_sky.webp',
+        bg: 'assets/chapter7/backgrounds/puzzle_dimension_top_view.webp',
+        char: '',
+        vfx: 'vfx-float',
+        sfx: 'assets/chapter7/sound_effects/magic_levitation.mp3',
         speaker: 'Ren (Internal)',
         text: 'I am pulled upward, settling into a forced, hovering position directly behind the broad back of the man with the axe. He had tracked my scream.'
+    },
+    {
+        char: 'assets/chapter7/characters/unknown_girl/snarling.webp',
+        sfx: 'assets/chapter7/sound_effects/girl_visceral_snarl.mp3',
+        speaker: '',
+        text: 'Robbed of her kill, the girl lets out a visceral snarl.'
     },
     {
         char: 'assets/chapter7/characters/unknown_girl/snarling_jump.webp',
         sfx: 'assets/chapter7/sound_effects/aggressive_leap.mp3',
         speaker: '',
-        text: 'Robbed of her kill, the girl lets out a visceral snarl. Her legs coil, and she launches herself off the stone cube, rocketing high into the pale, empty sky toward them.'
+        text: 'Her legs coil, and she launches herself off a stone cube, rocketing high into the pale, empty sky toward them.'
     },
     {
+        bg: 'assets/chapter7/backgrounds/puzzle_dimension_sky.webp',
         char: '',
         sfx: 'assets/chapter7/sound_effects/metal_clash_midair.mp3',
         vfx: 'vfx-energy-clash',
         speaker: '',
-        text: 'Their weapons violently collide mid-air, a shockwave rippling through the strange dimension.'
+        text: 'Their weapons violently collide mid-air in a relentless barrage, shockwave after shockwave tearing through the strange dimension.'
     },
     {
         char: 'assets/chapter7/characters/mysterious_protector/serious_locked_eyes.webp',
@@ -180,13 +193,21 @@ var chapter7 = [
         text: 'They lock eyes over the crossed blades. The man\'s expression is completely hardened. There will be no more holding back.'
     },
     {
-        char: '',
+        char: 'assets/chapter7/characters/unknown_girl/receiving_heavy_kick.webp',
         vfx: 'vfx-shake',
-        sfx: 'assets/chapter7/sound_effects/heavy_kick_cube_crash.mp3',
+        sfx: 'assets/chapter7/sound_effects/heavy_kick.mp3',
         speaker: '',
-        text: 'He drops his guard entirely and drives both of his heavy boots squarely into her stomach. The impact is devastating. She is sent rocketing backward toward the ground, crashing brutally through a series of floating stone cubes before her momentum finally dies, settling into one in a massive cloud of dust and rubble.'
+        text: 'He drops his guard entirely and drives both of his heavy boots squarely into her stomach. The impact is devastating.'
     },
     {
+        bg: 'assets/chapter7/backgrounds/puzzle_dimension_dust_and_rubble.webp',
+        char: 'assets/chapter7/characters/unknown_girl/receiving_heavy_kick.webp',
+        sfx: 'assets/chapter7/sound_effects/cube_crash.mp3',
+        speaker: '',
+        text: 'She is sent rocketing backward toward the ground, crashing brutally through a series of floating stone cubes before her momentum finally dies, settling into one in a massive cloud of dust and rubble.'
+    },
+    {
+        bg: 'assets/chapter7/backgrounds/puzzle_dimension_sky.webp',
         char: 'assets/chapter7/characters/mysterious_protector/casual_look_back.webp',
         speaker: 'Mysterious Protector',
         text: '"Just hang tight. You\'ll be fine."'
