@@ -375,6 +375,22 @@ body {
 }
 .vfx-flash-purple { animation: flashPurple 0.5s ease-out; }
 
+@keyframes barragePurple {
+    0% { background-color: transparent; }
+    4% { background-color: rgba(148, 0, 211, 0.9); }
+    8% { background-color: transparent; }
+    14% { background-color: rgba(148, 0, 211, 0.8); }
+    18% { background-color: transparent; }
+    35% { background-color: rgba(148, 0, 211, 0.9); }
+    40% { background-color: transparent; }
+    70% { background-color: rgba(148, 0, 211, 0.7); }
+    75% { background-color: transparent; }
+    92% { background-color: rgba(148, 0, 211, 0.8); }
+    96% { background-color: transparent; }
+    100% { background-color: transparent; }
+}
+.vfx-barrage-purple { animation: barragePurple 4s infinite; }
+
 @keyframes floatAnim {
     0%, 100% { transform: scale(1.04) translateY(0); }
     50% { transform: scale(1.04) translateY(-1.5%); }

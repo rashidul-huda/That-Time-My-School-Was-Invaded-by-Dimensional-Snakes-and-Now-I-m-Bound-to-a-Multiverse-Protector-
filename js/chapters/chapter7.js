@@ -104,11 +104,19 @@ var chapter7 = [
         text: 'The monster\'s shadow swallows me whole. The terrifying crunch of my own driveway being torn up is the last thing I hear before I am plunged into complete, suffocating darkness, sliding rapidly down a massive, muscular throat.'
     },
     {
+        bg: 'assets/chapter7/backgrounds/neighborhood_street.webp',
+        vfx: 'vfx-flash-purple',
+        sfx: 'assets/chapter7/sound_effects/deep_rumbling_mass.mp3',
+        speaker: '',
+        text: 'The purple mist churns and thickens in the air, pulling back together—bones, scales, mass—until the full terrible weight of the leviathan crashes back down onto the street.'
+    },
+    {
         bg: 'assets/chapter7/backgrounds/neighborhood_shattering.webp',
+        char: 'assets/chapter7/characters/snake/triumphant_screech.webp',
         vfx: 'vfx-shake',
         sfx: 'assets/chapter7/sound_effects/deafening_shatter_roar.mp3',
         speaker: '',
-        text: 'Back on the street, the leviathan rears its enormous head high into the sky, stretching its engorged neck. It lets out a triumphant, deafening screech that shatters every window on the block in a rain of glass.'
+        text: 'The leviathan rears its enormous head high into the sky, stretching its engorged neck. It lets out a triumphant, deafening screech that shatters every window on the block in a rain of glass.'
     },
     {
         char: 'assets/chapter7/characters/snake/looking_down_at_guy.webp',
@@ -132,17 +140,21 @@ var chapter7 = [
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_cubes.webp',
         bgm: 'assets/chapter7/background_music/surreal_dimension_ambient.mp3',
         speaker: '',
-        text: 'The world reforms into a sprawling, surreal expanse. An endless, pale horizon stretches out in every direction, littered with thousands of massive stone cubes — each large enough to reach a person\'s shoulder.'
+        text: 'The world reforms into a sprawling, surreal expanse. An endless horizon stretches out in every direction, littered with thousands of massive stone cubes—each large enough to reach a person\'s shoulder.'
     },
     {
         speaker: '',
         text: 'They float and rest in a gravity-defying grid, separated by wide, deliberate corridors of empty space between them.'
     },
     {
+        speaker: '',
+        text: 'Above, the sky swirls with auroras of violet and teal, glowing orbs drifting silently through the cosmic haze.'
+    },
+    {
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_cubes_pov.webp',
         sfx: 'assets/chapter7/sound_effects/ren_echoing_scream.mp3',
         speaker: 'Ren',
-        text: '(Running) "Hey! Get me out of here!"'
+        text: '"Hey! Get me out of here!"'
     },
     {
         speaker: 'Ren (Internal)',
@@ -177,7 +189,7 @@ var chapter7 = [
         char: 'assets/chapter7/characters/unknown_girl/snarling_jump.webp',
         sfx: 'assets/chapter7/sound_effects/aggressive_leap.mp3',
         speaker: '',
-        text: 'Her legs coil, and she launches herself off a stone cube, rocketing high into the pale, empty sky toward them.'
+        text: 'Her legs coil, and she launches herself off a stone cube, rocketing high into the swirling, aurora-lit sky toward them.'
     },
     {
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_sky.webp',
@@ -201,7 +213,7 @@ var chapter7 = [
     },
     {
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_dust_and_rubble.webp',
-        char: 'assets/chapter7/characters/unknown_girl/receiving_heavy_kick.webp',
+        char: 'assets/chapter7/characters/unknown_girl/crashing_into_cubes.webp',
         sfx: 'assets/chapter7/sound_effects/cube_crash.mp3',
         speaker: '',
         text: 'She is sent rocketing backward toward the ground, crashing brutally through a series of floating stone cubes before her momentum finally dies, settling into one in a massive cloud of dust and rubble.'
@@ -213,7 +225,6 @@ var chapter7 = [
         text: '"Just hang tight. You\'ll be fine."'
     },
     {
-        char: '',
         speaker: 'Ren (Internal)',
         text: 'I am paralyzed, hovering helplessly in the sky. I want to tell him I am incredibly far from fine, but my jaw is completely locked in terror.'
     },
@@ -224,7 +235,9 @@ var chapter7 = [
         text: 'A searing purple-white projectile streaks out from the dust cloud, missing the man\'s head by a fraction of an inch.'
     },
     {
-        vfx: 'vfx-shake',
+        bg: 'assets/chapter7/backgrounds/puzzle_dimension_cubes_exploding.webp',
+        char: 'assets/chapter7/characters/mysterious_protector/flying_evasive_maneuver.webp',
+        vfx: 'vfx-shake vfx-barrage-purple',
         sfx: 'assets/chapter7/sound_effects/multiple_energy_blasts.mp3',
         speaker: '',
         text: 'It\'s a barrage. An entire array of magical artillery tears through the sky. The man banks sharply, flying frenetically through the endless grid of cubes, dodging and weaving as the blasts detonate against the stone structures all around them.'
@@ -235,37 +248,66 @@ var chapter7 = [
     },
     {
         bg: 'assets/chapter7/backgrounds/hiding_behind_cube.webp',
+        char: '',
         speaker: '',
-        text: 'He dives sharply downward, pulling them behind the sheer face of a random stone block. The barrage of energy blasts violently impacts the opposite side, shaking the cube, before finally dying down. She lost track of them.'
+        text: 'He dives sharply downward, pulling them behind the sheer face of a random stone block. The barrage of energy blasts violently impacts the opposite side, shaking the cube.'
     },
     {
         char: 'assets/chapter7/characters/mysterious_protector/grinding_teeth.webp',
         speaker: '',
-        text: 'The man presses his back against the stone, grinding his teeth. The silence lasts for exactly two seconds.'
+        text: 'The man presses his back against the stone, grinding his teeth.'
+    },
+    {
+        bg: 'assets/chapter7/backgrounds/hiding_behind_cube_attack_stopped.webp',
+        speaker: '',
+        text: 'Then the barrage dies down. She lost track of them. A heavy silence falls—and lasts exactly two seconds.'
+    },
+    {
+        char: 'assets/chapter7/characters/unknown_girl/dropping_surprise_attack.webp',
+        sfx: 'assets/chapter7/sound_effects/girl_surprise_shout.mp3',
+        vfx: 'vfx-shake',
+        speaker: '',
+        text: 'The girl materializes violently from the space above them, dropping down with her dagger aimed directly at the man\'s neck.'
     },
     {
         char: '',
+        vfx: 'vfx-flash-white',
         sfx: 'assets/chapter7/sound_effects/surprise_dagger_clash.mp3',
-        vfx: 'vfx-shake',
         speaker: '',
-        text: 'The girl materializes violently from the space above them, dropping down with her dagger aimed directly at the man\'s neck. He snaps his blade-axe up in the nick of time.'
+        text: 'He snaps his blade-axe up in the nick of time. Sparks completely illuminate the narrow alley between the cubes.'
     },
     {
+        char: 'assets/chapter7/characters/unknown_girl/desperate_furious_slashing.webp',
         speaker: '',
-        text: 'Sparks completely illuminate the narrow alley between the cubes. It devolves into a brutal, lightning-fast close-quarters brawl. She slashes with blinding speed, a desperate, cornered fury.'
+        text: 'It devolves into a brutal, lightning-fast close-quarters brawl. She slashes with blinding speed, a desperate, cornered fury.'
     },
     {
+        char: 'assets/chapter7/characters/unknown_girl/crushing_ribcage_impact.webp',
         vfx: 'vfx-shake',
         sfx: 'assets/chapter7/sound_effects/weapon_hit_crash_down.mp3',
         speaker: '',
-        text: 'He finds an opening. He spins his weapon, using the heavy, flat side of the broadsword to deliver a crushing blow to her ribcage. She is sent plummeting straight down, slamming brutally into the stone floor of the dimension.'
+        text: 'He finds an opening. He spins his weapon, using the heavy, flat side of the broadsword to deliver a crushing blow to her ribcage.'
+    },
+    {
+        bg: 'assets/chapter7/backgrounds/crashing_through_cubes_motion.webp',
+        char: 'assets/chapter7/characters/unknown_girl/sent_flying.webp',
+        vfx: 'vfx-shake',
+        sfx: 'assets/chapter7/sound_effects/landing_on_cubes.mp3',
+        speaker: '',
+        text: 'She is sent crashing hard through several cubes, finally slamming into the floor of the dimension.'
     },
     {
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_ground.webp',
-        char: 'assets/chapter7/characters/unknown_girl/lying_in_rubble.webp',
-        sfx: 'assets/chapter7/sound_effects/landing_on_cubes.mp3',
+        char: 'assets/chapter7/characters/mysterious_protector/walking_dead_serious.webp',
+        sfx: 'assets/chapter7/sound_effects/cracked_stones_crunch.mp3',
         speaker: '',
-        text: 'The man slowly walks closer, his boots crunching on the cracked stone. The girl is lying in a crater of shattered debris, struggling to push herself up.'
+        text: 'The man slowly walks closer, his boots crunching on the cracked stones.'
+    },
+    {
+        bg: 'assets/chapter7/backgrounds/puzzle_dimension_crater.webp',
+        char: 'assets/chapter7/characters/unknown_girl/lying_in_rubble.webp',
+        speaker: '',
+        text: 'The girl is lying in a crater of shattered debris, struggling to push herself up.'
     },
     {
         char: 'assets/chapter7/characters/mysterious_protector/determined_stance.webp',
@@ -275,29 +317,56 @@ var chapter7 = [
     {
         char: 'assets/chapter7/characters/unknown_girl/smirking_and_spitting.webp',
         speaker: '',
-        text: 'The girl stops struggling. She looks up at his towering figure, spits onto the stone, and flashes a cruel, defiant smirk.'
+        text: 'The girl stops struggling. She looks up at his towering figure, spits onto the stones, and flashes a cruel, defiant smirk.'
     },
     {
-        char: '',
+        char: 'assets/chapter7/characters/mysterious_protector/angry.webp',
+        speaker: '',
+        text: 'Something shifts in the man. His jaw tightens. His eyes go cold.'
+    },
+    {
+        speaker: 'Mysterious Protector',
+        text: '"Then so be it."'
+    },
+    {
+        char: 'assets/chapter7/characters/mysterious_protector/transformed_full_battleaxe.webp',
         vfx: 'vfx-flash-white',
+        speaker: '',
+        text: 'The man\'s grip tightens. His weapon emits a blinding glow, rapidly elongating into a massive, terrifying battleaxe.'
+    },
+    {
+        char: 'assets/chapter7/characters/unknown_girl/receiving_final_hit.webp',
+        sfx: 'assets/chapter7/sound_effects/girl_scared_scream.mp3',
+        speaker: '',
+        text: 'He brings it down in a devastating, seismic overhead arc.'
+    },
+    {
+        bg: 'assets/chapter7/backgrounds/puzzle_dimension_crater_final_attack.webp',
+        char: 'assets/chapter7/characters/unknown_girl/unconscious.webp',
+        vfx: 'vfx-shake',
         sfx: 'assets/chapter7/sound_effects/massive_axe_boom.mp3',
         speaker: '',
-        text: 'The man\'s grip tightens. His weapon emits a blinding glow, rapidly elongating into a massive, terrifying battleaxe. He brings it down in a devastating, seismic overhead arc.'
+        text: 'The entire grid of cubes violently shudders from the impact. The girl lets out a single, faint grunt and goes still.'
     },
     {
-        char: 'assets/chapter7/characters/unknown_girl/disintegrating_ash.webp',
-        vfx: 'vfx-shake',
-        sfx: 'assets/chapter7/sound_effects/girl_faint_grunt.mp3',
-        speaker: '',
-        text: 'The entire grid of cubes violently shudders from the impact. The girl lets out a single, faint grunt as her form begins to rapidly fracture and fade.'
-    },
-    {
-        bgm: '',
+        bg: 'assets/chapter7/backgrounds/girl_disintegrates.webp',
         char: '',
+        speaker: '',
+        text: 'White dust begins to settle over her. Slowly, quietly, her form starts to dissolve into it.'
+    },
+    {
+        bg: 'assets/chapter7/backgrounds/puzzle_dimension_crater.webp',
+        bgm: '',
         vfx: 'vfx-flash-white',
         sfx: 'assets/chapter7/sound_effects/disintegration_chime.mp3',
         speaker: '',
-        text: 'She disintegrates completely into a shower of white ash. The moment she vanishes, a brilliant flash of light engulfs the strange dimension.'
+        text: 'She disintegrates completely into a shower of white ash.'
+    },
+    {
+        bg: '',
+        vfx: 'vfx-whiteout',
+        speaker: '',
+        text: 'The moment she vanishes, a brilliant flash of light engulfs the strange dimension.'
     },
     {
         bg: 'assets/chapter7/backgrounds/ren_driveway.webp',

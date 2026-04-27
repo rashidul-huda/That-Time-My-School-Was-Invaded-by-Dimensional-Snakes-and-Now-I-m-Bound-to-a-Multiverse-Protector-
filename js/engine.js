@@ -190,7 +190,7 @@ function completeLoad(loadSaveData) {
 function attemptAutoAdvance() {
     if (!isAutoPlay) return;
 
-    if (sfxPlayer.src && !sfxPlayer.paused && !sfxPlayer.ended) {
+    if (sfxPlayer.src && !sfxPlayer.paused && !sfxPlayer.ended && !sfxPlayer.error) {
         sfxPlayer.onended = () => {
             sfxPlayer.onended = null;
             if (isAutoPlay) advanceStory(true);
