@@ -343,7 +343,7 @@ var chapter7 = [
     {
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_crater_final_attack.webp',
         char: 'assets/chapter7/characters/unknown_girl/unconscious.webp',
-        vfx: 'vfx-shake',
+        vfx: 'vfx-shake vfx-flash-white',
         sfx: 'assets/chapter7/sound_effects/massive_axe_boom.mp3',
         speaker: '',
         text: 'The entire grid of cubes violently shudders from the impact. The girl lets out a single, faint grunt and goes still.'
@@ -369,26 +369,36 @@ var chapter7 = [
         text: 'The moment she vanishes, a brilliant flash of light engulfs the strange dimension.'
     },
     {
-        bg: 'assets/chapter7/backgrounds/ren_driveway.webp',
+        bg: 'assets/chapter7/backgrounds/ren_driveway_destroyed.webp',
         bgm: 'assets/chapter7/background_music/peaceful_aftermath.mp3',
+        sfx: 'assets/chapter7/sound_effects/dimension_transformation_chime.mp3',
         speaker: 'Ren (Internal)',
-        text: 'The wind hits my face. I blink rapidly. I am sitting perfectly still on the asphalt of my own driveway. The sun is shining. The cicadas are buzzing.'
+        text: 'The wind hits my face. I blink rapidly. The colors crash in all at once.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'I am sitting perfectly still on the asphalt of my own driveway. The sun is shining. The cicadas are buzzing.'
     },
     {
         speaker: 'Ren (Internal)',
         text: 'The massive leviathan is gone. The street lies in utter ruins. The girl is nowhere to be seen.'
     },
     {
+        char: 'assets/chapter7/characters/mysterious_protector/weapon_dissolving_on_shoulder.webp',
         speaker: 'Ren (Internal)',
         text: 'Only the man remains, standing casually at the end of the driveway, resting his massive weapon on his shoulder as it dissolves into thin air.'
     },
     {
         char: 'assets/chapter7/characters/mysterious_protector/relaxed_smile.webp',
+        vfx: 'vfx-flash-white',
+        speaker: 'Ren (Internal)',
+        text: 'As the last embers scatter, he lets his arm fall and plants both hands on his waist, tilting his gaze upward—completely at ease, like nothing just happened.'
+    },
+    {
         speaker: 'Mysterious Protector',
         text: '"Oh boy, that got me feeling hungry... Wanna go grab some food?"'
     },
     {
-        char: '',
         speaker: 'Ren (Internal)',
         text: 'I slowly look up at him. My brain entirely short-circuits. The sheer absurdity of the question shatters whatever trance the terror had locked me in.'
     },
