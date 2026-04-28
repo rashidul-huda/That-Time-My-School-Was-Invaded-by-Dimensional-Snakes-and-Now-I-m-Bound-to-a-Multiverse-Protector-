@@ -1,7 +1,6 @@
 var chapter7 = [
     {
         bg: 'assets/chapter6/backgrounds/ren_driveway.webp',
-        bgm: 'assets/chapter7/background_music/high_octane_aerial_clash.mp3',
         vfx: 'vfx-shake',
         sfx: 'assets/chapter7/sound_effects/sonic_boom_launch.mp3',
         speaker: '',
@@ -9,6 +8,7 @@ var chapter7 = [
     },
     {
         bg: 'assets/chapter7/backgrounds/ren_driveway_looking_up.webp',
+        bgm: 'assets/chapter7/background_music/high_octane_aerial_clash.mp3',
         vfx: 'vfx-camera-pan-up',
         speaker: 'Ren (Internal)',
         text: 'The sheer force of the sonic boom throws me flat on my back. The asphalt scrapes against my palms, but I can\'t even feel it. I can only stare at the sky.'
@@ -161,6 +161,7 @@ var chapter7 = [
         text: 'I hit a cold, hard stone surface, gasping for air. The suffocating darkness is gone. I scramble backward, screaming blindly into the endless void.'
     },
     {
+        bgm: 'assets/chapter7/background_music/puzzle_dimension_clash.mp3',
         char: 'assets/chapter7/characters/unknown_girl/crazy_bloodlust_chasing.webp',
         sfx: 'assets/chapter7/sound_effects/frantic_footsteps_on_cubes.mp3',
         speaker: '',
@@ -298,6 +299,7 @@ var chapter7 = [
     },
     {
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_ground.webp',
+        bgm: 'assets/chapter7/background_music/heroic_end_battle.mp3',
         char: 'assets/chapter7/characters/mysterious_protector/walking_dead_serious.webp',
         sfx: 'assets/chapter7/sound_effects/cracked_stones_crunch.mp3',
         speaker: '',
@@ -356,7 +358,6 @@ var chapter7 = [
     },
     {
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_crater.webp',
-        bgm: '',
         vfx: 'vfx-flash-white',
         sfx: 'assets/chapter7/sound_effects/disintegration_chime.mp3',
         speaker: '',
@@ -364,6 +365,7 @@ var chapter7 = [
     },
     {
         bg: '',
+        bgm: '',
         vfx: 'vfx-whiteout',
         speaker: '',
         text: 'The moment she vanishes, a brilliant flash of light engulfs the strange dimension.'
