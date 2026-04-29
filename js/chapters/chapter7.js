@@ -34,28 +34,31 @@ var chapter7 = [
     {
         char: 'assets/chapter7/characters/unknown_girl/locking_eyes_from_sky.webp',
         vfx: 'vfx-zoom-out',
-        sfx: 'assets/chapter7/sound_effects/eerie_heartbeat_focus.mp3',
+        sfx: 'assets/chapter7/sound_effects/girl_realization.mp3',
         speaker: '',
         text: 'Her empty, dead eyes slowly pan downward, cutting through the crackling haze and falling directly onto the boy trembling on the concrete.'
     },
     {
+        sfx: 'assets/chapter7/sound_effects/eerie_heartbeat_focus.mp3',
         speaker: 'Ren (Internal)',
         text: 'My blood runs entirely cold. She\'s done playing with him. She wants me.'
     },
     {
         char: 'assets/chapter7/characters/unknown_girl/crossing_arms_dark_energy.webp',
         vfx: 'vfx-flash-white vfx-shake',
-        sfx: 'assets/chapter7/sound_effects/massive_transformation_roar.mp3',
+        sfx: 'assets/chapter7/sound_effects/transformation_roar.mp3',
         speaker: '',
         text: 'The dagger in her hand vanishes into thin air. She crosses her arms in a sharp, unnatural gesture. A blinding sphere of black-and-purple light erupts around her.'
     },
     {
+        sfx: 'assets/chapter7/sound_effects/flesh_tearing_and_bone_snapping.mp3',
         speaker: '',
         text: 'The sickening sound of flesh tearing and bone snapping violently echoes across the neighborhood.'
     },
     {
         bg: 'assets/chapter7/backgrounds/ren_driveway_transformation.webp',
         char: 'assets/chapter7/characters/snake/transformation.webp',
+        sfx: 'assets/chapter7/sound_effects/guttural_roar.mp3',
         speaker: '',
         text: 'The light shatters. Where the girl just hovered, a humongous, obsidian leviathan now blots out the sun. It plummets toward the earth, letting out a guttural roar that violently rattles the roof tiles of the nearby houses.'
     },
@@ -86,7 +89,6 @@ var chapter7 = [
     {
         char: 'assets/chapter7/characters/mysterious_protector/planting_feet_back_view.webp',
         vfx: 'vfx-flash-purple vfx-shake',
-        sfx: 'assets/chapter7/sound_effects/ethereal_phasing_bite.mp3',
         speaker: '',
         text: 'The man plants his feet, raising his heavy blade-axe like an iron wall. The snake lunges. But as its snout makes contact with the glowing blade, its massive black form suddenly flickers into purple mist.'
     },
@@ -125,6 +127,7 @@ var chapter7 = [
     },
     {
         char: 'assets/chapter7/characters/mysterious_protector/stressful_look.webp',
+        sfx: 'assets/chapter7/sound_effects/man_grinding_teeth.mp3',
         speaker: '',
         text: 'For the very first time, the calm facade breaks. A bead of sweat rolls down the man\'s temple as he grinds his teeth.'
     },
@@ -152,7 +155,6 @@ var chapter7 = [
     },
     {
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_cubes_pov.webp',
-        sfx: 'assets/chapter7/sound_effects/ren_echoing_scream.mp3',
         speaker: 'Ren',
         text: '"Hey! Get me out of here!"'
     },
@@ -169,6 +171,7 @@ var chapter7 = [
     },
     {
         char: 'assets/chapter7/characters/unknown_girl/leaping_at_ren.webp',
+        sfx: 'assets/chapter7/sound_effects/girl_grunts.mp3',
         speaker: 'Ren (Internal)',
         text: 'She leaps directly at me. I throw my hands up—but before she can strike, my feet violently detach from the ground. An invisible, magical tether yanks me backward through the air.'
     },
@@ -244,6 +247,7 @@ var chapter7 = [
         text: 'It\'s a barrage. An entire array of magical artillery tears through the sky. The man banks sharply, flying frenetically through the endless grid of cubes, dodging and weaving as the blasts detonate against the stone structures all around them.'
     },
     {
+        sfx: 'assets/chapter7/sound_effects/masonry_exploding.mp3',
         speaker: 'Ren (Internal)',
         text: 'I am dragged through the air right behind him like a tethered balloon, watching chunks of masonry explode everywhere, fully certain I am going to pass out.'
     },
@@ -255,6 +259,8 @@ var chapter7 = [
     },
     {
         char: 'assets/chapter7/characters/mysterious_protector/grinding_teeth.webp',
+        vfx: 'vfx-shake',
+        sfx: 'assets/chapter7/sound_effects/man_grunting.mp3',
         speaker: '',
         text: 'The man presses his back against the stone, grinding his teeth.'
     },
@@ -279,6 +285,7 @@ var chapter7 = [
     },
     {
         char: 'assets/chapter7/characters/unknown_girl/desperate_furious_slashing.webp',
+        sfx: 'assets/chapter7/sound_effects/girl_cornered_fury.mp3',
         speaker: '',
         text: 'It devolves into a brutal, lightning-fast close-quarters brawl. She slashes with blinding speed, a desperate, cornered fury.'
     },
@@ -293,7 +300,7 @@ var chapter7 = [
         bg: 'assets/chapter7/backgrounds/crashing_through_cubes_motion.webp',
         char: 'assets/chapter7/characters/unknown_girl/sent_flying.webp',
         vfx: 'vfx-shake',
-        sfx: 'assets/chapter7/sound_effects/landing_on_cubes.mp3',
+        sfx: 'assets/chapter7/sound_effects/girl_in_pain.mp3',
         speaker: '',
         text: 'She is sent crashing hard through several cubes, finally slamming into the floor of the dimension.'
     },
@@ -308,6 +315,7 @@ var chapter7 = [
     {
         bg: 'assets/chapter7/backgrounds/puzzle_dimension_crater.webp',
         char: 'assets/chapter7/characters/unknown_girl/lying_in_rubble.webp',
+        sfx: 'assets/chapter7/sound_effects/girl_struggling.mp3',
         speaker: '',
         text: 'The girl is lying in a crater of shattered debris, struggling to push herself up.'
     },
@@ -318,11 +326,13 @@ var chapter7 = [
     },
     {
         char: 'assets/chapter7/characters/unknown_girl/smirking_and_spitting.webp',
+        sfx: 'assets/chapter7/sound_effects/smirking_and_spitting.mp3',
         speaker: '',
         text: 'The girl stops struggling. She looks up at his towering figure, spits onto the stones, and flashes a cruel, defiant smirk.'
     },
     {
         char: 'assets/chapter7/characters/mysterious_protector/angry.webp',
+        sfx: 'assets/chapter7/sound_effects/man_angry.mp3',
         speaker: '',
         text: 'Something shifts in the man. His jaw tightens. His eyes go cold.'
     },
@@ -333,6 +343,7 @@ var chapter7 = [
     {
         char: 'assets/chapter7/characters/mysterious_protector/transformed_full_battleaxe.webp',
         vfx: 'vfx-flash-white',
+        sfx: 'assets/chapter7/sound_effects/final_attack_build_up.mp3',
         speaker: '',
         text: 'The man\'s grip tightens. His weapon emits a blinding glow, rapidly elongating into a massive, terrifying battleaxe.'
     },
@@ -373,7 +384,6 @@ var chapter7 = [
     {
         bg: 'assets/chapter7/backgrounds/ren_driveway_destroyed.webp',
         bgm: 'assets/chapter7/background_music/peaceful_aftermath.mp3',
-        sfx: 'assets/chapter7/sound_effects/dimension_transformation_chime.mp3',
         speaker: 'Ren (Internal)',
         text: 'The wind hits my face. I blink rapidly. The colors crash in all at once.'
     },
@@ -387,11 +397,13 @@ var chapter7 = [
     },
     {
         char: 'assets/chapter7/characters/mysterious_protector/weapon_dissolving_on_shoulder.webp',
+        sfx: 'assets/chapter7/sound_effects/disintegration_chime.mp3',
         speaker: 'Ren (Internal)',
         text: 'Only the man remains, standing casually at the end of the driveway, resting his massive weapon on his shoulder as it dissolves into thin air.'
     },
     {
         char: 'assets/chapter7/characters/mysterious_protector/relaxed_smile.webp',
+        sfx: 'assets/chapter7/sound_effects/man_relieved.mp3',
         vfx: 'vfx-flash-white',
         speaker: 'Ren (Internal)',
         text: 'As the last embers scatter, he lets his arm fall and plants both hands on his waist, tilting his gaze upward—completely at ease, like nothing just happened.'
@@ -406,6 +418,7 @@ var chapter7 = [
     },
     {
         char: 'assets/chapter7/characters/mysterious_protector/warm_gentle_smile.webp',
+        sfx: 'assets/chapter7/sound_effects/man_smiling.mp3',
         speaker: 'Ren (Internal)',
         text: 'I just sit there, staring at him in complete and utter awe, as he offers me the brightest, warmest smile I have ever seen.'
     },
