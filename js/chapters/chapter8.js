@@ -1,38 +1,42 @@
 var chapter8 = [
     {
-        bg: 'assets/chapter8/backgrounds/ren_living_room_dusty.webp',
-        bgm: 'assets/chapter8/background_music/fragile_new_normal.mp3',
-        sfx: 'assets/chapter8/sound_effects/front_door_open_close.mp3',
+        bg: 'assets/chapter8/backgrounds/ren_genkan.webp',
+        bgm: 'assets/chapter5/background_music/fragile_new_normal.mp3',
+        sfx: 'assets/chapter5/sound_effects/front_door_open_close.mp3',
         speaker: 'Ren (Internal)',
-        text: 'I step inside my house, my knees still shaking. The front windows are entirely blown out, glass littering the genkan.'
+        text: 'I step inside my house, my knees still shaking. Cracks run along the walls. The shoe rack has tipped over, sandals and boots spilled across the genkan floor.'
     },
     {
         speaker: 'Ren',
         text: '"Mom?! Mom, are you okay?!"'
     },
     {
-        char: 'assets/chapter8/characters/mom/relieved_and_stressed.webp',
+        speaker: 'Mom',
+        text: '(From inside) "Ren? Is that you?!"'
+    },
+    {
+        char: 'assets/chapter8/characters/mom/stressed.webp',
         sfx: 'assets/chapter8/sound_effects/quick_footsteps.mp3',
         speaker: 'Mom',
-        text: '(Rushing out from the kitchen, hugging him) "Ren! Thank heavens! The neighborhood alert just went off! There was a leviathan right on our street!"'
+        text: '(Rushing out) "Ren! Thank heavens! There was a leviathan right on our street! Are you okay?!"'
     },
     {
         speaker: 'Ren',
         text: '"I\'m okay, Mom. It\'s gone. I\'m safe."'
     },
     {
-        char: 'assets/chapter8/characters/mom/dusting_apron.webp',
+        char: 'assets/chapter8/characters/mom/hands_clasped_relieved.webp',
         speaker: 'Mom',
-        text: '(Pulling back, checking him over, then sighing) "I was terrified you got caught up in it. The whole house shook..."'
+        text: '(Clasping hands) "I was terrified you got caught up in it. The whole house shook..."'
     },
     {
         speaker: 'Ren (Internal)',
         text: 'I let out a breath I feel like I’ve been holding for ten minutes. She knows what happened, but she didn\'t see the girl, or the blinding dimension of cubes.'
     },
     {
-        char: 'assets/chapter8/characters/mom/strict_mom_look.webp',
+        char: 'assets/chapter8/characters/mom/casual_mom_look.webp',
         speaker: 'Mom',
-        text: '"Wait. Where are the groceries? Did you manage to get the cooking oil and salt?"'
+        text: '(Checking him over) "Did you manage to get the cooking oil and salt?"'
     },
     {
         speaker: 'Ren (Internal)',
@@ -43,9 +47,13 @@ var chapter8 = [
         text: '(Smiling weakly) "I... dropped them outside, Mom. I\'ll go back for them later."'
     },
     {
-        char: 'assets/chapter8/characters/mom/angry_hands_on_hips.webp',
+        char: 'assets/chapter8/characters/mom/strict_hands_on_hips.webp',
         speaker: 'Mom',
-        text: '"Later?! Ren, I am making Karaage tonight. Do you want me to just boil the chicken in plain water? Because that is what you are eating if you do not step back out there and get my oil and salt right now."'
+        text: '"Ren, I am making Karaage tonight. Do you want me to just boil the chicken in plain water?"'
+    },
+    {
+        speaker: 'Mom',
+        text: '"I mean, if you\'re fine eating that, I don\'t mind."'
     },
     {
         speaker: 'Ren (Internal)',
@@ -53,11 +61,12 @@ var chapter8 = [
     },
     {
         speaker: 'Ren',
-        text: '"Alright, alright. I\'m going."'
+        text: '"I\'ll go get it."'
     },
     {
-        bg: 'assets/chapter8/backgrounds/ren_driveway_destroyed.webp',
-        sfx: 'assets/chapter8/sound_effects/front_door_open_close.mp3',
+        bg: 'assets/chapter7/backgrounds/ren_driveway_destroyed.webp',
+        char: '',
+        sfx: 'assets/chapter5/sound_effects/front_door_open_close.mp3',
         speaker: 'Ren (Internal)',
         text: 'I open the front door and step back onto the ruined driveway. The plastic grocery bag is sitting perfectly intact near a massive crater in the asphalt.'
     },
@@ -68,7 +77,7 @@ var chapter8 = [
     },
     {
         char: '',
-        sfx: 'assets/chapter8/sound_effects/plastic_bag_rustle.mp3',
+        sfx: 'assets/chapter6/sound_effects/plastic_bag_rustle.mp3',
         speaker: 'Ren (Internal)',
         text: 'I look at him. I bend down, pick up the grocery bag, turn around, and walk back inside.'
     },
@@ -78,20 +87,48 @@ var chapter8 = [
         text: 'I shut the door firmly, completely ignoring him.'
     },
     {
+        bg: 'assets/chapter8/backgrounds/ren_genkan.webp',
+        speaker: 'Ren (Internal)',
+        text: 'If I don\'t acknowledge the magical, axe-wielding giant in my driveway, he legally ceases to exist. That\'s just common sense.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'I have Karaage to eat and a normal life to aggressively cling to.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'Whatever cosmic turf war or magical insanity he just brought to my front gate, it is strictly above my pay grade. I am officially opting out.'
+    },
+    {
+        bg: 'assets/chapter8/backgrounds/ren_kitchen.webp',
+        speaker: 'Ren (Internal)',
+        text: 'I hand the cooking oil and salt off to my mother without another word and make a beeline for the stairs. One solid, uninterrupted nap. That is all it will take to hard-reset my brain back to reality.'
+    },
+    {
+        bg: 'assets/chapter8/backgrounds/ren_bedroom_staring_at_ceiling.webp',
+        speaker: 'Ren (Internal)',
+        text: 'I drag myself into my room and tuck myself into bed. Moments later...'
+    },
+    {
         vfx: 'vfx-shake',
-        sfx: 'assets/chapter8/sound_effects/heavy_military_rotors.mp3',
-        bg: 'assets/chapter8/backgrounds/ren_living_room_dusty.webp',
+        sfx: 'assets/chapter5/sound_effects/heavy_military_rotors.mp3',
         speaker: 'Ren (Internal)',
-        text: 'Barely five minutes later, the heavy thwump of GDC containment helicopters shakes the house. I watch through the broken window as heavily armed soldiers swarm our ruined street.'
+        text: 'The heavy thwump of GDC containment helicopters violently shakes the house.'
+    },
+    {
+        bg: 'assets/chapter8/backgrounds/ren_bedroom_broken_window_view.webp',
+        speaker: 'Ren (Internal)',
+        text: 'I peek through my broken bedroom window as heavily armed soldiers swarm our ruined street.'
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'They scan the crater, sweeping the area with thermal optics... but they find nothing. No snake. No ash. Just broken asphalt. The system worked fast, but there was nothing left for them to contain.'
+        text: 'They scan the crater, sweeping the area with thermal optics... but they find nothing. No snake. No ash. Just broken asphalt. There was nothing left for them to contain.'
     },
     {
+        bgm: '',
         vfx: 'vfx-blackout',
         speaker: 'Ren (Internal)',
-        text: 'The sheer exhaustion of the day finally catches up to me. My legs give out the second I reach my room. I collapse onto my bed, and the world goes completely black.'
+        text: 'The system worked fast, but before I can even watch them finish their examination, the sheer exhaustion of the day crushes me. My eyelids turn heavy, and the world goes completely black.'
     },
     {
         bg: 'assets/chapter8/backgrounds/ren_bedroom_evening.webp',
@@ -101,7 +138,11 @@ var chapter8 = [
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'And with the calm comes the questions.'
+        text: 'I let out a yawn, stretching my arms above my head, actually feeling somewhat new.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'But with the calm comes the questions.'
     },
     {
         speaker: 'Ren (Internal)',
@@ -116,44 +157,59 @@ var chapter8 = [
         text: 'I throw my covers off. I can\'t just hide in my room. I need answers.'
     },
     {
-        bg: 'assets/chapter8/backgrounds/ren_living_room_evening.webp',
-        char: 'assets/chapter8/characters/mom/worried_expression.webp',
+        bg: 'assets/chapter8/backgrounds/ren_genkan_evening.webp',
+        speaker: 'Ren (Internal)',
+        text: 'I head down to the genkan and start lacing up my sneakers.'
+    },
+    {
         speaker: 'Mom',
-        text: '"Ren, where are you going? It\'s already dark. Please don\'t go out after what happened today."'
+        text: '(Calling from the living room) "Ren, where are you going? It\'s already dark. Please don\'t go out after what happened today."'
     },
     {
         speaker: 'Ren',
-        text: '"I\'ll be fine, Mom. The containment team swept the entire block, remember? It\'s safe. I just need some fresh air, I\'ll stay in the neighborhood."'
+        text: '(Calling back) "I\'ll be fine, Mom. The containment team swept the entire block, remember? It\'s safe. I just need some fresh air, I\'ll stay in the neighborhood."'
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'She hesitates, but finally nods. I grab my jacket and head out.'
+        text: 'I hear her sigh heavily from the other room, but she doesn\'t stop me. I grab my jacket and head out.'
     },
     {
         bg: 'assets/chapter8/backgrounds/commercial_district_evening.webp',
         sfx: 'assets/chapter8/sound_effects/street_traffic.mp3',
-        char: '',
+        speaker: 'Ren (Internal)',
+        text: 'He is the only one who knows what is actually going on. My desire to stay out of it has been entirely eclipsed by my need to understand why a cosmic snake assassin wants me dead.'
+    },
+    {
         speaker: 'Ren (Internal)',
         text: 'I scour the immediate area, checking the alleys and the park where he might be lurking, but he\'s nowhere to be found.'
     },
     {
         speaker: 'Ren (Internal)',
-        text: 'Then I remember his last words. "I\'m hungry."'
+        text: 'Then I remember his last words. "Wanna go grab some food?"'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'It\'s a huge stretch. It has been hours since the attack. If he just wanted to eat, he would have finished and moved on a long time ago. But it\'s the only lead I have.'
+    },
+    {
+        speaker: 'Ren (Internal)',
+        text: 'I check three different cafes, but to no avail. He isn\'t anywhere.'
     },
     {
         bg: 'assets/chapter8/backgrounds/ramen_shop_interior.webp',
         sfx: 'assets/chapter8/sound_effects/loud_slurping.mp3',
         speaker: 'Ren (Internal)',
-        text: 'I check three different cafes before I hear it. The loudest, most obnoxious slurping sound coming from a corner booth in a busy local ramen shop.'
+        text: 'Then, pushing through the noren curtains of a busy local ramen shop, I hear it. The loudest, most obnoxious slurping sound.'
     },
     {
-        char: 'assets/chapter8/characters/mysterious_protector/surrounded_by_empty_bowls.webp',
+        bg: 'assets/chapter8/backgrounds/ramen_shop_corner_booth_stacked_bowls.webp',
+        char: 'assets/chapter8/characters/mysterious_protector/eating_happily.webp',
         speaker: 'Ren (Internal)',
-        text: 'It\'s him. He is surrounded by a towering stack of empty bowls, devouring a massive plate of gyoza like a starving maniac.'
+        text: 'Standing near the entrance, I spot him in a corner booth. He is surrounded by a towering stack of empty bowls, devouring a massive plate of gyoza like a starving maniac.'
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/waving_loudly.webp',
-        sfx: 'assets/chapter8/sound_effects/man_loud_greeting.mp3',
+        sfx: 'assets/chapter8/sound_effects/suddenly_delighted_man.mp3',
         speaker: 'Mysterious Protector',
         text: '(Spotting Ren, shouting across the restaurant) "HEY! OVER HERE! JOIN ME!"'
     },
@@ -180,6 +236,11 @@ var chapter8 = [
     {
         speaker: 'Ren',
         text: '"The Edo period?! You\'re like... three hundred years old?!"'
+    },
+    {
+        char: 'assets/chapter8/characters/mysterious_protector/slurping_noodles.webp',
+        speaker: 'Ren (Internal)',
+        text: 'He completely ignores my shock, lifting the bowl to his face and chugging the broth with absolute, oblivious joy.'
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/noticing_ren_discomfort.webp',
@@ -214,6 +275,7 @@ var chapter8 = [
         text: '"Yeah. I do. You were protecting me back there... weren\'t you? Why was she trying to kill me? Who are you?"'
     },
     {
+        char: 'assets/chapter8/characters/mysterious_protector/serious_look.webp',
         speaker: 'Mysterious Protector',
         text: '"I am a snake. Just like the girl who tried to kill you."'
     },
@@ -222,6 +284,7 @@ var chapter8 = [
         text: 'My breath hitches. My heart hammers against my ribs. I push back against the booth, ready to run.'
     },
     {
+        char: 'assets/chapter8/characters/mysterious_protector/assuring_smile.webp',
         speaker: 'Mysterious Protector',
         text: '"But don\'t worry! I am protecting you because you are my grandchild."'
     },
@@ -230,6 +293,7 @@ var chapter8 = [
         text: '"What?!"'
     },
     {
+        char: 'assets/chapter8/characters/mysterious_protector/elated_proud.webp',
         speaker: 'Mysterious Protector',
         text: '"Son, I am your great-great-great-great-great-great-great-grandfather."'
     },
@@ -242,7 +306,8 @@ var chapter8 = [
         text: '"Why is my great-great-whatever grandfather a snake?!"'
     },
     {
-        speaker: 'Mysterious Protector',
+        char: 'assets/chapter8/characters/mysterious_protector/reminiscing.webp',
+        speaker: 'Ancestor',
         text: '"That is a long story. A three-hundred-year-old story. Maybe longer. Give or take. I chose to become a snake back then, and we simply do not die in our world."'
     },
     {
@@ -251,15 +316,21 @@ var chapter8 = [
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/eating_happily.webp',
-        speaker: 'Mysterious Protector',
-        text: '"Oh boy, aren\'t you in for a story..." (He immediately goes back to slurping his noodles, offering absolutely zero explanation).'
+        speaker: 'Ancestor',
+        text: '"Oh boy, aren\'t you in for a story..."'
+    },
+    {
+        char: '',
+        speaker: 'Ren (Internal)',
+        text: 'He immediately goes back to slurping his noodles, offering absolutely zero explanation.'
     },
     {
         speaker: 'Ren',
         text: '"Wait. What happened to the girl? Is she dead?"'
     },
     {
-        speaker: 'Mysterious Protector',
+        char: 'assets/chapter8/characters/mysterious_protector/casual_chewing.webp',
+        speaker: 'Ancestor',
         text: '(Chewing on a piece of meat) "Nahhhh. She\'s fine. I just told you, we don\'t die in our world. She will come for you again. You are so in trouble."'
     },
     {
@@ -273,7 +344,7 @@ var chapter8 = [
     {
         char: 'assets/chapter8/characters/mysterious_protector/dead_serious.webp',
         bgm: 'assets/chapter8/background_music/sinking_dread.mp3',
-        speaker: 'Mysterious Protector',
+        speaker: 'Ancestor',
         text: '(Putting his chopsticks down, his tone dropping entirely) "Because you have done a horrible, horrible thing. You have killed a snake. You will be hunted and killed, or the universe goes to shambles."'
     },
     {
@@ -291,8 +362,9 @@ var chapter8 = [
         text: 'I nearly jump out of my skin. The girl from the driveway—the one who just turned into white ash—casually slides into the booth right beside me, smirking.'
     },
     {
+        char: '',
         speaker: 'Ren',
-        text: '(Terrified, looking at the Protector) "Hey! She\'s right here! Do something!"'
+        text: '(Terrified, looking at the Ancestor) "Hey! She\'s right here! Do something!"'
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/raising_eyebrow.webp',
@@ -316,10 +388,11 @@ var chapter8 = [
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/putting_bowl_down.webp',
-        speaker: 'Mysterious Protector',
+        speaker: 'Ancestor',
         text: '"She is right, Ren. A few days ago... the snake you threw acid on in your school. It\'s dead. That was her mother."'
     },
     {
+        char: '',
         vfx: 'vfx-tunnel-vision',
         sfx: 'assets/chapter8/sound_effects/ringing_in_ears.mp3',
         speaker: 'Ren (Internal)',
@@ -334,11 +407,12 @@ var chapter8 = [
         text: 'I... I killed it.'
     },
     {
-        speaker: 'Mysterious Protector',
+        char: 'assets/chapter8/characters/mysterious_protector/professor_explaining.webp',
+        speaker: 'Ancestor',
         text: '"In our world, when a snake is killed, we must hunt down who killed it to restore the balance in our universe. And in yours. It is a give and take."'
     },
     {
-        speaker: 'Mysterious Protector',
+        speaker: 'Ancestor',
         text: '"Snakes of our kind are responsible for maintaining all the fundamental forces that keep reality from collapsing. The strong nuclear force. Gravity. Even Love."'
     },
     {
@@ -346,7 +420,8 @@ var chapter8 = [
         text: 'I look at him closely. He isn\'t joking. He says the word "Love" with the exact same heavy, mathematical weight as "Gravity". It is a pillar of the cosmos.'
     },
     {
-        speaker: 'Mysterious Protector',
+        char: 'assets/chapter8/characters/mysterious_protector/serious_explaining.webp',
+        speaker: 'Ancestor',
         text: '"If one is killed, the balance is broken. To bring it back, whoever killed the snake must be avenged. Three snakes are sent to your world. They do the job, and they get stuck here forever. She is one of them."'
     },
     {
@@ -354,7 +429,8 @@ var chapter8 = [
         text: '"You guys are kidding, right?"'
     },
     {
-        speaker: 'Mysterious Protector',
+        char: 'assets/chapter8/characters/mysterious_protector/deadpan.webp',
+        speaker: 'Ancestor',
         text: '(Staring completely straight-faced) "No."'
     },
     {
@@ -371,7 +447,8 @@ var chapter8 = [
         text: '"What happens now?"'
     },
     {
-        speaker: 'Mysterious Protector',
+        char: 'assets/chapter8/characters/mysterious_protector/casual_happy.webp',
+        speaker: 'Ancestor',
         text: '"The usual. You will be hunted until you are dead."'
     },
     {
@@ -379,12 +456,13 @@ var chapter8 = [
         text: '"Then why not kill me right now?!"'
     },
     {
+        char: 'assets/chapter8/characters/unknown_girl/annoyed_glare.webp',
         speaker: 'Unknown Girl',
         text: '(Glaring at the Ancestor) "He won\'t let me."'
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/picking_teeth.webp',
-        speaker: 'Mysterious Protector',
+        speaker: 'Ancestor',
         text: '(Smiling brightly, picking his teeth with a toothpick) "That is right."'
     },
     {
@@ -392,6 +470,7 @@ var chapter8 = [
         text: '"Then what is the deal here? What are we doing?!"'
     },
     {
+        char: 'assets/chapter8/characters/unknown_girl/cold_threat.webp',
         speaker: 'Unknown Girl',
         text: '"You will die. By my hands, or by the ones who are also here to avenge her."'
     },
@@ -400,12 +479,13 @@ var chapter8 = [
         text: '"Who else is here?"'
     },
     {
+        char: 'assets/chapter8/characters/unknown_girl/serious_warning.webp',
         speaker: 'Unknown Girl',
         text: '"Snakes way more powerful than me. Snakes who even your protector cannot defeat."'
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/offended.webp',
-        speaker: 'Mysterious Protector',
+        speaker: 'Ancestor',
         text: '"I\'m offended."'
     },
     {
@@ -414,8 +494,8 @@ var chapter8 = [
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/smiling_brightly.webp',
-        bgm: '',
-        speaker: 'Mysterious Protector',
+        bgm: 'assets/chapter8/background_music/quirky_banter.mp3',
+        speaker: 'Ancestor',
         text: '"But don\'t worry! I won\'t let anything happen to you. You\'re my great-great-great-great-great-great-great-grandchild! ...Waiter! Bill!"'
     },
     {
@@ -424,12 +504,14 @@ var chapter8 = [
         text: 'The waiter rushes over, bowing politely, and hands over a leather booklet.'
     },
     {
+        char: '',
         sfx: 'assets/chapter8/sound_effects/sliding_bill.mp3',
         speaker: 'Ren (Internal)',
         text: 'The man opens it, glances at it, closes it, and smoothly slides it across the table directly to me.'
     },
     {
-        speaker: 'Mysterious Protector',
+        char: 'assets/chapter8/characters/mysterious_protector/winking.webp',
+        speaker: 'Ancestor',
         text: '"I\'ll be living with you, by the way. I have nowhere to go here."'
     },
     {
@@ -438,7 +520,7 @@ var chapter8 = [
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/boisterous_laugh.webp',
-        speaker: 'Mysterious Protector',
+        speaker: 'Ancestor',
         text: '(Laughing) "You don\'t expect me to have your money, do you? I was fully prepared to dine and dash, but since you\'re here, pay up!"'
     },
     {
@@ -452,11 +534,13 @@ var chapter8 = [
         text: 'I flip the bill open. My jaw physically drops.'
     },
     {
+        char: '',
         speaker: 'Ren',
         text: '"WHAT DID YOU EAT?! THIS IS MY ENTIRE THREE MONTHS ALLOWANCE! ARE YOU KIDDING ME?!"'
     },
     {
-        speaker: 'Mysterious Protector',
+        char: 'assets/chapter8/characters/mysterious_protector/clueless_shrug.webp',
+        speaker: 'Ancestor',
         text: '(Acting completely clueless) "Huh? Well, come dash with me then. You have your extra pork bowl on that list too, we are in this together."'
     },
     {
@@ -465,6 +549,7 @@ var chapter8 = [
     },
     {
         bg: 'assets/chapter8/backgrounds/ramen_shop_register.webp',
+        bgm: 'assets/chapter8/background_music/comedic_panic.mp3',
         sfx: 'assets/chapter8/sound_effects/cash_register_coins.mp3',
         char: '',
         speaker: 'Ren (Internal)',
@@ -472,13 +557,13 @@ var chapter8 = [
     },
     {
         bg: 'assets/chapter8/backgrounds/ramen_shop_exterior_evening.webp',
-        bgm: 'assets/chapter8/background_music/melancholy_evening.mp3',
-        sfx: 'assets/chapter8/sound_effects/evening_crickets.mp3',
+        sfx: 'assets/chapter8/sound_effects/distant_traffic.mp3',
         speaker: 'Ren (Internal)',
         text: 'We step out into the cool evening air. I am furious. It’s fortunate the manager knew me, or we would have had the police called on us. I have to pay off this ramen bill in installments.'
     },
     {
-        speaker: 'Mysterious Protector',
+        char: 'assets/chapter8/characters/mysterious_protector/pouting.webp',
+        speaker: 'Ancestor',
         text: '"Dine and dash. I knew I should have just done it."'
     },
     {
@@ -486,10 +571,12 @@ var chapter8 = [
         text: 'I shoot him a lethal glare. There is not a single ounce of shame on his face.'
     },
     {
+        char: 'assets/chapter8/characters/unknown_girl/waving_off.webp',
         speaker: 'Unknown Girl',
         text: '"I\'ll leave you guys on your own for now. Take care."'
     },
     {
+        bgm: 'assets/chapter8/background_music/melancholy_evening.mp3',
         speaker: 'Ren (Internal)',
         text: 'I snap out of my anger, suddenly remembering she is still standing there. Despite everything—despite the fact that she wants to kill me—I feel a strange, stupid pang of concern.'
     },
@@ -514,6 +601,7 @@ var chapter8 = [
         text: 'I watch her walk away under the streetlights. I really wanted her to be a friend when I first bumped into her. Given the cosmic death warrant, I don\'t see that happening.'
     },
     {
+        char: 'assets/chapter8/characters/unknown_girl/looking_over_shoulder.webp',
         speaker: 'Unknown Girl',
         text: '(Calling back over her shoulder, her voice piercing the quiet night) "And by the way..."'
     },
@@ -522,7 +610,7 @@ var chapter8 = [
         text: '"The other two are here as well. And they are not coming for you first."'
     },
     {
-        bgm: 'assets/chapter8/background_music/panic_realization.mp3',
+        bgm: '',
         speaker: 'Ren (Internal)',
         text: 'Both the Ancestor and I freeze. We exchange a completely clueless look.'
     },
@@ -531,10 +619,12 @@ var chapter8 = [
         text: '"They will hunt down your friends first. The ones who accompanied you in your murder."'
     },
     {
-        vfx: 'vfx-shake',
+        char: '',
+        vfx: 'vfx-tunnel-vision',
+        bgm: 'assets/chapter8/background_music/panic_realization.mp3',
         sfx: 'assets/chapter8/sound_effects/heartbeat_loud.mp3',
         speaker: 'Ren (Internal)',
-        text: 'My blood runs entirely to ice.'
+        text: 'A cold, leaden weight drops directly into the pit of my stomach, making it hard to breathe.'
     },
     {
         speaker: 'Ren (Internal)',
@@ -545,7 +635,6 @@ var chapter8 = [
         text: 'But... it wasn\'t just Kaito.'
     },
     {
-        vfx: 'vfx-tunnel-vision',
         speaker: 'Ren (Internal)',
         text: 'Sho. Mika. Yuta. They were all in the Biology Lab when I threw the acid.'
     },
