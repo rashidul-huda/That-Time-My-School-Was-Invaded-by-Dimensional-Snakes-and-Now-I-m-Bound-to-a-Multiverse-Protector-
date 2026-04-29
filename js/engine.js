@@ -1,7 +1,7 @@
 const SAVE_KEY = 'snakesVN_saveData';
 const UNLOCKS_KEY = 'snakesVN_unlocks';
 const PRELOAD_STEPS = 4;
-const TOTAL_CHAPTERS = 7;
+const TOTAL_CHAPTERS = 8;
 
 const bgmPlayer = new Audio();
 bgmPlayer.loop = true;
