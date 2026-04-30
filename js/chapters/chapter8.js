@@ -105,7 +105,7 @@ var chapter8 = [
         text: 'I hand the cooking oil and salt off to my mother without another word and make a beeline for the stairs. One solid, uninterrupted nap. That is all it will take to hard-reset my brain back to reality.'
     },
     {
-        bg: 'assets/chapter8/backgrounds/ren_bedroom_staring_at_ceiling.webp',
+        bg: 'assets/chapter8/backgrounds/ren_in_bed.webp',
         speaker: 'Ren (Internal)',
         text: 'I drag myself into my room and tuck myself into bed. Moments later...'
     },
@@ -125,6 +125,7 @@ var chapter8 = [
         text: 'They scan the crater, sweeping the area with thermal optics... but they find nothing. No snake. No ash. Just broken asphalt. There was nothing left for them to contain.'
     },
     {
+        bg: '',
         bgm: '',
         vfx: 'vfx-blackout',
         speaker: 'Ren (Internal)',
@@ -174,8 +175,8 @@ var chapter8 = [
         text: 'I hear her sigh heavily from the other room, but she doesn\'t stop me. I grab my jacket and head out.'
     },
     {
-        bg: 'assets/chapter8/backgrounds/commercial_district_evening.webp',
-        sfx: 'assets/chapter8/sound_effects/street_traffic.mp3',
+        bg: 'assets/chapter8/backgrounds/suburban_neighborhood.webp',
+        sfx: 'assets/chapter8/sound_effects/kids_playing.mp3',
         speaker: 'Ren (Internal)',
         text: 'He is the only one who knows what is actually going on. My desire to stay out of it has been entirely eclipsed by my need to understand why a cosmic snake assassin wants me dead.'
     },
@@ -192,6 +193,8 @@ var chapter8 = [
         text: 'It\'s a huge stretch. It has been hours since the attack. If he just wanted to eat, he would have finished and moved on a long time ago. But it\'s the only lead I have.'
     },
     {
+        bg: 'assets/chapter8/backgrounds/commercial_district_evening.webp',
+        sfx: 'assets/chapter8/sound_effects/street_traffic.mp3',
         speaker: 'Ren (Internal)',
         text: 'I check three different cafes, but to no avail. He isn\'t anywhere.'
     },
@@ -199,7 +202,7 @@ var chapter8 = [
         bg: 'assets/chapter8/backgrounds/ramen_shop_interior.webp',
         sfx: 'assets/chapter8/sound_effects/loud_slurping.mp3',
         speaker: 'Ren (Internal)',
-        text: 'Then, pushing through the noren curtains of a busy local ramen shop, I hear it. The loudest, most obnoxious slurping sound.'
+        text: 'Then, ducking below the noren curtains of a busy local ramen shop, I hear it. The loudest, most obnoxious slurping sound.'
     },
     {
         bg: 'assets/chapter8/backgrounds/ramen_shop_corner_booth_stacked_bowls.webp',
@@ -219,6 +222,7 @@ var chapter8 = [
         text: 'Every single customer turns to look at me. Deeply embarrassed, I quickly shuffle over to his booth and slide into the seat across from him.'
     },
     {
+        bg: 'assets/chapter8/backgrounds/corner_booth_sitting.webp',
         char: 'assets/chapter8/characters/mysterious_protector/eating_happily.webp',
         speaker: 'Mysterious Protector',
         text: '(Mouth full) "This food is incredible! It has literally been ages since I tasted anything this good."'
@@ -275,6 +279,7 @@ var chapter8 = [
         text: '"Yeah. I do. You were protecting me back there... weren\'t you? Why was she trying to kill me? Who are you?"'
     },
     {
+        bg: 'assets/chapter8/backgrounds/ren_pork_bowl.webp',
         char: 'assets/chapter8/characters/mysterious_protector/serious_look.webp',
         speaker: 'Mysterious Protector',
         text: '"I am a snake. Just like the girl who tried to kill you."'
@@ -548,15 +553,16 @@ var chapter8 = [
         text: '"I HAVEN\'T EVEN TOUCHED IT!"'
     },
     {
-        bg: 'assets/chapter8/backgrounds/ramen_shop_register.webp',
-        bgm: 'assets/chapter8/background_music/comedic_panic.mp3',
-        sfx: 'assets/chapter8/sound_effects/cash_register_coins.mp3',
-        char: '',
+        bg: 'assets/chapter8/backgrounds/ramen_shop_counter.webp',
+        bgm: 'assets/chapter8/background_music/comedic_calm.mp3',
+        sfx: 'assets/chapter8/sound_effects/manager_nervous_smile.mp3',
+        char: 'assets/chapter8/characters/manager/being_polite.webp',
         speaker: 'Ren (Internal)',
-        text: 'I spend the next ten minutes emptying every single coin out of my wallet at the cash register, bowing furiously to the manager.'
+        text: 'I spend the next ten minutes emptying every single coin out of my wallet at the counter, bowing furiously to the manager.'
     },
     {
-        bg: 'assets/chapter8/backgrounds/ramen_shop_exterior_evening.webp',
+        bg: 'assets/chapter8/backgrounds/main_road_evening.webp',
+        char: '',
         sfx: 'assets/chapter8/sound_effects/distant_traffic.mp3',
         speaker: 'Ren (Internal)',
         text: 'We step out into the cool evening air. I am furious. It’s fortunate the manager knew me, or we would have had the police called on us. I have to pay off this ramen bill in installments.'
