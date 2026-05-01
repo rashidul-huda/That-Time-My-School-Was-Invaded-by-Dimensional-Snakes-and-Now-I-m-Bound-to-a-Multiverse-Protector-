@@ -256,7 +256,7 @@ var chapter8 = [
     {
         char: 'assets/chapter8/characters/mysterious_protector/noticing_ren_discomfort.webp',
         speaker: 'Ren (Internal)',
-        text: 'I just stare at him, completely bewildered. He pauses mid-bite, finally noticing my tense, wildly uncomfortable demeanor.'
+        text: 'I just stare at him, completely bewildered. He pauses midway, finally noticing my tense, wildly uncomfortable demeanor.'
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/waving_waiter.webp',
@@ -333,16 +333,16 @@ var chapter8 = [
         text: '"What kind of a world do you live in?"'
     },
     {
-        char: 'assets/chapter8/characters/mysterious_protector/eating_happily3.webp',
         speaker: 'Ancestor',
         text: '"Oh boy, aren\'t you in for a story..."'
     },
     {
-        char: '',
+        char: 'assets/chapter8/characters/mysterious_protector/eating_happily3.webp',
         speaker: 'Ren (Internal)',
         text: 'He picks his bowl back up and immediately goes back to slurping his noodles, offering absolutely zero explanation.'
     },
     {
+        char: '',
         speaker: 'Ren',
         text: '"Wait. What happened to the girl? Is she dead?"'
     },
@@ -460,7 +460,7 @@ var chapter8 = [
         text: '"You guys are kidding, right?"'
     },
     {
-        char: 'assets/chapter8/characters/mysterious_protector/deadpan.webp',
+        char: 'assets/chapter8/characters/mysterious_protector/serious_look.webp',
         speaker: 'Ancestor',
         text: '(Staring completely straight-faced) "No."'
     },
