@@ -34,7 +34,7 @@ var chapter8 = [
         text: 'I let out a breath I feel like I’ve been holding for ten minutes. She knows what happened, but she didn\'t see the girl, or the blinding dimension of cubes.'
     },
     {
-        char: 'assets/chapter8/characters/mom/casual_mom_look.webp',
+        char: 'assets/chapter8/characters/mom/noticing_mom_look.webp',
         speaker: 'Mom',
         text: '(Checking him over) "Did you manage to get the cooking oil and salt?"'
     },
@@ -106,6 +106,7 @@ var chapter8 = [
     },
     {
         bg: 'assets/chapter8/backgrounds/ren_in_bed.webp',
+        sfx: 'assets/chapter8/sound_effects/bed_sheets_rustle.mp3',
         speaker: 'Ren (Internal)',
         text: 'I drag myself into my room and tuck myself into bed. Moments later...'
     },
@@ -121,6 +122,7 @@ var chapter8 = [
         text: 'I peek through my broken bedroom window as heavily armed soldiers swarm our ruined street.'
     },
     {
+        sfx: 'assets/chapter8/sound_effects/thermal_scanner_beep.mp3',
         speaker: 'Ren (Internal)',
         text: 'They scan the crater, sweeping the area with thermal optics... but they find nothing. No snake. No ash. Just broken asphalt. There was nothing left for them to contain.'
     },
@@ -223,7 +225,7 @@ var chapter8 = [
     },
     {
         bg: 'assets/chapter8/backgrounds/corner_booth_sitting.webp',
-        char: 'assets/chapter8/characters/mysterious_protector/eating_happily.webp',
+        char: 'assets/chapter8/characters/mysterious_protector/eating_happily2.webp',
         speaker: 'Mysterious Protector',
         text: '(Mouth full) "This food is incredible! It has literally been ages since I tasted anything this good."'
     },
@@ -234,8 +236,12 @@ var chapter8 = [
     {
         char: 'assets/chapter8/characters/mysterious_protector/boisterous_laugh.webp',
         sfx: 'assets/chapter8/sound_effects/man_guffaw.mp3',
+        speaker: 'Ren (Internal)',
+        text: 'He throws his head back and lets out a booming, infectious laugh that fills the entire shop.'
+    },
+    {
         speaker: 'Mysterious Protector',
-        text: '(Laughing heartily) "Oh, I\'ve been around since the age of the shoguns!"'
+        text: '"Oh, I\'ve been around since the age of the shoguns!"'
     },
     {
         speaker: 'Ren',
@@ -243,8 +249,9 @@ var chapter8 = [
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/slurping_noodles.webp',
+        sfx: 'assets/chapter8/sound_effects/loud_slurping.mp3',
         speaker: 'Ren (Internal)',
-        text: 'He completely ignores my shock, lifting the bowl to his face and chugging the broth with absolute, oblivious joy.'
+        text: 'He completely ignores my shock, sets down the empty gyoza plate, lifts the ramen bowl to his face, and chugs the broth with absolute, oblivious joy.'
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/noticing_ren_discomfort.webp',
@@ -253,6 +260,7 @@ var chapter8 = [
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/waving_waiter.webp',
+        sfx: 'assets/chapter8/sound_effects/calling_waiter.mp3',
         speaker: 'Mysterious Protector',
         text: '"Ah, how rude of me. Waiter! Bring the boy a bowl, extra pork!"'
     },
@@ -261,7 +269,12 @@ var chapter8 = [
         text: '"No, really, I\'m fine. I don\'t need anything—"'
     },
     {
-        char: 'assets/chapter8/characters/mysterious_protector/teasing_smile.webp',
+        char: '',
+        speaker: 'Ren (Internal)',
+        text: 'He puts his bowl down and fixes me with a look that leaves no room for argument.'
+    },
+    {
+        char: 'assets/chapter8/characters/mysterious_protector/teasing_look.webp',
         speaker: 'Mysterious Protector',
         text: '"Eat. You look like you need food. You\'re entirely too scrawny to be surviving leviathan attacks. Skin and bones, this kid."'
     },
@@ -270,7 +283,7 @@ var chapter8 = [
         text: 'I frown, visibly unamused by the jab. I am not in the mood for jokes.'
     },
     {
-        char: 'assets/chapter8/characters/mysterious_protector/serious_look.webp',
+        char: 'assets/chapter8/characters/mysterious_protector/getting_serious.webp',
         speaker: 'Mysterious Protector',
         text: '(His smile fades slightly, eyes locking onto mine) "And... because you look like you need answers. Food helps the heavy stuff go down."'
     },
@@ -320,14 +333,14 @@ var chapter8 = [
         text: '"What kind of a world do you live in?"'
     },
     {
-        char: 'assets/chapter8/characters/mysterious_protector/eating_happily.webp',
+        char: 'assets/chapter8/characters/mysterious_protector/eating_happily3.webp',
         speaker: 'Ancestor',
         text: '"Oh boy, aren\'t you in for a story..."'
     },
     {
         char: '',
         speaker: 'Ren (Internal)',
-        text: 'He immediately goes back to slurping his noodles, offering absolutely zero explanation.'
+        text: 'He picks his bowl back up and immediately goes back to slurping his noodles, offering absolutely zero explanation.'
     },
     {
         speaker: 'Ren',
@@ -335,6 +348,7 @@ var chapter8 = [
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/casual_chewing.webp',
+        sfx: 'assets/chapter8/sound_effects/man_chewing.mp3',
         speaker: 'Ancestor',
         text: '(Chewing on a piece of meat) "Nahhhh. She\'s fine. I just told you, we don\'t die in our world. She will come for you again. You are so in trouble."'
     },
@@ -343,18 +357,29 @@ var chapter8 = [
         text: 'He says it like he\'s commenting on the weather.'
     },
     {
+        char: '',
         speaker: 'Ren',
         text: '"What do you mean she\'ll come for me again?! Why is she trying to kill me?!"'
+    },
+    {
+        char: '',
+        speaker: 'Ren (Internal)',
+        text: 'He puts his bowl down and sets his chopsticks aside, his entire demeanor shifting into something deadly serious.'
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/dead_serious.webp',
         bgm: 'assets/chapter8/background_music/sinking_dread.mp3',
         speaker: 'Ancestor',
-        text: '(Putting his chopsticks down, his tone dropping entirely) "Because you have done a horrible, horrible thing. You have killed a snake. You will be hunted and killed, or the universe goes to shambles."'
+        text: '"Because you have done a horrible, horrible thing. You have killed a snake. You will be hunted and killed, or the universe goes to shambles."'
     },
     {
         speaker: 'Ren',
         text: '"What are you talking about? I haven\'t killed a snake! I don\'t even kill bugs!"'
+    },
+    {
+        char: '',
+        speaker: 'Ren (Internal)',
+        text: 'He picks the bowl back up, calmly drinking down the last of the broth as if we are not discussing my imminent death.'
     },
     {
         speaker: 'Unknown Voice',
@@ -372,9 +397,9 @@ var chapter8 = [
         text: '(Terrified, looking at the Ancestor) "Hey! She\'s right here! Do something!"'
     },
     {
-        char: 'assets/chapter8/characters/mysterious_protector/raising_eyebrow.webp',
+        char: 'assets/chapter8/characters/mysterious_protector/man_glancing.webp',
         speaker: 'Ren (Internal)',
-        text: 'The man just raises an eyebrow and goes back to drinking his broth.'
+        text: 'The man simply glances at her over the rim of his bowl and goes back to drinking his broth.'
     },
     {
         char: 'assets/chapter8/characters/unknown_girl/leaning_in_angry.webp',
@@ -394,7 +419,7 @@ var chapter8 = [
     {
         char: 'assets/chapter8/characters/mysterious_protector/putting_bowl_down.webp',
         speaker: 'Ancestor',
-        text: '"She is right, Ren. A few days ago... the snake you threw acid on in your school. It\'s dead. That was her mother."'
+        text: '(Putting the bowl down) "She is right, Ren. A few days ago... the snake you threw acid on in your school. It\'s dead. That was her mother."'
     },
     {
         char: '',
@@ -404,6 +429,7 @@ var chapter8 = [
         text: 'The blood completely drains from my face.'
     },
     {
+        sfx: 'assets/chapter8/sound_effects/flashback_glass_shatter_shriek.mp3',
         speaker: 'Ren (Internal)',
         text: 'The Biology lab. The glass bottle shattering against the massive, lidless eye. The horrifying shrieks of agony. I thought we just blinded it.'
     },
@@ -499,6 +525,7 @@ var chapter8 = [
     },
     {
         char: 'assets/chapter8/characters/mysterious_protector/smiling_brightly.webp',
+        sfx: 'assets/chapter8/sound_effects/man_guffaw.mp3',
         bgm: 'assets/chapter8/background_music/quirky_banter.mp3',
         speaker: 'Ancestor',
         text: '"But don\'t worry! I won\'t let anything happen to you. You\'re my great-great-great-great-great-great-great-grandchild! ...Waiter! Bill!"'
@@ -524,7 +551,8 @@ var chapter8 = [
         text: '"Why did you just slide the bill to me?"'
     },
     {
-        char: 'assets/chapter8/characters/mysterious_protector/boisterous_laugh.webp',
+        char: 'assets/chapter8/characters/mysterious_protector/boisterous_laugh2.webp',
+        sfx: 'assets/chapter8/sound_effects/man_guffaw.mp3',
         speaker: 'Ancestor',
         text: '(Laughing) "You don\'t expect me to have your money, do you? I was fully prepared to dine and dash, but since you\'re here, pay up!"'
     },
@@ -544,7 +572,7 @@ var chapter8 = [
         text: '"WHAT DID YOU EAT?! THIS IS MY ENTIRE THREE MONTHS ALLOWANCE! ARE YOU KIDDING ME?!"'
     },
     {
-        char: 'assets/chapter8/characters/mysterious_protector/clueless_shrug.webp',
+        char: 'assets/chapter8/characters/mysterious_protector/clueless.webp',
         speaker: 'Ancestor',
         text: '(Acting completely clueless) "Huh? Well, come dash with me then. You have your extra pork bowl on that list too, we are in this together."'
     },
