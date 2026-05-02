@@ -5,8 +5,7 @@ const TOTAL_CHAPTERS = 8;
 
 const bgmPlayer = new Audio();
 bgmPlayer.loop = true;
-const sfxPlayer = new Audio();
-sfxPlayer.loop = false;
+let activeSfxPlayers = [];
 
 const mainMenu = document.getElementById('main-menu');
 const loadingScreen = document.getElementById('loading-screen');
@@ -123,8 +122,11 @@ function preloadAhead(startIndex) {
                 a.src = step.bgm;
             }
             if (step.sfx) {
-                const a = new Audio();
-                a.src = step.sfx;
+                const sfxList = step.sfx.split(',');
+                sfxList.forEach(sfxSrc => {
+                    const a = new Audio();
+                    a.src = sfxSrc.trim();
+                });
             }
         }
     }
@@ -190,11 +192,21 @@ function completeLoad(loadSaveData) {
 function attemptAutoAdvance() {
     if (!isAutoPlay) return;
 
-    if (sfxPlayer.src && !sfxPlayer.paused && !sfxPlayer.ended && !sfxPlayer.error) {
-        sfxPlayer.onended = () => {
-            sfxPlayer.onended = null;
-            if (isAutoPlay) advanceStory(true);
-        };
+    activeSfxPlayers = activeSfxPlayers.filter(p => !p.ended && !p.error && !p.paused);
+
+    if (activeSfxPlayers.length > 0) {
+        let finishedCount = 0;
+        const totalToWait = activeSfxPlayers.length;
+
+        activeSfxPlayers.forEach(player => {
+            player.onended = () => {
+                player.onended = null;
+                finishedCount++;
+                if (finishedCount === totalToWait && isAutoPlay) {
+                    advanceStory(true);
+                }
+            };
+        });
     } else {
         advanceStory(true);
     }
@@ -210,7 +222,7 @@ function toggleAutoPlay() {
     } else {
         btnAuto.classList.remove('active');
         clearTimeout(autoPlayTimer);
-        sfxPlayer.onended = null;
+        activeSfxPlayers.forEach(p => p.onended = null);
     }
 }
 
@@ -255,7 +267,7 @@ function finishTyping() {
 
 function advanceStory(fromAuto = false) {
     clearTimeout(autoPlayTimer);
-    sfxPlayer.onended = null;
+    activeSfxPlayers.forEach(p => p.onended = null);
 
     if (fromAuto !== true && isAutoPlay) {
         isAutoPlay = false;
@@ -271,7 +283,8 @@ function advanceStory(fromAuto = false) {
 
     stepHistory.push({
         step: currentStep,
-        state: JSON.parse(JSON.stringify(persistentState))
+        state: JSON.parse(JSON.stringify(persistentState)),
+        vars: JSON.parse(JSON.stringify(gameVariables))
     });
 
     hasUnsavedChanges = true;
@@ -293,7 +306,7 @@ function advanceStory(fromAuto = false) {
 
 function goBack() {
     clearTimeout(autoPlayTimer);
-    sfxPlayer.onended = null;
+    activeSfxPlayers.forEach(p => p.onended = null);
 
     if (isAutoPlay) {
         isAutoPlay = false;
@@ -400,10 +413,21 @@ function renderStep(step, isGoingBack) {
             }
         }
 
+        activeSfxPlayers.forEach(player => {
+            player.pause();
+            player.currentTime = 0;
+        });
+        activeSfxPlayers = [];
+
         if (step.sfx) {
-            sfxPlayer.src = step.sfx;
-            sfxPlayer.currentTime = 0;
-            sfxPlayer.play().catch(e => {});
+            const sfxList = step.sfx.split(',');
+            sfxList.forEach(sfxSrc => {
+                const player = new Audio();
+                player.src = sfxSrc.trim();
+                player.loop = false;
+                player.play().catch(e => {});
+                activeSfxPlayers.push(player);
+            });
         }
 
         if (step.vfx) {
