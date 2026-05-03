@@ -1,7 +1,7 @@
 const SAVE_KEY = 'snakesVN_saveData';
 const UNLOCKS_KEY = 'snakesVN_unlocks';
 const PRELOAD_STEPS = 4;
-const TOTAL_CHAPTERS = 8;
+const TOTAL_CHAPTERS = 9;
 
 const bgmPlayer = new Audio();
 bgmPlayer.loop = true;
@@ -166,7 +166,7 @@ function completeLoad(loadSaveData) {
         currentStep = loadSaveData.currentStep;
         stepHistory = loadSaveData.stepHistory;
         persistentState = loadSaveData.persistentState;
-        gameVariables = loadSaveData.gameVariables || {};
+        gameVariables = JSON.parse(JSON.stringify(loadSaveData.gameVariables || {}));
         applyPersistentState();
         hasUnsavedChanges = false;
         renderStep(storyScript[currentStep], false);
@@ -174,10 +174,7 @@ function completeLoad(loadSaveData) {
         currentStep = 0;
         stepHistory = [];
         persistentState = { bg: null, char: null, bgm: null };
-
-        if (activeChapterId === 1) {
-            gameVariables = {};
-        }
+        gameVariables = {};
 
         bgLayer.style.backgroundImage = 'none';
         charLayer.style.backgroundImage = 'none';
@@ -268,7 +265,7 @@ function finishTyping() {
 function advanceStory(fromAuto = false) {
     clearTimeout(autoPlayTimer);
     activeSfxPlayers.forEach(p => p.onended = null);
-
+    
     if (fromAuto !== true && isAutoPlay) {
         isAutoPlay = false;
         btnAuto.classList.remove('active');
@@ -289,8 +286,16 @@ function advanceStory(fromAuto = false) {
 
     hasUnsavedChanges = true;
     let nextStep = currentStep;
+    
     if (storyScript[currentStep].jumpTo !== undefined) {
-        nextStep = storyScript[currentStep].jumpTo;
+        let target = storyScript[currentStep].jumpTo;
+        if (typeof target === 'function') target = target(gameVariables);
+
+        if (typeof target === 'string') {
+            nextStep = storyScript.findIndex(s => s.label === target);
+        } else {
+            nextStep = target;
+        }
     } else {
         nextStep++;
     }
@@ -306,7 +311,12 @@ function advanceStory(fromAuto = false) {
 
 function goBack() {
     clearTimeout(autoPlayTimer);
-    activeSfxPlayers.forEach(p => p.onended = null);
+    
+    activeSfxPlayers.forEach(p => {
+        p.onended = null;
+        p.pause();
+    });
+    activeSfxPlayers = [];
 
     if (isAutoPlay) {
         isAutoPlay = false;
@@ -314,8 +324,9 @@ function goBack() {
     }
 
     if (isTyping) {
-        finishTyping();
-        return;
+        clearInterval(typeInterval);
+        isTyping = false;
+        dialogueText.textContent = fullCurrentText;
     }
 
     if (stepHistory.length > 0) {
@@ -365,10 +376,29 @@ function renderStep(step, isGoingBack) {
             isTrue = !!varValue;
         }
 
-        let targetStep = isTrue ? step.ifTrue : step.ifFalse;
-        currentStep = targetStep;
+        let targetStepRaw = isTrue ? step.ifTrue : step.ifFalse;
+        if (typeof targetStepRaw === 'string') {
+            currentStep = storyScript.findIndex(s => s.label === targetStepRaw);
+        } else {
+            currentStep = targetStepRaw;
+        }
         renderStep(storyScript[currentStep], isGoingBack);
         return;
+    }
+
+    if (!isGoingBack) {
+        if (step.setVar) {
+            Object.assign(gameVariables, step.setVar);
+        }
+        if (step.addVar) {
+            for (let key in step.addVar) {
+                if (gameVariables[key] === undefined) gameVariables[key] = 0;
+                gameVariables[key] += step.addVar[key];
+            }
+        }
+        if (step.runLogic && typeof step.runLogic === 'function') {
+            step.runLogic(gameVariables);
+        }
     }
 
     if (step.bg !== undefined) persistentState.bg = step.bg;
@@ -460,13 +490,18 @@ function renderStep(step, isGoingBack) {
         return;
     }
 
-    if (step.choices) {
+    let choicesArray = step.choices || step.dynamicChoices;
+    if (choicesArray) {
         clearTimeout(autoPlayTimer);
         dialogueBox.style.display = 'none';
         choicesContainer.innerHTML = '';
         choicesContainer.style.display = 'flex';
 
-        step.choices.forEach(choice => {
+        choicesArray.forEach(choice => {
+            if (choice.condition && typeof choice.condition === 'function') {
+                if (!choice.condition(gameVariables)) return;
+            }
+
             const btn = document.createElement('button');
             btn.className = 'choice-btn';
             btn.innerText = choice.text;
@@ -483,9 +518,7 @@ function renderStep(step, isGoingBack) {
 
                 if (choice.addVar) {
                     for (let key in choice.addVar) {
-                        if (gameVariables[key] === undefined) {
-                            gameVariables[key] = 0;
-                        }
+                        if (gameVariables[key] === undefined) gameVariables[key] = 0;
                         gameVariables[key] += choice.addVar[key];
                     }
                 }
@@ -493,7 +526,20 @@ function renderStep(step, isGoingBack) {
                 hasUnsavedChanges = true;
                 choicesContainer.style.display = 'none';
                 dialogueBox.style.display = 'block';
-                currentStep += choice.nextStepOffset;
+
+                if (choice.jumpTo !== undefined) {
+                    let target = choice.jumpTo;
+                    if (typeof target === 'function') target = target(gameVariables);
+
+                    if (typeof target === 'string') {
+                        currentStep = storyScript.findIndex(s => s.label === target);
+                    } else {
+                        currentStep = target;
+                    }
+                } else {
+                    currentStep += (choice.nextStepOffset !== undefined ? choice.nextStepOffset : 1);
+                }
+                
                 preloadAhead(currentStep);
                 renderStep(storyScript[currentStep], false);
             };
