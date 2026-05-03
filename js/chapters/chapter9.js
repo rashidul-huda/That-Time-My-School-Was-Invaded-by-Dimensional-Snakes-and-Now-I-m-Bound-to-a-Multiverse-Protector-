@@ -49,6 +49,7 @@ var chapter9 = [
         text: 'He hums a soft, upbeat tune as he walks calmly past a squad of panicking, heavily armed soldiers sprinting in the opposite direction.'
     },
     {
+        bg: '',
         char: '',
         vfx: 'vfx-blackout',
         bgm: '',

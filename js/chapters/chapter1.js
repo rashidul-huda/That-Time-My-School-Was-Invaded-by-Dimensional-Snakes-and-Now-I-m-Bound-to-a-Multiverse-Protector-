@@ -157,6 +157,7 @@ var chapter1 = [
         text: '...'
     },
     {
+        bg: '',
         vfx: 'vfx-blackout', 
         sfx: 'assets/chapter1/sound_effects/snake_screech2.mp3',
         speaker: '',

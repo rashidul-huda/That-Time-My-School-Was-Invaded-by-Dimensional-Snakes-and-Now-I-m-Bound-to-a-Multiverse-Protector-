@@ -476,12 +476,6 @@ function renderStep(step, isGoingBack) {
                     vfxLayer.classList.add(vfxClass);
                 }
             });
-
-            if (step.vfx.includes('vfx-blackout') && step.text === '...') {
-                 setTimeout(() => { vfxLayer.classList.remove('vfx-blackout'); advanceStory(isAutoPlay); }, 1000);
-                 dialogueBox.style.display = 'none';
-                 return;
-            }
         }
     }
 
