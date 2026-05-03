@@ -207,19 +207,25 @@ Set the `vfx` property to a space-separated list of class names. Effects are res
 | Class | Applied To | Effect |
 |---|---|---|
 | `vfx-shake` | bg, char, vfx, ui | Screen shake |
-| `vfx-energy-clash` | bg, char, vfx, ui | Energy clash flash |
-| `vfx-camera-pan-up` | bg, char | Slow upward pan |
-| `vfx-zoom-in` | bg, char | Zoom in |
-| `vfx-zoom-out` | bg, char | Zoom out |
-| `vfx-float` | bg, char | Floating bob |
-| `vfx-blackout` | vfx layer | Full black overlay — auto-advances after 1 s if `text` is `'...'` |
+| `vfx-energy-clash` | bg, char, vfx, ui | All layers cycle through sepia/purple/bright/grayscale filters with shake, loops infinitely |
+| `vfx-camera-pan-up` | bg, char | Slow upward pan, holds at end |
+| `vfx-zoom-in` | bg, char | Zoom to 1.25×, holds at end |
+| `vfx-zoom-out` | bg, char | Zoom back from 1.25× to 1×, holds at end |
+| `vfx-float` | bg, char | Gentle bob up and down with slight zoom, loops infinitely |
+| `vfx-flash-red` | vfx layer | Flashes red at 60% opacity over 0.5 s |
+| `vfx-flash-white` | vfx layer | Flashes white at 95% opacity over 0.5 s, fades out |
+| `vfx-flash-purple` | vfx layer | Flashes purple at 70% opacity over 0.5 s |
+| `vfx-barrage-purple` | vfx layer | Irregular rapid purple flashes over 4 s, loops infinitely |
+| `vfx-blackout` | vfx layer | Instant solid black overlay |
+| `vfx-whiteout` | vfx layer | Instant solid white overlay |
+| `vfx-tunnel-vision` | vfx layer | Heavy vignette that fades in over 3 s |
 
 **Example — combine effects:**
 ```js
 { vfx: 'vfx-shake vfx-blackout', text: '...' }
 ```
 
-> The `vfx-blackout` + `text: '...'` combination is special: it auto-advances after 1 second and hides the dialogue box, creating a cinematic blackout cut.
+> **Infinite loops** (`vfx-energy-clash`, `vfx-float`, `vfx-barrage-purple`) keep running until the next step clears them. **Forwards fill** effects (`vfx-camera-pan-up`, `vfx-zoom-in`, `vfx-zoom-out`) hold their end state until the next step resets them.
 
 ---
 
@@ -558,7 +564,7 @@ When Auto-Play is on the button flips to a solid gold background. The engine tog
 
 ### Complete VFX Class Reference
 
-These classes are applied by the engine via the `vfx` step property. All are defined as CSS keyframe animations in `style.css`. This is the full list including ones not in `engine.js`'s reset logic (meaning they can persist until the next step clears them):
+These classes are applied by the engine via the `vfx` step property. All are defined as CSS keyframe animations in `style.css`. Every class is cleared automatically at the start of the next step.
 
 | Class | Duration | Loops | Description |
 |---|---|---|---|
@@ -572,7 +578,7 @@ These classes are applied by the engine via the `vfx` step property. All are def
 | `vfx-zoom-in` | 1.5 s | No (forwards fill) | bg + char zoom to 1.25× and stay |
 | `vfx-zoom-out` | 1.5 s | No (forwards fill) | bg + char zoom back from 1.25× to 1× |
 | `vfx-energy-clash` | 0.8 s | Yes (infinite) | All layers cycle through sepia/purple/bright/grayscale filters with shake |
-| `vfx-blackout` | Instant | — | VFX layer becomes solid black. Combine with `text: '...'` for auto-advance cutout |
+| `vfx-blackout` | Instant | — | VFX layer becomes solid black |
 | `vfx-whiteout` | Instant | — | VFX layer becomes solid white |
 | `vfx-tunnel-vision` | 3 s transition | — | Heavy vignette (inset box-shadow) that fades in over 3 s |
 
